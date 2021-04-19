@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kalkulator DPU</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <style>
+        .section {
+            margin-top: 5px;
+            margin-left: 5px;
+            margin-right: 5px;
+            background-color: #fff3e0;
+            border: 1px solid #FFD2D2;
+            border-radius: 10px;
+            min-height: 90vh;
+        }
+        .subtitle {
+            margin-top: -25px;
+            color: #e65100;
+            font-size: 14px;
+        }
+        .columns {
+            margin-top: -30px;
+        }
+        input[type=number] {
+            color: #e65100;
+            background: #ffe0b2;
+            border-radius: 5px;
+            height: 25px;
+        }
+        input[type=date] {
+            color: #e65100;
+            background-color: #fff3e0;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: none;
+            height: 25px;
+            outline: none;
+            
+        }
+        .control {
+            color: #dd2c00;
+        }
+        .column {
+            color: #e65100;
+        }
+    </style>
+  </head>
+  <body>
+  <section class="section">
+    <div class="container">
+      <p class="subtitle">
+        Temuan deffect per pos QG B
+        <input type="date">
+      </p>
+      <div class="columns is-mobile">
+        <div class="column">
+          <div class="field">
+            <p class="control">1E
+            <input id="txt1" onkeyup="sum();" class="input is-small is-danger" type="number" value="0">
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="field">
+            <p class="control">1ER
+            <input id="txt2" onkeyup="sum();" class="input is-small is-danger" type="number" value="0">
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="field">
+            <p class="control">1EL
+            <input id="txt3" onkeyup="sum();" class="input is-small is-danger" type="number" value="0">
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="field">
+            <p class="control">1R
+            <input id="txt4" onkeyup="sum();" class="input is-small is-danger" type="number" value="0">
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="field">
+            <p class="control">1L
+            <input id="txt5" onkeyup="sum();" class="input is-small is-danger" type="number" value="0">
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="columns is-mobile">
+        <div class="column">
+          <div class="field">
+            <p class="control">1C
+            <input id="txt6" onkeyup="sum();" class="input is-small is-danger" type="number" value="0">
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="field">
+            <p class="control">1B
+            <input id="txt7" onkeyup="sum();" class="input is-small is-danger" type="number" value="0">
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="field">
+            <p class="control">2R
+            <input id="txt8" onkeyup="sum();" class="input is-small is-danger" type="number" value="0">
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="field">
+            <p class="control">2R1
+            <input id="txt9" onkeyup="sum();" class="input is-small is-danger" type="number" value="0">
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="field">
+            <p class="control">2L
+            <input id="txt10" onkeyup="sum();" class="input is-small is-danger" type="number" value="0">
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="columns is-mobile">
+        <div class="column">
+          <div class="field">
+            <p class="control">3F
+            <input id="txt11" onkeyup="sum();" class="input is-small is-danger" type="number" value="0">
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="field">
+            <p class="control">3C
+            <input id="txt12" onkeyup="sum();" class="input is-small is-danger" type="number" value="0">
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="field">
+            <p class="control">3B
+            <input id="txt13" onkeyup="sum();" class="input is-small is-danger" type="number" value="0">
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="field">
+            <p class="control">3R1
+            <input id="txt14" onkeyup="sum();" class="input is-small is-danger" type="number" value="0">
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="field">
+            <p class="control">3R2
+            <input id="txt15" onkeyup="sum();" class="input is-small is-danger" type="number" value="0">
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="columns is-mobile">
+        <div class="column">
+          <div class="field">
+            <p class="control">SPEC1
+            <input id="txt16" onkeyup="sum();" class="input is-small is-danger" type="number" value="0">
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="field">
+            <p class="control">4R
+            <input id="txt17" onkeyup="sum();" class="input is-small is-danger" type="number" value="0">
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="field">
+            <p class="control">4L
+            <input id="txt18" onkeyup="sum();" class="input is-small is-danger" type="number" value="0">
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="field">
+            <p class="control">4E
+            <input id="txt19" onkeyup="sum();" class="input is-small is-danger" type="number" value="0">
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="field">
+            <p class="control">5UB
+            <input id="txt20" onkeyup="sum();" class="input is-small is-danger" type="number" value="0">
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="columns is-mobile">
+        <div class="column">
+          <div class="field">
+            <p class="control">5F
+            <input id="txt21" onkeyup="sum();" class="input is-small is-danger" type="number" value="0">
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="field">
+            <p class="control">5E
+            <input id="txt22" onkeyup="sum();" class="input is-small is-danger" type="number" value="0">
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="field">
+            <p class="control">5R1
+            <input id="txt23" onkeyup="sum();" class="input is-small is-danger" type="number" value="0">
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="field">
+            <p class="control">5R2
+            <input id="txt24" onkeyup="sum();" class="input is-small is-danger" type="number" value="0">
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="field">
+            <p class="control">SPEC2
+            <input id="txt25" onkeyup="sum();" class="input is-small is-danger" type="number" value="0">
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="columns is-mobile">
+        <div class="column">
+          <div class="field">
+            <p class="control">6R
+            <input id="txt26" onkeyup="sum();" class="input is-small is-danger" type="number" value="0">
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="field">
+            <p class="control">6L
+            <input id="txt27" onkeyup="sum();" class="input is-small is-danger" type="number" value="0">
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="field">
+            <p class="control">7
+            <input id="txt28" onkeyup="sum();" class="input is-small is-danger" type="number" value="0">
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="field">
+            <p class="control">APP
+            <input id="txt29" onkeyup="sum();" class="input is-small is-danger" type="number" value="0">
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="field">
+            <p class="control">
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="columns is-mobile">
+        <div class="column">TOTAL</div>
+        <div class="column">
+          <div class="field">
+            <p class="control">
+            <input id="txt30" onkeyup="devide();" class="input is-small is-danger" type="number" value="0">
+            </p>
+          </div>
+        </div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+      </div>
+      <div class="columns is-mobile">
+        <div class="column">Unit</div>
+        <div class="column">
+          <div class="field">
+            <p class="control">
+            <input id="txt31" onkeyup="devide();" class="input is-small is-danger" type="number" value="">
+            </p>
+          </div>
+        </div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+      </div>
+      <div class="columns is-mobile">
+        <div class="column">DPU</div>
+        <div class="column">
+          <div class="field">
+            <p class="control">
+            <input id="txt32" class="input is-small is-danger" type="number" value="0">
+            </p>
+          </div>
+        </div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+      </div>
+    </div>
+  </section>
+  
+  
+<script>
+function sum() {
+      var txtSatu = document.getElementById('txt1').value;
+      var txtDua = document.getElementById('txt2').value;
+      var txtTiga = document.getElementById('txt3').value;
+      var txtEmpat = document.getElementById('txt4').value;
+      var txtLima = document.getElementById('txt5').value;
+      var txtEnam = document.getElementById('txt6').value;
+      var txtTuju = document.getElementById('txt7').value;
+      var txtDelapan = document.getElementById('txt8').value;
+      var txtSembilan = document.getElementById('txt9').value;
+      var txtSepuluh = document.getElementById('txt10').value;
+      var txtSeBelas = document.getElementById('txt11').value;
+      var txtDuaBelas = document.getElementById('txt12').value;
+      var txtTigaBelas = document.getElementById('txt13').value;
+      var txtEmpatBelas = document.getElementById('txt14').value;
+      var txtLimaBelas = document.getElementById('txt15').value;
+      var txtEnamBelas = document.getElementById('txt16').value;
+      var txtTujuBelas = document.getElementById('txt17').value;
+      var txtDelapanBelas = document.getElementById('txt18').value;
+      var txtSembilanBelas = document.getElementById('txt19').value;
+      var txtDuapuluh = document.getElementById('txt20').value;
+      var txtDuapuluhSatu = document.getElementById('txt21').value;
+      var txtDuapuluhDua = document.getElementById('txt22').value;
+      var txtDuapuluhTiga = document.getElementById('txt23').value;
+      var txtDuapuluhEmpat = document.getElementById('txt24').value;
+      var txtDuapuluhLima = document.getElementById('txt25').value;
+      var txtDuapuluhEnam = document.getElementById('txt26').value;
+      var txtDuapuluhTuju = document.getElementById('txt27').value;
+      var txtDuapuluhDelapan = document.getElementById('txt28').value;
+      var txtDuapuluhSembilan = document.getElementById('txt29').value;
+    
+      var result = parseFloat(txtSatu) + parseFloat(txtDua) + parseFloat(txtTiga) + parseFloat(txtEmpat) + parseFloat(txtLima) + parseFloat(txtEnam) + parseFloat(txtTuju) + parseFloat(txtDelapan) + parseFloat(txtSembilan) + parseFloat(txtSepuluh) + parseFloat(txtSeBelas) + parseFloat(txtDuaBelas) + parseFloat(txtTigaBelas) + parseFloat(txtEmpatBelas) + parseFloat(txtLimaBelas) + parseFloat(txtEnamBelas) + parseFloat(txtTujuBelas) + parseFloat(txtDelapanBelas) + parseFloat(txtSembilanBelas) + parseFloat(txtDuapuluh) + parseFloat(txtDuapuluhSatu) + parseFloat(txtDuapuluhDua) + parseFloat(txtDuapuluhTiga) + parseFloat(txtDuapuluhEmpat) + parseFloat(txtDuapuluhLima) + parseFloat(txtDuapuluhEnam) + parseFloat(txtDuapuluhTuju) + parseFloat(txtDuapuluhDelapan) + parseFloat(txtDuapuluhSembilan);
+      if (!isNaN(result)) {
+         document.getElementById('txt30').value = result;
+      }
+}
+
+function devide(){
+      var txtTigapuluh = document.getElementById('txt30').value;
+      var txtTigapuluhSatu = document.getElementById('txt31').value;
+      
+      var hasil = parseFloat(txtTigapuluh) / parseFloat(txtTigapuluhSatu);
+      if (!isNaN(hasil)) {
+          document.getElementById('txt32').value= hasil;
+      }
+}
+</script>
+  </body>
+</html>
