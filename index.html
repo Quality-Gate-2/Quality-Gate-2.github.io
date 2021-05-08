@@ -1,796 +1,772 @@
-<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#000"/>
-    <title>Kalkulator DPU</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
-    <style>
-        html {
-            background-color: #000;
-        }
-        .section {
-            margin-top: 5px;
-            margin-left: 5px;
-            margin-right: 5px;
-            background: #eed7be;
-            background: -moz-linear-gradient(top, #eed7be 0%, #f3d18d 100%);
-            background: -webkit-linear-gradient(top, #eed7be 0%, #f3d18d 100%);
-            background: linear-gradient(to bottom, #eed7be 0%, #f3d18d 100%);
-            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eed7be', endColorstr='#f3d18d',GradientType=0 );
-            border: 1px solid #FFD2D2;
-            border-radius: 10px;
-            min-height: 80vh;
-        }
-        .field1,
-        .field2 {
-            margin-top: -20px;
-        }
-        .field2 {
-            text-align: right;
-        }
-        .title {
-            text-align: center;
-            font-size: 20px;
-            margin-top: -30px;
-            color: #e65100;
-        }
-        .subtitle {
-            margin-top: -20px;
-            color: #e65100;
-            font-size: 14px;
-        }
-        .columns {
-            margin-top: -30px;
-        }
-        input[type=text] {
-            color: #e65100;
-            background-color: #eed7be;
-            border-top: none;
-            border-left: none;
-            border-right: none;
-            border-bottom: none;
-            height: 25px;
-            outline: none;
-            width: 50px;
-        }
-        input[type=number] {
-            color: #e65100;
-            background: #ffe0b2;
-            border-radius: 5px;
-            height: 25px;
-            text-align: right;
-        }
-        input[type=date] {
-            color: #e65100;
-            background-color: #eed7be;
-            border-top: none;
-            border-left: none;
-            border-right: none;
-            border-bottom: none;
-            height: 25px;
-            outline: none;
-            
-        }
-        .control {
-            color: #dd2c00;
-        }
-        .column {
-            color: #e65100;
-        }
-        i {
-            color: #e65100;
-        }
-    </style>
-  </head>
-  <body>
-  <section class="section">
-    <div class="container">
-      <div class="columns is-mobile">
-        <div class="column">
-          <div class="field1">
-            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
- width="40px" height="40px" text-align="left" viewBox="0 0 1000.000000 1000.000000">
-              <g transform="translate(0.000000,1000.000000) scale(0.100000,-0.100000)"
-fill="#000000" stroke="none">
-                <path d="M4665 9784 c-11 -1 -90 -10 -175 -19 -161 -17 -341 -46 -445 -72 -33
--8 -71 -17 -85 -20 -71 -13 -328 -97 -430 -140 -204 -86 -491 -240 -549 -295
--11 -10 -23 -18 -26 -18 -8 0 -154 -107 -177 -129 -9 -9 -42 -38 -74 -66 -95
--81 -259 -243 -273 -267 -11 -22 14 -49 481 -516 271 -270 495 -492 499 -492
-4 0 23 20 43 44 62 76 149 160 247 238 96 77 218 158 237 158 6 0 17 6 24 14
-47 47 383 166 528 187 35 5 67 13 70 17 8 11 43 13 356 18 268 5 301 4 410
--16 247 -44 403 -94 589 -187 111 -55 289 -170 356 -227 133 -116 167 -149
-240 -232 94 -108 188 -247 249 -369 23 -47 46 -85 50 -85 4 0 10 -19 13 -42 7
--55 52 -115 107 -144 l45 -24 550 0 551 0 45 28 c58 38 74 57 93 115 20 60 20
-69 -3 164 -63 262 -113 402 -234 657 -72 151 -67 141 -134 251 -29 48 -53 88
--53 91 0 2 -6 12 -14 21 -8 10 -48 63 -89 118 -103 139 -111 149 -297 336
--201 202 -364 327 -645 492 -118 70 -407 196 -543 238 -37 11 -97 30 -133 41
--37 11 -71 18 -77 14 -6 -3 -13 -2 -16 3 -10 16 -322 77 -466 91 -52 5 -138
-14 -190 20 -83 8 -601 12 -655 4z"/>
-                <path d="M4470 7081 c-19 -10 -36 -25 -38 -33 -4 -18 1252 -1273 1275 -1273 9
-0 26 16 37 35 20 34 21 51 24 560 2 353 0 541 -7 575 -13 58 -62 118 -116 140
--29 13 -127 15 -587 15 -521 0 -555 -1 -588 -19z"/>
-                <path d="M6935 6021 c-48 -22 -79 -54 -100 -103 -13 -32 -15 -112 -15 -576 0
--375 3 -549 11 -573 7 -19 28 -51 48 -72 63 -66 71 -67 637 -67 321 0 521 4
-553 11 36 7 61 21 90 49 70 68 71 75 71 650 0 562 -2 579 -62 637 -67 64 -52
-63 -650 62 -501 0 -546 -2 -583 -18z"/>
-              </g>
-              <g transform="translate(0.000000,1000.000000) scale(0.100000,-0.100000)"
-fill="#e65100" stroke="none">
-                <path d="M2335 8638 c-67 -82 -245 -336 -245 -352 0 -3 -12 -22 -26 -43 -14
--21 -54 -96 -89 -168 -230 -470 -345 -1006 -345 -1600 1 -505 66 -920 209
--1320 271 -762 853 -1396 1591 -1733 245 -112 545 -204 805 -247 55 -9 125
--20 155 -25 269 -44 811 -46 1138 -4 59 7 82 33 82 88 0 33 -8 55 -32 89 -36
-49 -186 236 -308 383 -41 50 -131 160 -200 244 -69 84 -185 225 -257 312 -73
-88 -139 167 -145 177 -24 33 -63 50 -138 60 -69 9 -228 50 -275 70 -11 5 -51
-21 -90 37 -436 176 -800 500 -987 876 -78 157 -119 280 -167 503 -58 264 -54
-676 10 975 55 256 200 568 347 745 17 22 32 44 32 50 0 15 -955 969 -974 973
--8 2 -47 -37 -91 -90z"/>
-                <path d="M4389 7003 l-24 -38 -3 -540 c-2 -371 0 -552 8 -578 14 -49 65 -106
-115 -128 37 -17 79 -19 579 -19 534 0 539 0 582 22 31 15 44 28 44 42 0 15
--198 220 -625 646 -343 344 -631 626 -639 628 -7 2 -24 -14 -37 -35z"/>
-                <path d="M5235 4491 c-56 -11 -70 -26 -70 -73 0 -32 8 -54 30 -84 28 -39 365
--426 391 -449 6 -5 67 -75 135 -154 68 -79 169 -194 224 -257 55 -62 156 -178
-225 -256 68 -79 162 -186 208 -238 47 -52 97 -108 111 -125 329 -377 339 -387
-478 -453 l78 -37 566 0 c543 0 568 1 588 19 44 40 26 98 -61 200 -60 71 -598
-684 -664 756 -17 19 -143 163 -280 320 -136 157 -253 290 -259 295 -6 6 -71
-80 -145 165 -183 212 -243 269 -331 313 -137 67 -137 67 -694 66 -275 -1 -513
--4 -530 -8z"/>
-              </g>
-            </svg>
-          </div>
-        </div>
-        <div class="column">
-          <div class="field2">
-            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
- width="43px" height="40px" viewBox="0 0 1000.000000 1000.000000">
-              <g transform="translate(0.000000,1000.000000) scale(0.100000,-0.100000)"
-fill="#c62828" stroke="none">
-              <path d="M430 7910 c-80 -4 -178 -11 -219 -15 l-74 -7 1327 -1327 1326 -1327
--360 -519 c-198 -286 -356 -521 -352 -523 5 -1 200 29 433 67 2648 438 4785
-947 6139 1463 626 239 999 447 1137 634 63 84 82 134 82 219 2 206 -179 341
--699 520 -813 279 -1969 494 -3375 625 -527 49 -655 61 -915 79 -773 57 -1552
-91 -2530 111 -554 12 -1380 13 -1380 2 0 -4 535 -542 1189 -1196 l1189 -1189
-113 7 c249 16 1043 85 1168 102 l44 6 -954 955 -954 955 545 -6 c2519 -27
-4820 -309 5915 -724 321 -122 365 -152 365 -249 0 -90 -115 -161 -428 -264
--1139 -372 -2763 -673 -4627 -858 -314 -32 -946 -86 -1125 -97 l-105 -6 -1279
-1286 -1278 1286 -87 -2 c-47 0 -151 -4 -231 -8z"/>
-              </g>
-            </svg>
-          </div>
-        </div>
-      </div>
-      <h1 class="title">
-        Info Quality Dept ASSY 2 Shift B
-      </h1>
-      <p class="subtitle">
-        <input type="text">
-        <input type="date">
-      </p>
-      <p class="subtitle">
-        Deffect Per Jalur
-      </p>
-      <div class="columns is-mobile">
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input class="input is-small is-danger" type="number">
-              <span class="icon is-small is-left">
-                <i>PTDL</i>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input class="input is-small is-danger" type="number">
-              <span class="icon is-small is-left">
-                <i>T0</i>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input class="input is-small is-danger" type="number">
-              <span class="icon is-small is-left">
-                <i>T12</i>
-              </span>
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="columns is-mobile">
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input class="input is-small is-danger" type="number">
-              <span class="icon is-small is-left">
-                <i>CH1</i>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input class="input is-small is-danger" type="number">
-              <span class="icon is-small is-left">
-                <i>CH2</i>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input class="input is-small is-danger" type="number">
-              <span class="icon is-small is-left">
-                <i>Final</i>
-              </span>
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="columns is-mobile">
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input class="input is-small is-danger" type="number">
-              <span class="icon is-small is-left">
-                <i>SPS</i>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input class="input is-small is-danger" type="number">
-              <span class="icon is-small is-left">
-                <i>JDT</i>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input class="input is-small is-danger" type="number">
-              <span class="icon is-small is-left">
-                <i>Other</i>
-              </span>
-            </p>
-          </div>
-        </div>
-      </div>
-      <p class="subtitle">
-        Temuan deffect per pos QG
-      </p>
-      <div class="columns is-mobile">
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input id="txt1" onkeyup="sum();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText1();">
-              <span class="icon is-small is-left">
-                <i>1E</i>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input id="txt2" onkeyup="sum();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText2();">
-              <span class="icon is-small is-left">
-                <i>1ER</i>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input id="txt3" onkeyup="sum();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText3();" required>
-              <span class="icon is-small is-left">
-                <i>1EL</i>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input id="txt4" onkeyup="sum();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText4();">
-              <span class="icon is-small is-left">
-                <i>1R</i>
-              </span>
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="columns is-mobile">
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input id="txt5" onkeyup="sum();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText5();">
-              <span class="icon is-small is-left">
-                <i>1L</i>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input id="txt6" onkeyup="sum();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText6();">
-              <span class="icon is-small is-left">
-                <i>1C</i>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input id="txt7" onkeyup="sum();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText7();">
-              <span class="icon is-small is-left">
-                <i>1B</i>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input id="txt8" onkeyup="sum();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText8();">
-              <span class="icon is-small is-left">
-                <i>2E</i>
-              </span>
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="columns is-mobile">
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input id="txt9" onkeyup="sum();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText9();">
-              <span class="icon is-small is-left">
-                <i>2R</i>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input id="txt10" onkeyup="sum();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText10();">
-              <span class="icon is-small is-left">
-                <i>2L</i>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input id="txt11" onkeyup="sum();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText11();">
-              <span class="icon is-small is-left">
-                <i>3F</i>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input id="txt12" onkeyup="sum();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText12();">
-              <span class="icon is-small is-left">
-                <i>3C</i>
-              </span>
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="columns is-mobile">
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input id="txt13" onkeyup="sum();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText13();">
-              <span class="icon is-small is-left">
-                <i>3B</i>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input id="txt14" onkeyup="sum();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText14();">
-              <span class="icon is-small is-left">
-                <i>3R1</i>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input id="txt15" onkeyup="sum();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText15();">
-              <span class="icon is-small is-left">
-                <i>3R2</i>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input id="txt16" onkeyup="sum();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText16();">
-              <span class="icon is-small is-left">
-                <i>SP1</i>
-              </span>
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="columns is-mobile">
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input id="txt17" onkeyup="sum();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText17();">
-              <span class="icon is-small is-left">
-                <i>4R</i>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input id="txt18" onkeyup="sum();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText18();">
-              <span class="icon is-small is-left">
-                <i>4L</i>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input id="txt19" onkeyup="sum();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText19();">
-              <span class="icon is-small is-left">
-                <i>4E</i>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input id="txt20" onkeyup="sum();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText20();">
-              <span class="icon is-small is-left">
-                <i>5UB</i>
-              </span>
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="columns is-mobile">
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input id="txt21" onkeyup="sum();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText21();">
-              <span class="icon is-small is-left">
-                <i>5F</i>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input id="txt22" onkeyup="sum();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText22();">
-              <span class="icon is-small is-left">
-                <i>5E</i>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input id="txt23" onkeyup="sum();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText23();">
-              <span class="icon is-small is-left">
-                <i>5R1</i>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input id="txt24" onkeyup="sum();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText24();">
-              <span class="icon is-small is-left">
-                <i>5R2</i>
-              </span>
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="columns is-mobile">
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input id="txt25" onkeyup="sum();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText25();">
-              <span class="icon is-small is-left">
-                <i>SP2</i>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input id="txt26" onkeyup="sum();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText26();">
-              <span class="icon is-small is-left">
-                <i>6R</i>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input id="txt27" onkeyup="sum();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText27();">
-              <span class="icon is-small is-left">
-                <i>6L</i>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input id="txt28" onkeyup="sum();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText28();">
-              <span class="icon is-small is-left">
-                <i>7</i>
-              </span>
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="columns is-mobile">
-        <div class="column"></div>
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input id="txt29" onkeyup="sum();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText29();" onblur="kembalikan29();">
-              <span class="icon is-small is-left">
-                <i>APP</i>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="column"></div>
-      </div>
-      
-      
-      <div class="columns is-mobile">
-        <div class="column">TOTAL</div>
-        <div class="column">
-          <div class="field">
-            <p class="control">
-            <input id="txt30" onkeyup="devide();" class="input is-small is-danger" type="number" value="0">
-            </p>
-          </div>
-        </div>
-        <div class="column"></div>
-        <div class="column"></div>
-        <div class="column"></div>
-      </div>
-      <div class="columns is-mobile">
-        <div class="column">UNIT</div>
-        <div class="column">
-          <div class="field">
-            <p class="control">
-            <input id="txt31" onkeyup="devide();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText31();">
-            </p>
-          </div>
-        </div>
-        <div class="column"></div>
-        <div class="column"></div>
-        <div class="column"></div>
-      </div>
-      <div class="columns is-mobile">
-        <div class="column">DPU</div>
-        <div class="column">
-          <div class="field">
-            <p class="control">
-            <input id="txt32" class="input is-small is-danger" type="number" value="0">
-            </p>
-          </div>
-        </div>
-        <div class="column"></div>
-        <div class="column"></div>
-        <div class="column"></div>
-      </div>
+ <head>  
+ </head> 
+ <body> 
+  <!-- Created by Darwin[21 Dec❤️] --> --&gt; 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>idul fitri</title> 
+  <style>
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
+/* Kaushan+Script, oregano, sail */
+ html, body, .container {
+   height: 100%;
+   font-family: 'Kaushan Script', 'Sail', cursive;
+}
+ body {
+   background: #e74;
+   overflow: hidden;
+   background-image: linear-gradient(to bottom, #190e14, #0d0d4b 30%, #c76075 80%, #e9b64b 95%);
+   background-image: radial-gradient(circle at center bottom, #e9b64b, #c76075 15%, #0d0d4b 75%, #190e14 90%);
+}
+ div#beach, canvas#canvas {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100vw;
+   height: 100%;
+}
+ div#beach {
+   background-image: url(masjid.png);
+  /* background-size: cover;
+   */
+   background-position: bottom right;
+   background-size: 400px;
+   background-repeat: no-repeat;
+}
+ div#video {
+   position: absolute;
+   right: 243px;
+   bottom: 200px;
+}
+ div#video iframe {
+   width: 255px;
+   height: 155px;
+}
+ #people {
+   position: absolute;
+   bottom: 65px;
+   left: 40px;
+   width: 40px;
+}
+ #car {
+   position: absolute;
+   bottom: 46px;
+   left: 180px;
+   width: 230px;
+}
+ div#sea {
+   background-color: blue;
+   height: 85px;
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 95%;
+   background-image: radial-gradient(circle at center top, #23485a, #0d0246);
+}
+ .merrywrap {
+   position: absolute;
+   right: 0px;
+   left: 0px;
+   bottom: 0px;
+   top: 0px;
+   background-color: #d44;
+   transition: background-color 0.5s ease;
+}
+ .giftbox {
+   position: absolute;
+   width: 200px;
+   height: 150px;
+   left: 50%;
+   margin-left: -150px;
+   bottom: 40px;
+   z-index: 10;
+  
+}
+ .giftbox > div {
+   background: #34495e;
+   position: absolute;
+}
+ .giftbox > div:after, .giftbox > div:before {
+   position: absolute;
+   content: "";
+   top: 0;
+}
+ .giftbox:after {
+   position: absolute;
+   color: #fff;
+   width: 100%;
+   content: "Click Me!";
+   left: 0;
+   bottom: 0;
+   font-size: 24px;
+   text-align: center;
+   transform: rotate(-20deg);
+   transform-origin: 0 0;
+}
+ .giftbox .cover {
+   width: 95%;
+   top: 0;
+   left: 0;
+   height: 25%;
+   z-index: 2;
+}
+ .giftbox .cover:before {
+   position: absolute;
+   height: 96%;
+   left: 50%;
+   width: 50px;
+   transform: translateX(-50%);
+   background: #fdc56d;
+}
+ .giftbox .cover > div {
+   position: absolute;
+   width: 50px;
+   height: 50px;
+   left: 50%;
+   top: -50px;
+   transform: translateX(-50%);
+}
+ .giftbox .cover > div:before, .giftbox .cover > div:after {
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   content: "";
+   box-shadow: inset 0 0 0 15px #fdc56d;
+   border-radius: 30px;
+   transform-origin: 50% 100%;
+}
+ .giftbox .cover > div:before {
+   transform: translateX(-45%) skewY(40deg);
+}
+ .giftbox .cover > div:after {
+   transform: translateX(45%) skewY(-40deg);
+}
+ .giftbox .box {
+   right: 5%;
+   left: 5%;
+   height: 80%;
+   bottom: 0;
+}
+ .giftbox .box:before {
+   width: 50px;
+   height: 100%;
+   left: 50%;
+   transform: translateX(-50%);
+   background: #fdc56d;
+}
+ .giftbox .box:after {
+   width: 100%;
+   height: 30px;
+   background: rgba(0, 0, 0, 0.2);
+}
+ .icons {
+   position: absolute;
+   left: 10px;
+  /*top:50%;
+   width: 100%;
+  */
+   height: auto;
+   transform: translateY(10px) rotate(0deg);
+}
+ .icons .row {
+   width: 100vw;
+   text-align: center;
+}
+ .icons .row span {
+   color: #e5e5e5;
+   text-shadow: 4px 4px 0 rgba(96, 125, 139, 0.4);
+   font-size: 30px;
+   display: inline-block;
+   opacity: 0;
+   transition: transform 0.5s ease-in, opacity 0.7s;
+}
+.icons .row span:nth-child(5) {
+   color: yellow;
+   text-shadow: 4px 4px 0 rgba(96, 125, 139, 0.4);
+   font-size: 30px;
+   display: inline-block;
+   opacity: 0;
+   transition: transform 0.5s ease-in, opacity 0.7s;
+}
+ .step-1 .giftbox {
+   animation: wobble 0.5s linear infinite forwards;
+}
+ .step-1 .cover {
+   animation: wobble 0.5s linear infinite 0.1s forwards;
+}
+ .step-1 .icons .row span {
+   opacity: 1;
+}
+ .step-2 .giftbox:after {
+   opacity: 0;
+}
+ .step-3 .giftbox, .step-4 .giftbox {
+   opacity: 0;
+   z-index: 1;
+}
+ .step-3 .giftbox:after, .step-4 .giftbox:after {
+   opacity: 0;
+}
+ .step-2 .giftbox .cover {
+   animation: flyUp 0.4s ease-in forwards;
+}
+ .step-2 .giftbox .box {
+   animation: flyDown 0.2s ease-in 0.05s forwards;
+}
+ @keyframes wobble {
+   25% {
+     transform: rotate(4deg);
+  }
+   75% {
+     transform: rotate(-2deg);
+  }
+}
+ @keyframes flyUp {
+   75% {
+     opacity: 1;
+  }
+   100% {
+     transform: translateY(-1000px) rotate(20deg);
+     opacity: 0;
+  }
+}
+ @keyframes flyDown {
+   75% {
+     opacity: 1;
+  }
+   100% {
+     transform: translateY(100%);
+     opacity: 0;
+  }
+}
+ .step-1 .icons .row span {
+   opacity: 0;
+}
+ .step-1 .icons .row span:first-child {
+   transform: translateY(700%) translateX(600%);
+}
+ .step-1 .icons .row span:nth-child(2) {
+   transform: translateY(700%) translateX(500%);
+}
+ .step-1 .icons .row span:nth-child(3) {
+   transform: translateY(700%) translateX(400%);
+}
+ .step-1 .icons .row span:nth-child(4) {
+   transform: translateY(700%) translateX(300%);
+}
+ .step-1 .icons .row span:nth-child(5) {
+   transform: translateY(700%) translateX(200%);
+}
+ .step-1 .icons .row span:nth-child(6) {
+   transform: translateY(700%) translateX(100%);
+}
+ .step-1 .icons .row span:nth-child(7) {
+   transform: translateY(700%) translateX(0);
+}
+ .step-1 .icons .row span:nth-child(8) {
+   transform: translateY(700%) translateX(-100%);
+}
+ .step-1 .icons .row span:nth-child(9) {
+   transform: translateY(700%) translateX(-200%);
+}
+ .step-1 .icons .row span:nth-child(10) {
+   transform: translateY(700%) translateX(-300%);
+}
+ .step-1 .icons .row span:nth-child(11) {
+   transform: translateY(700%) translateX(-400%);
+}
+ .step-1 .icons .row span:nth-child(12) {
+   transform: translateY(700%) translateX(-500%);
+}
+ .step-1 .icons .row span:nth-child(13) {
+   transform: translateY(700%) translateX(-600%);
+}
+ .step-2 .icons .row span:nth-child(2) {
+   -webkit-transition-delay: 0.1s;
+   transition-delay: 0.1s;
+}
+ .step-2 .icons .row span:nth-child(3) {
+   -webkit-transition-delay: 0.15s;
+   transition-delay: 0.15s;
+}
+ .step-2 .icons .row span:nth-child(4) {
+   -webkit-transition-delay: 0.2s;
+   transition-delay: 0.2s;
+}
+ .step-2 .icons .row span:nth-child(5) {
+   -webkit-transition-delay: 0.25s;
+   transition-delay: 0.25s;
+}
+ .step-2 .icons .row span:nth-child(6) {
+   -webkit-transition-delay: 0.3s;
+   transition-delay: 0.3s;
+}
+ .step-2 .icons .row span:nth-child(7) {
+   -webkit-transition-delay: 0.35s;
+   transition-delay: 0.35s;
+}
+ .step-2 .icons .row span:nth-child(8) {
+   -webkit-transition-delay: 0.4s;
+   transition-delay: 0.4s;
+}
+ .step-2 .icons .row span:nth-child(9) {
+   -webkit-transition-delay: 0.45s;
+   transition-delay: 0.45s;
+}
+ .step-2 .icons .row span:nth-child(10) {
+   -webkit-transition-delay: 0.5s;
+   transition-delay: 0.5s;
+}
+ .step-2 .icons .row span:nth-child(11) {
+   -webkit-transition-delay: 0.55s;
+   transition-delay: 0.55s;
+}
+ .step-2 .icons .row span:nth-child(12) {
+   -webkit-transition-delay: 0.6s;
+   transition-delay: 0.6s;
+}
+ .step-2 .icons .row span:nth-child(13) {
+   -webkit-transition-delay: 0.65s;
+   transition-delay: 0.65s;
+}
+ .step-2 .icons span, .step-3 .icons span, .step-4 .icons span {
+   opacity: 1;
+   transition-timing-function: cubic-bezier(0, 0, 0.2, 0.91);
+}
+ .step-4 .icons .row span, .step-3 .icons .row span {
+  /*animation: wobble 0.6s linear infinite forwards;
+  */
+   color: #c6e2ff;
+   animation: neon 0.08s ease-in-out infinite alternate;
+}
+ .step-4 .icons .row span:nth-child(even), .step-3 .icons .row span:nth-child(even) {
+   animation-duration: 0.7s;
+}
+ 
+ .moon {
+   position: absolute;
+   top: 10%;
+   right: 200px;
+   width: 100px;
+   height: 100px;
+   border-radius: 50%;
+   background: #ddd;
+   box-shadow: inset 20px -10px 0 0 #b9b9b9;
+}
+ .moon .crater1 {
+   position: absolute;
+   width: 30px;
+   height: 30px;
+   border-radius: 50%;
+   background: #bbb;
+   box-shadow: inset -3px 1.5px 0 0 #aaa;
+   top: 20px;
+   right: 20px;
+}
+ .moon .crater2 {
+   position: absolute;
+   width: 10px;
+   height: 10px;
+   border-radius: 50%;
+   background: #bbb;
+   box-shadow: inset -1px 0.5px 0 0 #aaa;
+   top: 45px;
+   right: 50px;
+}
+ .moon .crater3 {
+   position: absolute;
+   width: 15px;
+   height: 15px;
+   border-radius: 50%;
+   background: #bbb;
+   box-shadow: inset -1.5px 0.75px 0 0 #aaa;
+   top: 60px;
+   right: 25px;
+}
+ @media (min-width: 1000px) {
+   .icons {
+     left: 30px;
+  }
+   .icons .row span {
+     font-size: 40px;
+  }
+   #people {
+     left: 80px;
+     bottom: 70px;
+     width: 160px;
+  }
+   div#beach {
+     background-size: 2000px;
+  }
+   div#video {
+     right: 290px;
+     bottom: 235px;
+  }
+   div#video iframe {
+     width: 295px;
+     height: 185px;
+  }
+   .moon {
+     right: 230px;
+  }
+}
+ 
+  </style> 
+  <div class="moon"> 
+   <div class="crater1"></div> 
+   <div class="crater2"></div> 
+   <div class="crater3"></div> 
+  </div> 
+  <canvas id="canvas"></canvas> 
+  <div id=""></div> 
+  <div id="beach"></div> 
+  <!--<img src="masijd.png" alt="jumping-people" id="people">-->
+  <!--<img src="https://dl.dropbox.com/s/zoftkmdxyyqr8ce/belair.png" alt="jumping-people" id="car" />-->
+  <div id="merrywrap" class="merrywrap"> 
+   <div class="giftbox"> 
+    <div class="cover"> 
+     <div></div> 
+    </div> 
+    <div class="box"></div> 
+   </div> 
+   <div class="icons"> 
+    <div class="row"> 
+     <span> Haryono Sekeluarga</span> 
+    </div> 
+    <div class="row"> 
+     <span>Mengucapkan</span> 
+    </div> 
+    <div class="row"> 
+     <span><img width="100px" src="ketupat.png"></span> 
+    </div> 
+    <div class="row"> 
+     <span></span> 
+     <span>Selamat hari raya</span> 
+    </div> 
+    <div class="row"> 
+     <span>IDUL FITRI</span> 
+    </div> 
+    <div class="row"> 
+     <span>1 syawal 1442H</span> 
+    </div> 
+    <div class="row"> 
+     <span>Minal aidin wal aidzin</span> 
     </div>
-  </section>
-  
-  
-<script>
-function sum() {
-      var txtSatu = document.getElementById('txt1').value;
-      var txtDua = document.getElementById('txt2').value;
-      var txtTiga = document.getElementById('txt3').value;
-      var txtEmpat = document.getElementById('txt4').value;
-      var txtLima = document.getElementById('txt5').value;
-      var txtEnam = document.getElementById('txt6').value;
-      var txtTuju = document.getElementById('txt7').value;
-      var txtDelapan = document.getElementById('txt8').value;
-      var txtSembilan = document.getElementById('txt9').value;
-      var txtSepuluh = document.getElementById('txt10').value;
-      var txtSeBelas = document.getElementById('txt11').value;
-      var txtDuaBelas = document.getElementById('txt12').value;
-      var txtTigaBelas = document.getElementById('txt13').value;
-      var txtEmpatBelas = document.getElementById('txt14').value;
-      var txtLimaBelas = document.getElementById('txt15').value;
-      var txtEnamBelas = document.getElementById('txt16').value;
-      var txtTujuBelas = document.getElementById('txt17').value;
-      var txtDelapanBelas = document.getElementById('txt18').value;
-      var txtSembilanBelas = document.getElementById('txt19').value;
-      var txtDuapuluh = document.getElementById('txt20').value;
-      var txtDuapuluhSatu = document.getElementById('txt21').value;
-      var txtDuapuluhDua = document.getElementById('txt22').value;
-      var txtDuapuluhTiga = document.getElementById('txt23').value;
-      var txtDuapuluhEmpat = document.getElementById('txt24').value;
-      var txtDuapuluhLima = document.getElementById('txt25').value;
-      var txtDuapuluhEnam = document.getElementById('txt26').value;
-      var txtDuapuluhTuju = document.getElementById('txt27').value;
-      var txtDuapuluhDelapan = document.getElementById('txt28').value;
-      var txtDuapuluhSembilan = document.getElementById('txt29').value;
+    <div class="row"> 
+     <span>Mohon maaf Lahir & Batin</span> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="video"> 
+   <iframe width="225" height="145" src="" frameborder="0" allowfullscreen></iframe>
+  </div> 
+  <script>
     
-      var result = parseFloat(txtSatu) + parseFloat(txtDua) + parseFloat(txtTiga) + parseFloat(txtEmpat) + parseFloat(txtLima) + parseFloat(txtEnam) + parseFloat(txtTuju) + parseFloat(txtDelapan) + parseFloat(txtSembilan) + parseFloat(txtSepuluh) + parseFloat(txtSeBelas) + parseFloat(txtDuaBelas) + parseFloat(txtTigaBelas) + parseFloat(txtEmpatBelas) + parseFloat(txtLimaBelas) + parseFloat(txtEnamBelas) + parseFloat(txtTujuBelas) + parseFloat(txtDelapanBelas) + parseFloat(txtSembilanBelas) + parseFloat(txtDuapuluh) + parseFloat(txtDuapuluhSatu) + parseFloat(txtDuapuluhDua) + parseFloat(txtDuapuluhTiga) + parseFloat(txtDuapuluhEmpat) + parseFloat(txtDuapuluhLima) + parseFloat(txtDuapuluhEnam) + parseFloat(txtDuapuluhTuju) + parseFloat(txtDuapuluhDelapan) + parseFloat(txtDuapuluhSembilan);
-      if (!isNaN(result)) {
-         document.getElementById('txt30').value = result;
-      }
-}
+     
+      window.requestAnimFrame = ( function() {
+        return window.requestAnimationFrame ||
+              window.webkitRequestAnimationFrame ||
+              window.mozRequestAnimationFrame ||
+              function( callback ) {
+                window.setTimeout( callback, 1000 / 60 );
+              };
+      })();
 
-function devide(){
-      var txtTigapuluh = document.getElementById('txt30').value;
-      var txtTigapuluhSatu = document.getElementById('txt31').value;
+      // now we will setup our basic variables for the demo
+      var canvas = document.getElementById( 'canvas' ),
+          ctx = canvas.getContext( '2d' ),
+          // full screen dimensions
+          cw = window.innerWidth,
+          ch = window.innerHeight,
+          // firework collection
+          fireworks = [],
+          // particle collection
+          particles = [],
+          // starting hue
+          hue = 120,
+          // when launching fireworks with a click, too many get launched at once without a limiter, one launch per 5 loop ticks
+          limiterTotal = 5,
+          limiterTick = 0,
+          // this will time the auto launches of fireworks, one launch per 80 loop ticks
+          timerTotal = 80,
+          timerTick = 0,
+          mousedown = false,
+          // mouse x coordinate,
+          mx,
+          // mouse y coordinate
+          my;
+          
+      // set canvas dimensions
+      canvas.width = cw;
+      canvas.height = ch;
+
+      // now we are going to setup our function placeholders for the entire demo
+
+      // get a random number within a range
+      function random( min, max ) {
+        return Math.random() * ( max - min ) + min;
+      }
+
+      // calculate the distance between two points
+      function calculateDistance( p1x, p1y, p2x, p2y ) {
+        var xDistance = p1x - p2x,
+            yDistance = p1y - p2y;
+        return Math.sqrt( Math.pow( xDistance, 2 ) + Math.pow( yDistance, 2 ) );
+      }
+
+      // create firework
+      function Firework( sx, sy, tx, ty ) {
+        // actual coordinates
+        this.x = sx;
+        this.y = sy;
+        // starting coordinates
+        this.sx = sx;
+        this.sy = sy;
+        // target coordinates
+        this.tx = tx;
+        this.ty = ty;
+        // distance from starting point to target
+        this.distanceToTarget = calculateDistance( sx, sy, tx, ty );
+        this.distanceTraveled = 0;
+        // track the past coordinates of each firework to create a trail effect, increase the coordinate count to create more prominent trails
+        this.coordinates = [];
+        this.coordinateCount = 3;
+        // populate initial coordinate collection with the current coordinates
+        while( this.coordinateCount-- ) {
+          this.coordinates.push( [ this.x, this.y ] );
+        }
+        this.angle = Math.atan2( ty - sy, tx - sx );
+        this.speed = 2;
+        this.acceleration = 1.05;
+        this.brightness = random( 50, 70 );
+        // circle target indicator radius
+        this.targetRadius = 1;
+      }
+
+      // update firework
+      Firework.prototype.update = function( index ) {
+        // remove last item in coordinates array
+        this.coordinates.pop();
+        // add current coordinates to the start of the array
+        this.coordinates.unshift( [ this.x, this.y ] );
+        
+        // cycle the circle target indicator radius
+        if( this.targetRadius < 8 ) {
+          this.targetRadius += 0.3;
+        } else {
+          this.targetRadius = 1;
+        }
+        
+        // speed up the firework
+        this.speed *= this.acceleration;
+        
+        // get the current velocities based on angle and speed
+        var vx = Math.cos( this.angle ) * this.speed,
+            vy = Math.sin( this.angle ) * this.speed;
+        // how far will the firework have traveled with velocities applied?
+        this.distanceTraveled = calculateDistance( this.sx, this.sy, this.x + vx, this.y + vy );
+        
+        // if the distance traveled, including velocities, is greater than the initial distance to the target, then the target has been reached
+        if( this.distanceTraveled >= this.distanceToTarget ) {
+          createParticles( this.tx, this.ty );
+          // remove the firework, use the index passed into the update function to determine which to remove
+          fireworks.splice( index, 1 );
+        } else {
+          // target not reached, keep traveling
+          this.x += vx;
+          this.y += vy;
+        }
+      }
+
+      // draw firework
+      Firework.prototype.draw = function() {
+        ctx.beginPath();
+        // move to the last tracked coordinate in the set, then draw a line to the current x and y
+        ctx.moveTo( this.coordinates[ this.coordinates.length - 1][ 0 ], this.coordinates[ this.coordinates.length - 1][ 1 ] );
+        ctx.lineTo( this.x, this.y );
+        ctx.strokeStyle = 'hsl(' + hue + ', 100%, ' + this.brightness + '%)';
+        ctx.stroke();
+        
+        ctx.beginPath();
+        // draw the target for this firework with a pulsing circle
+        ctx.arc( this.tx, this.ty, this.targetRadius, 0, Math.PI * 2 );
+        ctx.stroke();
+      }
+
+      // create particle
+      function Particle( x, y ) {
+        this.x = x;
+        this.y = y;
+        // track the past coordinates of each particle to create a trail effect, increase the coordinate count to create more prominent trails
+        this.coordinates = [];
+        this.coordinateCount = 5;
+        while( this.coordinateCount-- ) {
+          this.coordinates.push( [ this.x, this.y ] );
+        }
+        // set a random angle in all possible directions, in radians
+        this.angle = random( 0, Math.PI * 2 );
+        this.speed = random( 1, 10 );
+        // friction will slow the particle down
+        this.friction = 0.95;
+        // gravity will be applied and pull the particle down
+        this.gravity = 1;
+        // set the hue to a random number +-20 of the overall hue variable
+        this.hue = random( hue - 20, hue + 20 );
+        this.brightness = random( 50, 80 );
+        this.alpha = 1;
+        // set how fast the particle fades out
+        this.decay = random( 0.015, 0.03 );
+      }
+
+      // update particle
+      Particle.prototype.update = function( index ) {
+        // remove last item in coordinates array
+        this.coordinates.pop();
+        // add current coordinates to the start of the array
+        this.coordinates.unshift( [ this.x, this.y ] );
+        // slow down the particle
+        this.speed *= this.friction;
+        // apply velocity
+        this.x += Math.cos( this.angle ) * this.speed;
+        this.y += Math.sin( this.angle ) * this.speed + this.gravity;
+        // fade out the particle
+        this.alpha -= this.decay;
+        
+        // remove the particle once the alpha is low enough, based on the passed in index
+        if( this.alpha <= this.decay ) {
+          particles.splice( index, 1 );
+        }
+      }
+
+      // draw particle
+      Particle.prototype.draw = function() {
+        ctx. beginPath();
+        // move to the last tracked coordinates in the set, then draw a line to the current x and y
+        ctx.moveTo( this.coordinates[ this.coordinates.length - 1 ][ 0 ], this.coordinates[ this.coordinates.length - 1 ][ 1 ] );
+        ctx.lineTo( this.x, this.y );
+        ctx.strokeStyle = 'hsla(' + this.hue + ', 100%, ' + this.brightness + '%, ' + this.alpha + ')';
+        ctx.stroke();
+      }
+
+      // create particle group/explosion
+      function createParticles( x, y ) {
+        // increase the particle count for a bigger explosion, beware of the canvas performance hit with the increased particles though
+        var particleCount = 30;
+        while( particleCount-- ) {
+          particles.push( new Particle( x, y ) );
+        }
+      }
+
+      // main demo loop
+      function loop() {
+        // this function will run endlessly with requestAnimationFrame
+        requestAnimFrame( loop );
+        
+        // increase the hue to get different colored fireworks over time
+        hue += 0.5;
+        
+        // normally, clearRect() would be used to clear the canvas
+        // we want to create a trailing effect though
+        // setting the composite operation to destination-out will allow us to clear the canvas at a specific opacity, rather than wiping it entirely
+        ctx.globalCompositeOperation = 'destination-out';
+        // decrease the alpha property to create more prominent trails
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.5)';
+        ctx.fillRect( 0, 0, cw, ch );
+        // change the composite operation back to our main mode
+        // lighter creates bright highlight points as the fireworks and particles overlap each other
+        ctx.globalCompositeOperation = 'lighter';
+        
+        // loop over each firework, draw it, update it
+        var i = fireworks.length;
+        while( i-- ) {
+          fireworks[ i ].draw();
+          fireworks[ i ].update( i );
+        }
+        
+        // loop over each particle, draw it, update it
+        var i = particles.length;
+        while( i-- ) {
+          particles[ i ].draw();
+          particles[ i ].update( i );
+        }
+        
+        // launch fireworks automatically to random coordinates, when the mouse isn't down
+        if( timerTick >= timerTotal ) {
+          if( !mousedown ) {
+            // start the firework at the bottom middle of the screen, then set the random target coordinates, the random y coordinates will be set within the range of the top half of the screen
+            fireworks.push( new Firework( cw / 2, ch, random( 0, cw ), random( 0, ch / 2 ) ) );
+            timerTick = 0;
+          }
+        } else {
+          timerTick++;
+        }
+        
+        // limit the rate at which fireworks get launched when mouse is down
+        if( limiterTick >= limiterTotal ) {
+          if( mousedown ) {
+            // start the firework at the bottom middle of the screen, then set the current mouse coordinates as the target
+            fireworks.push( new Firework( cw / 2, ch, mx, my ) );
+            limiterTick = 0;
+          }
+        } else {
+          limiterTick++;
+        }
+      }
+
+      window.onload=function(){
+      var merrywrap=document.getElementById("merrywrap");
+      var box=merrywrap.getElementsByClassName("giftbox")[0];
+      var step=1;
+      var stepMinutes=[2000,2000,1000,1000];
+      function init(){
+          box.addEventListener("click",openBox,false);
+      }
+      function stepClass(step){
+        merrywrap.className='merrywrap';
+        merrywrap.className='merrywrap step-'+step;
+      }
+      function openBox(){
+        if(step===1){
+        box.removeEventListener("click",openBox,false); 
+        }  
+        stepClass(step); 
+        if(step===3){ 
+        } 
+        if(step===4){
+          reveal();
+        return;
+        }   
+        setTimeout(openBox,stepMinutes[step-1]);
+        step++;  
+      }
       
-      var hasil = parseFloat(txtTigapuluh) / parseFloat(txtTigapuluhSatu);
-      if (!isNaN(hasil)) {
-          document.getElementById('txt32').value = hasil;
+      init();
+      
       }
-}
 
-function eraseText1() {
-    document.getElementById("txt1").value ="";
-}
-
-function eraseText2() {
-    document.getElementById("txt2").value = "";
-	}
-	
-function eraseText3() {
-    document.getElementById("txt3").value ="";
-}
-
-function eraseText4() {
-    document.getElementById("txt4").value ="";
-}
-
-function eraseText5() {
-    document.getElementById("txt5").value ="";
-}
-
-function eraseText6() {
-    document.getElementById("txt6").value ="";
-}
-
-function eraseText7() {
-    document.getElementById("txt7").value ="";
-}
-
-function eraseText8() {
-    document.getElementById("txt8").value ="";
-}
-
-function eraseText9() {
-    document.getElementById("txt9").value ="";
-}
-
-function eraseText10() {
-    document.getElementById("txt10").value ="";
-}
-
-function eraseText11() {
-    document.getElementById("txt11").value ="";
-}
-
-function eraseText12() {
-    document.getElementById("txt12").value ="";
-}
-
-function eraseText13() {
-    document.getElementById("txt13").value ="";
-}
-
-function eraseText14() {
-    document.getElementById("txt14").value ="";
-}
-
-function eraseText15() {
-    document.getElementById("txt15").value ="";
-}
-
-function eraseText16() {
-    document.getElementById("txt16").value ="";
-}
-
-function eraseText17() {
-    document.getElementById("txt17").value ="";
-}
-
-function eraseText18() {
-    document.getElementById("txt18").value ="";
-}
-
-function eraseText19() {
-    document.getElementById("txt19").value ="";
-}
-
-function eraseText20() {
-    document.getElementById("txt20").value ="";
-}
-
-function eraseText21() {
-    document.getElementById("txt21").value ="";
-}
-
-function eraseText22() {
-    document.getElementById("txt22").value ="";
-}
-
-function eraseText23() {
-    document.getElementById("txt23").value ="";
-}
-
-function eraseText24() {
-    document.getElementById("txt24").value ="";
-}
-
-function eraseText25() {
-    document.getElementById("txt25").value ="";
-}
-
-function eraseText26() {
-    document.getElementById("txt26").value ="";
-}
-
-function eraseText27() {
-    document.getElementById("txt27").value ="";
-}
-
-function eraseText28() {
-    document.getElementById("txt28").value ="";
-}
-
-function eraseText29() {
-    document.getElementById("txt29").value ="";
-}
-
-function eraseText31() {
-    document.getElementById("txt31").value ="";
-}
-
-</script>
-  </body>
+      function reveal() {
+      document.querySelector('.merrywrap').style.backgroundColor = 'transparent';
+      
+      loop();
+      
+      var w, h;
+      if(window.innerWidth >= 1000) {
+        w = 295; h = 185;
+      }
+      else {
+        w = 255; h = 155;
+         }
+      }
+    </script> 
+  <div id="clab"> 
+   <div id="loader"> 
+    <div class="loading"> 
+     <span> LOADING....</span> 
+    </div> 
+   </div> 
+  </div>   
+ </body>
 </html>
