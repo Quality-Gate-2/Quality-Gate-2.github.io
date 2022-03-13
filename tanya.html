@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Haiii</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="uikit.min.css" />
+        <script src="uikit.min.js"></script>
+        <script src="uikit-icons.min.js"></script>
+    </head>
+    <body>
+
+        <div class="uk-text-center">
+            <h1>Hai cantikkkk</h1>
+        <img src="https://media1.giphy.com/media/a9QBC2aru310k/giphy.gif?cid=790b7611533f054e8ed4a6db457afc4597adb3b40abf1d8b&rid=giphy.gif&ct=g">
+        <h1>Kangen Gak Sama Aku?</h1>
+        <br>
+<a id='btn_mau' class="uk-button uk-button-primary " href="https://api.whatsapp.com/send?phone=6288211442328&text=Hai%20Aku%20Kangen%20Kamu%20Pengen%20Telpon" onclick="alert('Iya Kangen');">Aku Kangen</a>&nbsp; &nbsp; &nbsp; &nbsp;
+<button class="uk-button uk-button-danger uk-position-absolute" id='btn_gamau' onclick='gamau(this)' >GaK Kangen</button>
+        </div>
+    </body>
+    <script>
+        function gamau(id){
+            var mau = document.getElementById('btn_mau');
+            var i = Math.floor(Math.random()*300)+1;
+            var j = Math.floor(Math.random()*100)+mau.offsetTop;
+            id.style.left = i+'px';
+            id.style.top = j+'px';
+        }
+    </script>
+</html>
