@@ -1,797 +1,372 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#000"/>
-    <title>Kalkulator DPU</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
-    <style>
-        html {
-            background-color: #000;
-        }
-        .section {
-            margin-top: 5px;
-            margin-left: 5px;
-            margin-right: 5px;
-            background: #ff2121;
-background: -moz-linear-gradient(top, #ff2121 0%, #ffffff 100%);
-background: -webkit-linear-gradient(top, #ff2121 0%, #ffffff 100%);
-background: linear-gradient(to bottom, #ff2121 0%, #ffffff 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff2121', endColorstr='#ffffff',GradientType=0 );
-                                
-            border: 1px solid #FFD2D2;
-            border-radius: 10px;
-            min-height: 80vh;
-        }
-        .field1,
-        .field2 {
-            margin-top: -20px;
-        }
-        .field2 {
-            text-align: right;
-        }
-        .title {
-            text-align: center;
-            font-size: 20px;
-            margin-top: -30px;
-            color: #000;
-        }
-        .subtitle {
-            margin-top: -20px;
-            color: #000;
-            font-size: 14px;
-        }
-        .columns {
-            margin-top: -30px;
-        }
-        input[type=text] {
-            color: #e65100;
-            background-color: #eed7be;
-            border-top: none;
-            border-left: none;
-            border-right: none;
-            border-bottom: none;
-            height: 25px;
-            outline: none;
-            width: 50px;
-        }
-        input[type=number] {
-            color: #e65100;
-            background: #ffe0b2;
-            border-radius: 5px;
-            height: 25px;
-            text-align: right;
-        }
-        input[type=date] {
-            color: #e65100;
-            background-color: #eed7be;
-            border-top: none;
-            border-left: none;
-            border-right: none;
-            border-bottom: none;
-            height: 25px;
-            outline: none;
-            
-        }
-        .control {
-            color: #dd2c00;
-        }
-        .column {
-            color: #e65100;
-        }
-        i {
-            color: #e65100;
-        }
-    </style>
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
   <body>
-  <section class="section">
-    <div class="container">
-      <div class="columns is-mobile">
-        <div class="column">
-          <div class="field1">
-            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
- width="40px" height="40px" text-align="left" viewBox="0 0 1000.000000 1000.000000">
-              <g transform="translate(0.000000,1000.000000) scale(0.100000,-0.100000)"
-fill="#000000" stroke="none">
-                <path d="M4665 9784 c-11 -1 -90 -10 -175 -19 -161 -17 -341 -46 -445 -72 -33
--8 -71 -17 -85 -20 -71 -13 -328 -97 -430 -140 -204 -86 -491 -240 -549 -295
--11 -10 -23 -18 -26 -18 -8 0 -154 -107 -177 -129 -9 -9 -42 -38 -74 -66 -95
--81 -259 -243 -273 -267 -11 -22 14 -49 481 -516 271 -270 495 -492 499 -492
-4 0 23 20 43 44 62 76 149 160 247 238 96 77 218 158 237 158 6 0 17 6 24 14
-47 47 383 166 528 187 35 5 67 13 70 17 8 11 43 13 356 18 268 5 301 4 410
--16 247 -44 403 -94 589 -187 111 -55 289 -170 356 -227 133 -116 167 -149
-240 -232 94 -108 188 -247 249 -369 23 -47 46 -85 50 -85 4 0 10 -19 13 -42 7
--55 52 -115 107 -144 l45 -24 550 0 551 0 45 28 c58 38 74 57 93 115 20 60 20
-69 -3 164 -63 262 -113 402 -234 657 -72 151 -67 141 -134 251 -29 48 -53 88
--53 91 0 2 -6 12 -14 21 -8 10 -48 63 -89 118 -103 139 -111 149 -297 336
--201 202 -364 327 -645 492 -118 70 -407 196 -543 238 -37 11 -97 30 -133 41
--37 11 -71 18 -77 14 -6 -3 -13 -2 -16 3 -10 16 -322 77 -466 91 -52 5 -138
-14 -190 20 -83 8 -601 12 -655 4z"/>
-                <path d="M4470 7081 c-19 -10 -36 -25 -38 -33 -4 -18 1252 -1273 1275 -1273 9
-0 26 16 37 35 20 34 21 51 24 560 2 353 0 541 -7 575 -13 58 -62 118 -116 140
--29 13 -127 15 -587 15 -521 0 -555 -1 -588 -19z"/>
-                <path d="M6935 6021 c-48 -22 -79 -54 -100 -103 -13 -32 -15 -112 -15 -576 0
--375 3 -549 11 -573 7 -19 28 -51 48 -72 63 -66 71 -67 637 -67 321 0 521 4
-553 11 36 7 61 21 90 49 70 68 71 75 71 650 0 562 -2 579 -62 637 -67 64 -52
-63 -650 62 -501 0 -546 -2 -583 -18z"/>
-              </g>
-              <g transform="translate(0.000000,1000.000000) scale(0.100000,-0.100000)"
-fill="#000" stroke="none">
-                <path d="M2335 8638 c-67 -82 -245 -336 -245 -352 0 -3 -12 -22 -26 -43 -14
--21 -54 -96 -89 -168 -230 -470 -345 -1006 -345 -1600 1 -505 66 -920 209
--1320 271 -762 853 -1396 1591 -1733 245 -112 545 -204 805 -247 55 -9 125
--20 155 -25 269 -44 811 -46 1138 -4 59 7 82 33 82 88 0 33 -8 55 -32 89 -36
-49 -186 236 -308 383 -41 50 -131 160 -200 244 -69 84 -185 225 -257 312 -73
-88 -139 167 -145 177 -24 33 -63 50 -138 60 -69 9 -228 50 -275 70 -11 5 -51
-21 -90 37 -436 176 -800 500 -987 876 -78 157 -119 280 -167 503 -58 264 -54
-676 10 975 55 256 200 568 347 745 17 22 32 44 32 50 0 15 -955 969 -974 973
--8 2 -47 -37 -91 -90z"/>
-                <path d="M4389 7003 l-24 -38 -3 -540 c-2 -371 0 -552 8 -578 14 -49 65 -106
-115 -128 37 -17 79 -19 579 -19 534 0 539 0 582 22 31 15 44 28 44 42 0 15
--198 220 -625 646 -343 344 -631 626 -639 628 -7 2 -24 -14 -37 -35z"/>
-                <path d="M5235 4491 c-56 -11 -70 -26 -70 -73 0 -32 8 -54 30 -84 28 -39 365
--426 391 -449 6 -5 67 -75 135 -154 68 -79 169 -194 224 -257 55 -62 156 -178
-225 -256 68 -79 162 -186 208 -238 47 -52 97 -108 111 -125 329 -377 339 -387
-478 -453 l78 -37 566 0 c543 0 568 1 588 19 44 40 26 98 -61 200 -60 71 -598
-684 -664 756 -17 19 -143 163 -280 320 -136 157 -253 290 -259 295 -6 6 -71
-80 -145 165 -183 212 -243 269 -331 313 -137 67 -137 67 -694 66 -275 -1 -513
--4 -530 -8z"/>
-              </g>
-            </svg>
-          </div>
-        </div>
-        <div class="column">
-          <div class="field2">
-            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
- width="43px" height="40px" viewBox="0 0 1000.000000 1000.000000">
-              <g transform="translate(0.000000,1000.000000) scale(0.100000,-0.100000)"
-fill="#000" stroke="none">
-              <path d="M430 7910 c-80 -4 -178 -11 -219 -15 l-74 -7 1327 -1327 1326 -1327
--360 -519 c-198 -286 -356 -521 -352 -523 5 -1 200 29 433 67 2648 438 4785
-947 6139 1463 626 239 999 447 1137 634 63 84 82 134 82 219 2 206 -179 341
--699 520 -813 279 -1969 494 -3375 625 -527 49 -655 61 -915 79 -773 57 -1552
-91 -2530 111 -554 12 -1380 13 -1380 2 0 -4 535 -542 1189 -1196 l1189 -1189
-113 7 c249 16 1043 85 1168 102 l44 6 -954 955 -954 955 545 -6 c2519 -27
-4820 -309 5915 -724 321 -122 365 -152 365 -249 0 -90 -115 -161 -428 -264
--1139 -372 -2763 -673 -4627 -858 -314 -32 -946 -86 -1125 -97 l-105 -6 -1279
-1286 -1278 1286 -87 -2 c-47 0 -151 -4 -231 -8z"/>
-              </g>
-            </svg>
-          </div>
-        </div>
+    <div class="card text-center">
+     <div class="card-header">
+    Update DPU Dome Running
+     </div>
+     <div class="card-body">
+     <div class="row">
+      <div class="col form-floating mb-3">
+        <input type="number" class="form-control form-control-sm" id="date"  placeholder="First name" aria-label="First name" onkeyup="sum();">
+        <label for="floatingInput">
+           Tanggal
+        </label>
       </div>
-      <h1 class="title">
-        Info Quality Dept ASSY 2 Shift B
-      </h1>
-      <p class="subtitle">
-        <input type="text">
-        <input type="date">
-      </p>
-      <p class="subtitle">
-        Deffect Per Jalur
-      </p>
-      <div class="columns is-mobile">
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input class="input is-small is-danger" type="number">
-              <span class="icon is-small is-left">
-                <i>PTDL</i>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input class="input is-small is-danger" type="number">
-              <span class="icon is-small is-left">
-                <i>T0</i>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input class="input is-small is-danger" type="number">
-              <span class="icon is-small is-left">
-                <i>T12</i>
-              </span>
-            </p>
-          </div>
-        </div>
+      <div class="col form-floating">
+
       </div>
-      <div class="columns is-mobile">
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input class="input is-small is-danger" type="number">
-              <span class="icon is-small is-left">
-                <i>CH1</i>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input class="input is-small is-danger" type="number">
-              <span class="icon is-small is-left">
-                <i>CH2</i>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input class="input is-small is-danger" type="number">
-              <span class="icon is-small is-left">
-                <i>Final</i>
-              </span>
-            </p>
-          </div>
-        </div>
+     </div>
+     <div class="row">
+      <div class="col form-floating mb-3">
+        <input type="number" class="form-control form-control-sm" id="floatingInput1"  placeholder="First name" aria-label="First name" onkeyup="sum();">
+        <label for="floatingInput">
+           Unit Out Final
+        </label>
       </div>
-      <div class="columns is-mobile">
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input class="input is-small is-danger" type="number">
-              <span class="icon is-small is-left">
-                <i>SPS</i>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input class="input is-small is-danger" type="number">
-              <span class="icon is-small is-left">
-                <i>JDT</i>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input class="input is-small is-danger" type="number">
-              <span class="icon is-small is-left">
-                <i>Other</i>
-              </span>
-            </p>
-          </div>
-        </div>
+      <div class="col form-floating">
+        <input type="number" class="form-control" id="floatingInput2" placeholder="Last name" aria-label="Last name" onkeyup="sum();">
+        <label for="floatingInput">
+            Unit Check QRC
+        </label>
       </div>
-      <p class="subtitle">
-        Temuan deffect per pos QG
-      </p>
-      <div class="columns is-mobile">
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input id="txt1" onkeyup="sum();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText1();">
-              <span class="icon is-small is-left">
-                <i>1E</i>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input id="txt2" onkeyup="sum();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText2();">
-              <span class="icon is-small is-left">
-                <i>1ER</i>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input id="txt3" onkeyup="sum();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText3();" required>
-              <span class="icon is-small is-left">
-                <i>1EL</i>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input id="txt4" onkeyup="sum();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText4();">
-              <span class="icon is-small is-left">
-                <i>1R</i>
-              </span>
-            </p>
-          </div>
-        </div>
+     </div>
+     <div class="row">
+      <div class="col form-floating mb-3">
+        <input type="number" class="form-control" id="floatingInput3"  placeholder="First name" aria-label="First name" value="0" onfocus="eraseText1();" onkeyup="sum();">
+        <label for="floatingInput">
+           Unit Running WIP
+        </label>
       </div>
-      <div class="columns is-mobile">
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input id="txt5" onkeyup="sum();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText5();">
-              <span class="icon is-small is-left">
-                <i>1L</i>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input id="txt6" onkeyup="sum();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText6();">
-              <span class="icon is-small is-left">
-                <i>1C</i>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input id="txt7" onkeyup="sum();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText7();">
-              <span class="icon is-small is-left">
-                <i>1B</i>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input id="txt8" onkeyup="sum();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText8();">
-              <span class="icon is-small is-left">
-                <i>2E</i>
-              </span>
-            </p>
-          </div>
-        </div>
+      <div class="col form-floating">
       </div>
-      <div class="columns is-mobile">
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input id="txt9" onkeyup="sum();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText9();">
-              <span class="icon is-small is-left">
-                <i>2R</i>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input id="txt10" onkeyup="sum();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText10();">
-              <span class="icon is-small is-left">
-                <i>2L</i>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input id="txt11" onkeyup="sum();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText11();">
-              <span class="icon is-small is-left">
-                <i>3F</i>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input id="txt12" onkeyup="sum();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText12();">
-              <span class="icon is-small is-left">
-                <i>3C</i>
-              </span>
-            </p>
-          </div>
-        </div>
+     </div>
+     <div class="row">
+      <div class="col form-floating mb-3">
+        <input type="number" class="form-control" id="floatingInput4"  placeholder="First name" aria-label="First name" onkeyup="sum();">
+        <label for="floatingInput">
+           Total Temuan RH
+        </label>
       </div>
-      <div class="columns is-mobile">
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input id="txt13" onkeyup="sum();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText13();">
-              <span class="icon is-small is-left">
-                <i>3B</i>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input id="txt14" onkeyup="sum();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText14();">
-              <span class="icon is-small is-left">
-                <i>3R1</i>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input id="txt15" onkeyup="sum();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText15();">
-              <span class="icon is-small is-left">
-                <i>3R2</i>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input id="txt16" onkeyup="sum();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText16();">
-              <span class="icon is-small is-left">
-                <i>SP1</i>
-              </span>
-            </p>
-          </div>
-        </div>
+      <div class="col form-floating">
+        <input type="number" class="form-control" id="floatingInput5" placeholder="Last name" aria-label="Last name" onkeyup="sum();">
+        <label for="floatingInput">
+            Total Temuan LH
+        </label>
       </div>
-      <div class="columns is-mobile">
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input id="txt17" onkeyup="sum();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText17();">
-              <span class="icon is-small is-left">
-                <i>4R</i>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input id="txt18" onkeyup="sum();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText18();">
-              <span class="icon is-small is-left">
-                <i>4L</i>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input id="txt19" onkeyup="sum();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText19();">
-              <span class="icon is-small is-left">
-                <i>4E</i>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input id="txt20" onkeyup="sum();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText20();">
-              <span class="icon is-small is-left">
-                <i>5UB</i>
-              </span>
-            </p>
-          </div>
-        </div>
+     </div>     
+     <div class="row">
+      <div class="col form-floating mb-3">
+        <input type="number" class="form-control" id="floatingInput6"  placeholder="First name" aria-label="First name" onkeyup="sum();">
+        <label for="floatingInput">
+           Unit Cek Dome
+        </label>
       </div>
-      <div class="columns is-mobile">
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input id="txt21" onkeyup="sum();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText21();">
-              <span class="icon is-small is-left">
-                <i>5F</i>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input id="txt22" onkeyup="sum();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText22();">
-              <span class="icon is-small is-left">
-                <i>5E</i>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input id="txt23" onkeyup="sum();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText23();">
-              <span class="icon is-small is-left">
-                <i>5R1</i>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input id="txt24" onkeyup="sum();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText24();">
-              <span class="icon is-small is-left">
-                <i>5R2</i>
-              </span>
-            </p>
-          </div>
-        </div>
+      <div class="col form-floating">
+
       </div>
-      <div class="columns is-mobile">
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input id="txt25" onkeyup="sum();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText25();">
-              <span class="icon is-small is-left">
-                <i>SP2</i>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input id="txt26" onkeyup="sum();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText26();">
-              <span class="icon is-small is-left">
-                <i>6R</i>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input id="txt27" onkeyup="sum();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText27();">
-              <span class="icon is-small is-left">
-                <i>6L</i>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input id="txt28" onkeyup="sum();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText28();">
-              <span class="icon is-small is-left">
-                <i>7</i>
-              </span>
-            </p>
-          </div>
-        </div>
+     </div>     
+     <div class="row">
+      <div class="col form-floating mb-3">
+        <input type="number" class="form-control" id="floatingInput7" placeholder="Last name" aria-label="Last name" onkeyup="sum();">
+        <label for="floatingInput">
+            Total Deffect Function
+        </label>
       </div>
-      <div class="columns is-mobile">
-        <div class="column"></div>
-        <div class="column">
-          <div class="field">
-            <p class="control has-icons-left">
-            <input id="txt29" onkeyup="sum();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText29();" onblur="kembalikan29();">
-              <span class="icon is-small is-left">
-                <i>APP</i>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="column"></div>
+      <div class="col form-floating">
+        <input type="number" class="form-control" id="floatingInput8" placeholder="Last name" aria-label="Last name" onkeyup="sum();">
+        <label for="floatingInput">
+            Total Deffect Appearance 
+        </label>
       </div>
-      
-      
-      <div class="columns is-mobile">
-        <div class="column">TOTAL</div>
-        <div class="column">
-          <div class="field">
-            <p class="control">
-            <input id="txt30" onkeyup="devide();" class="input is-small is-danger" type="number" value="0">
-            </p>
-          </div>
-        </div>
-        <div class="column"></div>
-        <div class="column"></div>
-        <div class="column"></div>
+     </div>          
+     <div class="row">
+      <div class="col form-floating mb-3">
+        <input type="number" class="form-control" id="floatingInput9" placeholder="Last name" aria-label="Last name" onkeyup="sum();">
+        <label for="floatingInput">
+            Total Running Unit
+        </label>
       </div>
-      <div class="columns is-mobile">
-        <div class="column">UNIT</div>
-        <div class="column">
-          <div class="field">
-            <p class="control">
-            <input id="txt31" onkeyup="devide();" class="input is-small is-danger" type="number" value="0" onfocus="eraseText31();">
-            </p>
-          </div>
-        </div>
-        <div class="column"></div>
-        <div class="column"></div>
-        <div class="column"></div>
+      <div class="col form-floating">
+
       </div>
-      <div class="columns is-mobile">
-        <div class="column">DPU</div>
-        <div class="column">
-          <div class="field">
-            <p class="control">
-            <input id="txt32" class="input is-small is-danger" type="number" value="0">
-            </p>
-          </div>
-        </div>
-        <div class="column"></div>
-        <div class="column"></div>
-        <div class="column"></div>
+     </div>          
+     <div class="row">
+      <div class="col form-floating mb-3">
+        <input type="number" class="form-control" id="floatingInput10" placeholder="Last name" aria-label="Last name" onkeyup="sum();">
+        <label for="floatingInput">
+            Total Unit Rm2
+        </label>
       </div>
+      <div class="col form-floating">
+        <input type="number" class="form-control" id="floatingInput11" placeholder="Last name" aria-label="Last name" onkeyup="sum();">
+        <label for="floatingInput">
+            Total Unit Rm0
+        </label>
+      </div>
+     </div>          
+     <div class="row">
+      <div class="col form-floating mb-3">
+        <input type="number" class="form-control" id="floatingInput12" placeholder="Last name" aria-label="Last name" onkeyup="sum();">
+        <label for="floatingInput">
+            D40
+        </label>
+      </div>
+      <div class="col form-floating">
+        <input type="number" class="form-control" id="floatingInput13" placeholder="Last name" aria-label="Last name" onkeyup="sum();">
+        <label for="floatingInput">
+            D26
+        </label>
+      </div>
+     </div>          
+     <div class="row">
+      <div class="col form-floating mb-3">
+        <input type="number" class="form-control" id="floatingInput14" placeholder="Last name" aria-label="Last name" onkeyup="sum();">
+        <label for="floatingInput">
+            D88
+        </label>
+      </div>
+      <div class="col form-floating">
+        <input type="number" class="form-control" id="floatingInput15" placeholder="Last name" aria-label="Last name" onkeyup="sum();">
+        <label for="floatingInput">
+            TMC
+        </label>
+      </div>
+     </div>          
+     <div class="row">
+      <div class="col form-floating mb-3">
+        <input type="number" class="form-control" id="floatingInput16" placeholder="Last name" aria-label="Last name" onkeyup="sum();">
+        <label for="floatingInput">
+            D40R LhD
+        </label>
+      </div>
+      <div class="col form-floating">
+        <input type="number" class="form-control" id="floatingInput17" placeholder="Last name" aria-label="Last name" onkeyup="sum();">
+        <label for="floatingInput">
+            Remain D40R
+        </label>
+      </div>
+     </div>          
+     <div class="row">
+      <div class="col form-floating mb-3">
+        <input type="number" class="form-control" id="floatingInput18" placeholder="Last name" aria-label="Last name" onkeyup="sum();">
+        <label for="floatingInput">
+            OK QRC
+        </label>
+      </div>
+      <div class="col form-floating">
+        <input type="number" class="form-control" id="floatingInput19" placeholder="Last name" aria-label="Last name" onkeyup="sum();">
+        <label for="floatingInput">
+            OK Rm0
+        </label>
+      </div>
+     </div>          
+     </div>
     </div>
-  </section>
+
+
+
+<br>
+<div class="card">
+  <div class="card-header">
+Hasil
+  </div>
+  <div class="card-body ">
+    <h5 class="card-title text-center">*_السلام عليكم ورحمة الله وبركاته_*</h5>
+    <p class="card-text">Berikut saya kirimkan Achievement Quality Round Check tanggal <span id="date1"></span><span> Mei 2024 Shift B.</span></p>
+    <ul class="list-group">
+        <li class="list-group-item">1. Unit Scan Out Final: <span id="hasila"></span><span> Unit</span></li>
+        <li class="list-group-item">2. Unit Cek QRC: <span id="hasilb"></span><span> Unit</span></li>
+        <li class="list-group-item"><span>•</span>   Total DPU QRC: <span id="hasild"></span><span></span></li>                  <li class="list-group-item">3. Unit Bypass: <span id="hasilc"></span><span> Unit</span></li>
+        <li class="list-group-item">4. Unit Cek Dome Running: <span id="hasile"></span><span> Unit</span></li>
+        <li class="list-group-item"> Target DPU Dome Running: 0.29<span id="hasil"></span></li>
+        <li class="list-group-item">DPU Dome Running: <span id="hasil"></span><span></span></li>
+        <li class="list-group-item">• Function: <span id="hasilf"></span><span>/</span><span id="hasilg"></span><span> = </span><span id="hasilh"></span></li>
+        <li class="list-group-item">• Appearance: <span id="hasili"></span><span>/</span><span id="hasilj"></span><span> = </span><span id="hasilk"></span></li>
+        <li class="list-group-item">• Total DPU: <span id="hasill"></span><span>/</span><span id="hasilm"></span><span> = </span><span id="hasiln"></span></li>
+
+    </ul>
+    <div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label">Problem</label>
+  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+</div>
+
+<ul class="list-group">
+    <li class="list-group-item">RUNNING UNIT</li>
+    <li class="list-group-item">Total : <span id="running"></span><span> Unit</span></li>
+    <li class="list-group-item">RM2: <span id="rm2"></span><span> Unit</span></li>
+    <li class="list-group-item">RM0: <span id="rm1"></span><span> Unit</span></li>
+    <li class="list-group-item">a. D40: <span id="d40"></span><span> Unit</span></li>
+    <li class="list-group-item">b. D26: <span id="d26"></span><span> Unit</span></li>
+    <li class="list-group-item">c. D88: <span id="d88"></span><span> Unit</span></li>
+    <li class="list-group-item">d. TMC: <span id="tmc"></span><span> Unit</span></li>
+    <li class="list-group-item">e. D40R: <span id="d40r"></span><span> Unit</span></li>
+    <li class="list-group-item">•Remain: <span id="remain"></span><span> Unit</span></li>
+    <li class="list-group-item">•OK QRC: <span id="okqrc"></span><span> Unit</span></li>
+    <li class="list-group-item">•OK RMO: <span id="okrm0"></span><span> Unit</span></li>
+    <li class="list-group-item">Terima kasih 🙏</li>
+    <li class="list-group-item text-center">
+        *_والسلام عليكم ورحمة الله وبركاته_*
+    </li>
+    <li class="list-group-item">NB</li>
+    <li class="list-group-item">*) Remain = Belum Check QG </li>
+    <li class="list-group-item">*) OK QG = Sudah check QG tp belum di repair </li>
+    <li class="list-group-item">*) OK RM 0 = unit siap masuk jalur QV</li>
+</ul>
+
+  </div>
   
-  
-<script>
+</div>
+
+
+
+
+    <script>
 function sum() {
-      var txtSatu = document.getElementById('txt1').value;
-      var txtDua = document.getElementById('txt2').value;
-      var txtTiga = document.getElementById('txt3').value;
-      var txtEmpat = document.getElementById('txt4').value;
-      var txtLima = document.getElementById('txt5').value;
-      var txtEnam = document.getElementById('txt6').value;
-      var txtTuju = document.getElementById('txt7').value;
-      var txtDelapan = document.getElementById('txt8').value;
-      var txtSembilan = document.getElementById('txt9').value;
-      var txtSepuluh = document.getElementById('txt10').value;
-      var txtSeBelas = document.getElementById('txt11').value;
-      var txtDuaBelas = document.getElementById('txt12').value;
-      var txtTigaBelas = document.getElementById('txt13').value;
-      var txtEmpatBelas = document.getElementById('txt14').value;
-      var txtLimaBelas = document.getElementById('txt15').value;
-      var txtEnamBelas = document.getElementById('txt16').value;
-      var txtTujuBelas = document.getElementById('txt17').value;
-      var txtDelapanBelas = document.getElementById('txt18').value;
-      var txtSembilanBelas = document.getElementById('txt19').value;
-      var txtDuapuluh = document.getElementById('txt20').value;
-      var txtDuapuluhSatu = document.getElementById('txt21').value;
-      var txtDuapuluhDua = document.getElementById('txt22').value;
-      var txtDuapuluhTiga = document.getElementById('txt23').value;
-      var txtDuapuluhEmpat = document.getElementById('txt24').value;
-      var txtDuapuluhLima = document.getElementById('txt25').value;
-      var txtDuapuluhEnam = document.getElementById('txt26').value;
-      var txtDuapuluhTuju = document.getElementById('txt27').value;
-      var txtDuapuluhDelapan = document.getElementById('txt28').value;
-      var txtDuapuluhSembilan = document.getElementById('txt29').value;
-    
-      var result = parseFloat(txtSatu) + parseFloat(txtDua) + parseFloat(txtTiga) + parseFloat(txtEmpat) + parseFloat(txtLima) + parseFloat(txtEnam) + parseFloat(txtTuju) + parseFloat(txtDelapan) + parseFloat(txtSembilan) + parseFloat(txtSepuluh) + parseFloat(txtSeBelas) + parseFloat(txtDuaBelas) + parseFloat(txtTigaBelas) + parseFloat(txtEmpatBelas) + parseFloat(txtLimaBelas) + parseFloat(txtEnamBelas) + parseFloat(txtTujuBelas) + parseFloat(txtDelapanBelas) + parseFloat(txtSembilanBelas) + parseFloat(txtDuapuluh) + parseFloat(txtDuapuluhSatu) + parseFloat(txtDuapuluhDua) + parseFloat(txtDuapuluhTiga) + parseFloat(txtDuapuluhEmpat) + parseFloat(txtDuapuluhLima) + parseFloat(txtDuapuluhEnam) + parseFloat(txtDuapuluhTuju) + parseFloat(txtDuapuluhDelapan) + parseFloat(txtDuapuluhSembilan);
+      var txtFirstNumberValue = document.getElementById('floatingInput1').value;
+      var txtSecondNumberValue = document.getElementById('floatingInput2').value;
+      var txtThirdNumberValue = document.getElementById('floatingInput3').value;
+      var txtFourthNumberValue = document.getElementById('floatingInput4').value;
+      var txtFifthNumberValue = document.getElementById('floatingInput5').value;
+      var txtSixthNumberValue = document.getElementById('floatingInput6').value;
+      var txtSeventhNumberValue = document.getElementById('floatingInput7').value;
+      var txtEightthNumberValue = document.getElementById('floatingInput8').value;      
+      var txtNinethNumberValue = document.getElementById('floatingInput9').value;        
+      var txtTenthNumberValue = document.getElementById('floatingInput10').value;   
+      var txtEleventhNumberValue = document.getElementById('floatingInput11').value; 
+      var txtTwelvethNumberValue = document.getElementById('floatingInput12').value;   
+      var txt13thNumberValue = document.getElementById('floatingInput13').value;   
+      var txt14thNumberValue = document.getElementById('floatingInput14').value;   
+      var txt15thNumberValue = document.getElementById('floatingInput15').value;   
+      var txt16thNumberValue = document.getElementById('floatingInput16').value;   
+      var txt17thNumberValue = document.getElementById('floatingInput17').value;   
+      var txt18thNumberValue = document.getElementById('floatingInput18').value;   
+      var txt19thNumberValue = document.getElementById('floatingInput19').value;   
+      var txtDateNumberValue = document.getElementById('date').value;   
+      
+      var result = parseFloat(txtDateNumberValue);
       if (!isNaN(result)) {
-         document.getElementById('txt30').value = result;
+         document.getElementById('date1').innerHTML= result;
+      }
+      
+      var result = parseFloat(txtFirstNumberValue) + (0);
+      if (!isNaN(result)) {
+         document.getElementById('hasila').innerHTML= result;
+      }
+      var result = parseFloat(txtSecondNumberValue) + (0);
+      if (!isNaN(result)) {
+         document.getElementById('hasilb').innerHTML= result;
+      }
+
+      var result = parseFloat(txtFirstNumberValue) + parseFloat(txtThirdNumberValue) - parseFloat(txtSecondNumberValue);
+      if (!isNaN(result)) {
+         document.getElementById('hasilc').innerHTML= result;
+      }
+      var result = (parseFloat(txtFourthNumberValue) + parseFloat(txtFifthNumberValue)) / parseFloat(txtSecondNumberValue);
+      if (!isNaN(result)) {
+         document.getElementById('hasild').innerHTML= result.toFixed(2);
+      }      
+      var result = parseFloat(txtSixthNumberValue) + (0);
+      if (!isNaN(result)) {
+         document.getElementById('hasile').innerHTML= result;
+      }
+      var result = parseFloat(txtSeventhNumberValue) + (0);
+      if (!isNaN(result)) {
+         document.getElementById('hasilf').innerHTML= result;
+      }
+      var result = parseFloat(txtSeventhNumberValue) / parseFloat(txtSixthNumberValue);
+      if (!isNaN(result)) {
+         document.getElementById('hasilh').innerHTML= result.toFixed(2);
+      }
+      var result = parseFloat(txtSixthNumberValue) + (0) *(1);
+      if (!isNaN(result)) {
+         document.getElementById('hasilg').innerHTML= result;
+      }
+      var result = parseFloat(txtEightthNumberValue) + (0);
+      if (!isNaN(result)) {
+         document.getElementById('hasili').innerHTML= result;
+      }
+      var result = parseFloat(txtSixthNumberValue) + (0) *(1) *(1) ;
+      if (!isNaN(result)) {
+         document.getElementById('hasilj').innerHTML= result;
+      }
+      var result = parseFloat(txtEightthNumberValue) / parseFloat(txtSixthNumberValue) ;
+      if (!isNaN(result)) {
+         document.getElementById('hasilk').innerHTML= result.toFixed(2);
+      }
+      var result = parseFloat(txtSixthNumberValue) + (0) *(1) *(1) *(1);
+      if (!isNaN(result)) {
+         document.getElementById('hasilm').innerHTML= result;
+      }      
+      var result = parseFloat(txtSeventhNumberValue) + parseFloat(txtEightthNumberValue);
+      if (!isNaN(result)) {
+         document.getElementById('hasill').innerHTML= result;
+      }
+      var result = (parseFloat(txtSeventhNumberValue) + parseFloat(txtEightthNumberValue)) / parseFloat(txtSixthNumberValue);
+      if (!isNaN(result)) {
+         document.getElementById('hasiln').innerHTML= result.toFixed(2);
+      }
+      var result = parseFloat(txtNinethNumberValue) + (0);
+      if (!isNaN(result)) {
+         document.getElementById('running').innerHTML= result;
+      }
+      var result = parseFloat(txtTenthNumberValue) + (0);
+      if (!isNaN(result)) {
+         document.getElementById('rm2').innerHTML= result;
+      }
+      var result = parseFloat(txtEleventhNumberValue) + (0);
+      if (!isNaN(result)) {
+         document.getElementById('rm1').innerHTML= result;
+      }
+      var result = parseFloat(txtTwelvethNumberValue) + (0);
+      if (!isNaN(result)) {
+         document.getElementById('d40').innerHTML= result;
+      }
+      var result = parseFloat(txt13thNumberValue) + (0);
+      if (!isNaN(result)) {
+         document.getElementById('d26').innerHTML= result;
+      }
+      var result = parseFloat(txt14thNumberValue) + (0);
+      if (!isNaN(result)) {
+         document.getElementById('d88').innerHTML= result;
+      }
+      var result = parseFloat(txt15thNumberValue) + (0);
+      if (!isNaN(result)) {
+         document.getElementById('tmc').innerHTML= result;
+      }
+      var result = parseFloat(txt16thNumberValue) + (0);
+      if (!isNaN(result)) {
+         document.getElementById('d40r').innerHTML= result;
+      }
+      var result = parseFloat(txt17thNumberValue) + (0);
+      if (!isNaN(result)) {
+         document.getElementById('remain').innerHTML= result;
+      }
+      var result = parseFloat(txt18thNumberValue) + (0);
+      if (!isNaN(result)) {
+         document.getElementById('okqrc').innerHTML= result;
+      }
+      var result = parseFloat(txt19thNumberValue) + (0);
+      if (!isNaN(result)) {
+         document.getElementById('okrm0').innerHTML= result;
       }
 }
 
-function devide(){
-      var txtTigapuluh = document.getElementById('txt30').value;
-      var txtTigapuluhSatu = document.getElementById('txt31').value;
-      
-      var hasil = parseFloat(txtTigapuluh) / parseFloat(txtTigapuluhSatu);
-      if (!isNaN(hasil)) {
-          document.getElementById('txt32').value = hasil;
-      }
-}
 
 function eraseText1() {
-    document.getElementById("txt1").value ="";
+    document.getElementById("floatingInput3").value ="";
 }
 
-function eraseText2() {
-    document.getElementById("txt2").value = "";
-	}
-	
-function eraseText3() {
-    document.getElementById("txt3").value ="";
-}
 
-function eraseText4() {
-    document.getElementById("txt4").value ="";
-}
 
-function eraseText5() {
-    document.getElementById("txt5").value ="";
-}
+    </script>
 
-function eraseText6() {
-    document.getElementById("txt6").value ="";
-}
-
-function eraseText7() {
-    document.getElementById("txt7").value ="";
-}
-
-function eraseText8() {
-    document.getElementById("txt8").value ="";
-}
-
-function eraseText9() {
-    document.getElementById("txt9").value ="";
-}
-
-function eraseText10() {
-    document.getElementById("txt10").value ="";
-}
-
-function eraseText11() {
-    document.getElementById("txt11").value ="";
-}
-
-function eraseText12() {
-    document.getElementById("txt12").value ="";
-}
-
-function eraseText13() {
-    document.getElementById("txt13").value ="";
-}
-
-function eraseText14() {
-    document.getElementById("txt14").value ="";
-}
-
-function eraseText15() {
-    document.getElementById("txt15").value ="";
-}
-
-function eraseText16() {
-    document.getElementById("txt16").value ="";
-}
-
-function eraseText17() {
-    document.getElementById("txt17").value ="";
-}
-
-function eraseText18() {
-    document.getElementById("txt18").value ="";
-}
-
-function eraseText19() {
-    document.getElementById("txt19").value ="";
-}
-
-function eraseText20() {
-    document.getElementById("txt20").value ="";
-}
-
-function eraseText21() {
-    document.getElementById("txt21").value ="";
-}
-
-function eraseText22() {
-    document.getElementById("txt22").value ="";
-}
-
-function eraseText23() {
-    document.getElementById("txt23").value ="";
-}
-
-function eraseText24() {
-    document.getElementById("txt24").value ="";
-}
-
-function eraseText25() {
-    document.getElementById("txt25").value ="";
-}
-
-function eraseText26() {
-    document.getElementById("txt26").value ="";
-}
-
-function eraseText27() {
-    document.getElementById("txt27").value ="";
-}
-
-function eraseText28() {
-    document.getElementById("txt28").value ="";
-}
-
-function eraseText29() {
-    document.getElementById("txt29").value ="";
-}
-
-function eraseText31() {
-    document.getElementById("txt31").value ="";
-}
-
-</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
-</html>
+	      </html>
