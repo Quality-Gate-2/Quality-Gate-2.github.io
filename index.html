@@ -3,370 +3,435 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Update DPU Dome</title>
+    <title>Update Dome</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
   <body>
-    <div class="card text-center">
-     <div class="card-header">
-    Update DPU Dome Running
-     </div>
-     <div class="card-body">
-     <div class="row">
-      <div class="col form-floating mb-3">
-        <input type="number" class="form-control form-control-sm" id="date"  placeholder="First name" aria-label="First name" onkeyup="sum();">
-        <label for="floatingInput">
-           Tanggal
-        </label>
-      </div>
-      <div class="col form-floating">
+    <div class="container">
+  <!-- Content here -->
+        <div class="card text-center">
+            <div class="card-header">
+              Update Dome
+            </div>
+            <div class="card-body">
+                <div class="row g-3">
+                    <div class="col">
+                        <div class="form-floating mb-3">
+                        <input type="number" class="form-control" id="tgl"  placeholder="Tanggal" aria-label="Tanggal" >
+                        <label >Tanggal</label>
+                        </div>
+                    </div>
+                     <div class="col">
+                         
+                        <select id="bln" class="form-select" aria-label="Default select example">
+  <option selected>Bulan</option>
+  <option value="Januari">Januari</option>
+  <option value="Februari">Februari</option>
+  <option value="Maret">Maret</option>
+  <option value="April">April</option>
+  <option value="Mei">Mei</option>
+  <option value="Juni">Juni</option>
+  <option value="Juli">Juli</option>
+  <option value="Agustus">Agustus</option>
+  <option value="September">September</option>
+  <option value="Oktober">Oktober</option>
+  <option value="November">November</option>
+  <option value="Desembea">Desember</option>
+</select>
+                    </div>                   
+                    <div class="col">
+                        <div class="form-floating mb-3">
+                        <input type="text" class="form-control visually-hidden" id="thn" placeholder="Tahun" aria-label="First name">
+                        
+                        </div>
+                    </div>
+                    
+                </div>
 
-      </div>
-     </div>
-     <div class="row">
-      <div class="col form-floating mb-3">
-        <input type="number" class="form-control form-control-sm" id="floatingInput1"  placeholder="First name" aria-label="First name" onkeyup="sum();">
-        <label for="floatingInput">
-           Unit Out Final
-        </label>
-      </div>
-      <div class="col form-floating">
-        <input type="number" class="form-control" id="floatingInput2" placeholder="Last name" aria-label="Last name" onkeyup="sum();">
-        <label for="floatingInput">
-            Unit Check QRC
-        </label>
-      </div>
-     </div>
-     <div class="row">
-      <div class="col form-floating mb-3">
-        <input type="number" class="form-control" id="floatingInput3"  placeholder="First name" aria-label="First name" value="0" onfocus="eraseText1();" onkeyup="sum();">
-        <label for="floatingInput">
-           Unit Running WIP
-        </label>
-      </div>
-      <div class="col form-floating">
-      </div>
-     </div>
-     <div class="row">
-      <div class="col form-floating mb-3">
-        <input type="number" class="form-control" id="floatingInput4"  placeholder="First name" aria-label="First name" onkeyup="sum();">
-        <label for="floatingInput">
-           Total Temuan RH
-        </label>
-      </div>
-      <div class="col form-floating">
-        <input type="number" class="form-control" id="floatingInput5" placeholder="Last name" aria-label="Last name" onkeyup="sum();">
-        <label for="floatingInput">
-            Total Temuan LH
-        </label>
-      </div>
-     </div>     
-     <div class="row">
-      <div class="col form-floating mb-3">
-        <input type="number" class="form-control" id="floatingInput6"  placeholder="First name" aria-label="First name" onkeyup="sum();">
-        <label for="floatingInput">
-           Unit Cek Dome
-        </label>
-      </div>
-      <div class="col form-floating">
+                <div class="row g-3">
+                    <div class="col">
+                        <div class="form-floating mb-3">
+                            <input type="number" class="form-control" id="fin" placeholder="Cek Dome" onkeyup="sum();">
+                            <label for="Cek Dome">Out Final</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating mb-3">
+                            <input type="number" class="form-control" id="qrc" placeholder="deffect Function" onkeyup="sum();">
+                            <label for="Deffect Function">Check QRC</label>
+                        </div>
+                    </div>
+                    <div class="col"> 
+                        <div class="form-floating mb-3">
+                            <input type="number" class="form-control" id="no1" placeholder="deffect Appearance " onkeyup="sum();">
+                            <label for="Deffect Appearance ">Unit Remain</label>
+                        </div>
+                    </div>    
+                </div>
+                <div class="row g-3">
+                    <div class="col">
+                        <div class="form-floating mb-3">
+                            <input type="number" class="form-control" id="wip" placeholder="Cek Dome" onkeyup="sum();" value="0" onfocus="eraseText1();">
+                            <label for="Cek Dome">Remain WIP</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating mb-3">
+                            <input type="number" class="form-control" id="byp" placeholder="deffect Function" onkeyup="sum();" value="0" onfocus="eraseText2();">
+                            <label for="Deffect Function">Unit Bypass</label>
+                        </div>
+                    </div>
+                    <div class="col"> 
+                        <div class="form-floating mb-3">
+                            <input type="number" class="form-control visually-hidden" id="" placeholder="deffect Appearance " onkeyup="sum();">
+                            <label for="Deffect Appearance "></label>
+                        </div>
+                    </div>    
+                </div>
 
-      </div>
-     </div>     
-     <div class="row">
-      <div class="col form-floating mb-3">
-        <input type="number" class="form-control" id="floatingInput7" placeholder="Last name" aria-label="Last name" onkeyup="sum();">
-        <label for="floatingInput">
-            Total Deffect Function
-        </label>
-      </div>
-      <div class="col form-floating">
-        <input type="number" class="form-control" id="floatingInput8" placeholder="Last name" aria-label="Last name" onkeyup="sum();">
-        <label for="floatingInput">
-            Total Deffect Appearance 
-        </label>
-      </div>
-     </div>          
-     <div class="row">
-      <div class="col form-floating mb-3">
-        <input type="number" class="form-control" id="floatingInput9" placeholder="Last name" aria-label="Last name" onkeyup="sum();">
-        <label for="floatingInput">
-            Total Running Unit
-        </label>
-      </div>
-      <div class="col form-floating">
+                <div class="row g-3">
+                    <div class="col">
+                        <div class="form-floating mb-3">
+                            <input type="number" class="form-control" id="trh" placeholder="QRC RH" onkeyup="sum();">
+                            <label for="Qrc RH">QRC RH</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating">
+                            <input type="number" class="form-control" id="tlh" placeholder="QRC LH" onkeyup="sum();">
+                            <label for="QRC LH">QRC LH</label>
+                        </div>
+                    </div>
+                    <div class="col">
+<div class="form-floating">
+  <input type="number" class="form-control" id="no2" placeholder="QRC LH" onkeyup="sum();">
+  <label for="floatingPassword">DPU QRC</label>
+</div>
+                    </div>
+                </div>
+                <div class="row g-3">
+                    <div class="col">
+                        <div class="form-floating mb-3">
+                            <input type="number" class="form-control" id="dmr" placeholder="Cek Dome" onkeyup="sum();">
+                            <label for="Cek Dome">Cek Dome</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating mb-3">
+                            <input type="number" class="form-control" id="fnc" placeholder="deffect Function" onkeyup="sum();">
+                            <label for="Deffect Function">Func</label>
+                        </div>
+                    </div>
+                    <div class="col"> 
+                        <div class="form-floating mb-3">
+                            <input type="number" class="form-control" id="app" placeholder="deffect Appearance " onkeyup="sum();">
+                            <label for="Deffect Appearance ">App</label>
+                        </div>
+                    </div>    
+                </div>
 
-      </div>
-     </div>          
-     <div class="row">
-      <div class="col form-floating mb-3">
-        <input type="number" class="form-control" id="floatingInput10" placeholder="Last name" aria-label="Last name" onkeyup="sum();">
-        <label for="floatingInput">
-            Total Unit Rm2
-        </label>
-      </div>
-      <div class="col form-floating">
-        <input type="number" class="form-control" id="floatingInput11" placeholder="Last name" aria-label="Last name" onkeyup="sum();">
-        <label for="floatingInput">
-            Total Unit Rm0
-        </label>
-      </div>
-     </div>          
-     <div class="row">
-      <div class="col form-floating mb-3">
-        <input type="number" class="form-control" id="floatingInput12" placeholder="Last name" aria-label="Last name" onkeyup="sum();">
-        <label for="floatingInput">
-            D40
-        </label>
-      </div>
-      <div class="col form-floating">
-        <input type="number" class="form-control" id="floatingInput13" placeholder="Last name" aria-label="Last name" onkeyup="sum();">
-        <label for="floatingInput">
-            D26
-        </label>
-      </div>
-     </div>          
-     <div class="row">
-      <div class="col form-floating mb-3">
-        <input type="number" class="form-control" id="floatingInput14" placeholder="Last name" aria-label="Last name" onkeyup="sum();">
-        <label for="floatingInput">
-            D88
-        </label>
-      </div>
-      <div class="col form-floating">
-        <input type="number" class="form-control" id="floatingInput15" placeholder="Last name" aria-label="Last name" onkeyup="sum();">
-        <label for="floatingInput">
-            TMC
-        </label>
-      </div>
-     </div>          
-     <div class="row">
-      <div class="col form-floating mb-3">
-        <input type="number" class="form-control" id="floatingInput16" placeholder="Last name" aria-label="Last name" onkeyup="sum();">
-        <label for="floatingInput">
-            D40R LhD
-        </label>
-      </div>
-      <div class="col form-floating">
-        <input type="number" class="form-control" id="floatingInput17" placeholder="Last name" aria-label="Last name" onkeyup="sum();">
-        <label for="floatingInput">
-            Remain D40R
-        </label>
-      </div>
-     </div>          
-     <div class="row">
-      <div class="col form-floating mb-3">
-        <input type="number" class="form-control" id="floatingInput18" placeholder="Last name" aria-label="Last name" onkeyup="sum();">
-        <label for="floatingInput">
-            OK QRC
-        </label>
-      </div>
-      <div class="col form-floating">
-        <input type="number" class="form-control" id="floatingInput19" placeholder="Last name" aria-label="Last name" onkeyup="sum();">
-        <label for="floatingInput">
-            OK Rm0
-        </label>
-      </div>
-     </div>          
-     </div>
+                <div class="row g-3">
+                    <div class="col">
+                        <textarea type="text" class="form-control" id="prb" placeholder="Problem No 1" aria-label="Problem" rows="1"></textarea>
+                    </div>
+                <div class="row g-3">
+                    <div class="col">
+                        <input type="text" class="form-control" id="prb1" placeholder="Problem No 2" aria-label="Problem" rows="3">
+                    </div>                    
+                </div>
+                <div class="row g-3">
+                    <div class="col">
+                        <input type="text" class="form-control" id="prb2" placeholder="Problem No 3" aria-label="Problem" rows="3">
+                    </div>
+            </div>
+            <div class="card-body">
+                <div class="row g-3">
+                    <div class="col">
+                        <div class="form-floating mb-3">
+                            <input type="number" class="form-control" id="trn" placeholder="Cek Dome" onkeyup="sum();">
+                            <label for="Total Running">Total running</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating mb-3">
+                            <input type="number" class="form-control" id="rm2" placeholder="Unit RM2" onkeyup="sum();">
+                            <label for="Unit RM2">Unit RM2</label>
+                        </div>
+                    </div>
+                    <div class="col"> 
+                    <div class="form-floating mb-3">
+                            <input type="button" class="form-control" id="rm0" placeholder="Unit RM0" onkeyup="sum();" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" >
+                            <label for="Unit RM0 ">Unit RM0</label>
+                        </div>
+                    </div>    
+                </div>
+
+            </div>
+        </div>
+<div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label visually-hidden">Problem Function Dome Running</label>
+  <textarea class="form-control visually-hidden" id="txa" rows="3"></textarea>
+</div>
+
+  <!-- Text To Send WA -->       
+<input id="t1" class="form-control form-control-sm visually-hidden" type="text" placeholder=".form-control-sm" aria-label=".form-control-sm example" value="*_丕賱爻賱丕賲 毓賱賷賰賲 賵乇丨賲丞 丕賱賱賴 賵亘乇賰丕鬲賴_*">
+<input id="t2" class="visually-hidden form-control form-control-sm" type="text" placeholder=".form-control-sm" aria-label=".form-control-sm example" value="*Berikut saya kirimkan Achievement Quality Round Check tanggal*">
+<input id="t3" class="visually-hidden form-control form-control-sm" type="text" placeholder=".form-control-sm" aria-label=".form-control-sm example" value="1. Scan out final            :">
+<input id="t4" class="visually-hidden  form-control form-control-sm" type="text" placeholder=".form-control-sm" aria-label=".form-control-sm example" value="2. Total unit check QG  :">
+<input id="t5" class="visually-hidden  form-control form-control-sm" type="text" placeholder=".form-control-sm" aria-label=".form-control-sm example" value="DPU Round Check    :">
+<input id="t6" class="visually-hidden  form-control form-control-sm" type="text" placeholder=".form-control-sm" aria-label=".form-control-sm example" value="3. Total unit bypass      :">
+<input id="t7" class="visually-hidden  form-control form-control-sm" type="text" placeholder=".form-control-sm" aria-label=".form-control-sm example" value="4. Total Unit check Dome Running :">
+<input id="t8" class="visually-hidden  form-control form-control-sm" type="text" placeholder=".form-control-sm" aria-label=".form-control-sm example" value="        _*Target DPU : 0.29*_">
+<input id="t9" class="visually-hidden  form-control form-control-sm" type="text" placeholder=".form-control-sm" aria-label=".form-control-sm example" value="        Total DPU Dome Running ">
+<input id="t10" class="visually-hidden  form-control form-control-sm" type="text" placeholder=".form-control-sm" aria-label=".form-control-sm example" value="          a. Function       :">
+<input id="t11" class="visually-hidden  form-control form-control-sm" type="text" placeholder=".form-control-sm" aria-label=".form-control-sm example" value="          b. Appearance :">
+<input id="t12" class="visually-hidden  form-control form-control-sm" type="text" placeholder=".form-control-sm" aria-label=".form-control-sm example" value="          c. Total              :">
+<input id="t13" class=" visually-hidden  form-control form-control-sm" type="text" placeholder=".form-control-sm" aria-label=".form-control-sm example" value="        Problem :">
+<input id="t14" class="visually-hidden  form-control form-control-sm" type="text" placeholder=".form-control-sm" aria-label=".form-control-sm example" value="Total Running Unit :">
+<input id="t15" class="visually-hidden  form-control form-control-sm" type="text" placeholder=".form-control-sm" aria-label=".form-control-sm example" value="Total unit RM2        :">
+<input id="t16" class="visually-hidden  form-control form-control-sm" type="text" placeholder=".form-control-sm" aria-label=".form-control-sm example" value="Total unit RM0        :">
+<input id="t17" class="visually-hidden  form-control form-control-sm" type="text" placeholder=".form-control-sm" aria-label=".form-control-sm example" value="   Unit D40    :">
+<input id="t18" class="visually-hidden  form-control form-control-sm" type="text" placeholder=".form-control-sm" aria-label=".form-control-sm example" value="   Unit D88    :">
+<input id="t19" class="visually-hidden  form-control form-control-sm" type="text" placeholder=".form-control-sm" aria-label=".form-control-sm example" value="   Unit D26    :">
+<input id="t20" class="visually-hidden  form-control form-control-sm" type="text" placeholder=".form-control-sm" aria-label=".form-control-sm example" value="   Unit TMC   :">
+<input id="t21" class="visually-hidden  form-control form-control-sm" type="text" placeholder=".form-control-sm" aria-label=".form-control-sm example" value="   Unit D40R  :">
+<input id="t22" class="visually-hidden  form-control form-control-sm" type="text" placeholder=".form-control-sm" aria-label=".form-control-sm example" value="    鈥emain  :">
+<input id="t23" class="visually-hidden  form-control form-control-sm" type="text" placeholder=".form-control-sm" aria-label=".form-control-sm example" value="    鈥K QRC  :">
+<input id="t24" class="visually-hidden  form-control form-control-sm" type="text" placeholder=".form-control-sm" aria-label=".form-control-sm example" value="    鈥K RM0 :">
+<input id="t25" class="visually-hidden  form-control form-control-sm" type="text" placeholder=".form-control-sm" aria-label=".form-control-sm example" value="Terima kasih 馃檹">
+<input id="t26" class="visually-hidden  form-control form-control-sm" type="text" placeholder=".form-control-sm" aria-label=".form-control-sm example" value="*_賵丕賱爻賱丕賲 毓賱賷賰賲 賵乇丨賲丞 丕賱賱賴 賵亘乇賰丕鬲賴_*">
+<input id="t27" class="visually-hidden  form-control form-control-sm" type="text" placeholder=".form-control-sm" aria-label=".form-control-sm example" value="NB :">
+<input id="t28" class="visually-hidden  form-control form-control-sm" type="text" placeholder=".form-control-sm" aria-label=".form-control-sm example" value="*) Remain = Belum Check QG">
+<input id="t29" class="visually-hidden  form-control form-control-sm" type="text" placeholder=".form-control-sm" aria-label=".form-control-sm example" value="*) OK QG = Sudah check QG tp belum direpair">
+<input id="t30" class="visually-hidden  form-control form-control-sm" type="text" placeholder=".form-control-sm" aria-label=".form-control-sm example" value="*) OK RM0 = unit siap masuk jalur QV">
+
+  <!-- Tombol Send WA -->      
+        <div class="card">
+            <h5 class="card-header">Kirim Ke WA</h5>
+            <div class="card-body">
+                <div class="col">
+                    <input id="numbe" type="number" placeholder="Nomer WA" class="form-control visually-hidden"  aria-label="Scan Out Final">
+                </div>
+                <div class="col"> 
+                    <i class="bi bi-whatsapp"></i>
+                    <a href="#" onclick="send_handle()" class="btn btn-success">Kirim</a>
+                </div>
+            </div>
+        </div>
     </div>
 
+<!-- Button trigger modal -->
 
 
-<br>
-<div class="card">
-  <div class="card-header">
-Hasil ( silahkan di copy dan dipaste pada WA dan kirim )
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Unit WIP RM 0</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row g-3">
+            <div class="col">
+                <div class="form-floating mb-3">
+                    <input type="number" class="form-control" id="d26" placeholder="" onkeyup="sum();">
+                    <label for="Cek Dome">D26</label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-floating mb-3">
+                    <input type="number" class="form-control" id="d40" placeholder="D40" onkeyup="sum();">
+                    <label for="D40">D40</label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-floating mb-3">
+                    <input type="number" class="form-control" id="d88" placeholder="D88" onkeyup="sum();">
+                    <label for="D40">D88</label>
+                </div>
+            </div>
+        </div>    
+        <div class="row g-3">
+            <div class="col"> 
+                <div class="form-floating mb-3">
+                    <input type="number" class="form-control" id="tmc" placeholder="TMC" onkeyup="sum();">
+                    <label for="TMC">TMC</label>
+                </div>
+            </div>
+
+            <div class="col"> 
+                <div class="form-floating mb-3">
+                    <input type="number" class="form-control" id="d4r" placeholder="D40R" onkeyup="sum();">
+                    <label for="D40R">D40R</label>
+                </div>
+            </div>    
+        </div>
+        <hr>
+        <h4>Status unit D40R di RM0</h4>
+        <div class="row g-3">
+            <div class="col"> 
+                <div class="form-floating mb-3">
+                    <input type="button" class="form-control" id="rmn" placeholder="D40R belum check QRC" onkeyup="sum();">
+                    <label for="">Remain QRC</label>
+                </div>
+            </div>            
+            <div class="col"> 
+                <div class="form-floating mb-3">
+                    <input type="number" class="form-control" id="okq" placeholder="D40R OK QRC" onkeyup="sum();">
+                    <label for="">OK QRC</label>
+                </div>
+            </div>
+
+            <div class="col"> 
+                <div class="form-floating mb-3">
+                    <input type="number" class="form-control" id="okr" placeholder="OK RM0" onkeyup="sum();">
+                    <label for="D40R">OK Rm0</label>
+                </div>
+            </div>    
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-bs-dismiss="modal">OK</button>
+      </div>
+    </div>
   </div>
-  <div class="card-body ">
-    <h5 class="card-title text-center">*_السلام عليكم ورحمة الله وبركاته_*</h5>
-    <p class="card-text">Berikut saya kirimkan Achievement Quality Round Check tanggal <span id="date1"></span><span> Mei 2024 Shift B.</span></p>
-    <ul class="list-group">
-        <li class="list-group-item">1. Unit Scan Out Final: <span id="hasila"></span><span> Unit</span></li>
-        <li class="list-group-item">2. Unit Cek QRC: <span id="hasilb"></span><span> Unit</span></li>
-        <li class="list-group-item"><span>•</span>   Total DPU QRC: <span id="hasild"></span><span></span></li>                  <li class="list-group-item">3. Unit Bypass: <span id="hasilc"></span><span> Unit</span></li>
-        <li class="list-group-item">4. Unit Cek Dome Running: <span id="hasile"></span><span> Unit</span></li>
-        <li class="list-group-item"> Target DPU Dome Running: 0.29<span id="hasil"></span></li>
-        <li class="list-group-item">DPU Dome Running: <span id="hasil"></span><span></span></li>
-        <li class="list-group-item">• Function: <span id="hasilf"></span><span>/</span><span id="hasilg"></span><span> = </span><span id="hasilh"></span></li>
-        <li class="list-group-item">• Appearance: <span id="hasili"></span><span>/</span><span id="hasilj"></span><span> = </span><span id="hasilk"></span></li>
-        <li class="list-group-item">• Total DPU: <span id="hasill"></span><span>/</span><span id="hasilm"></span><span> = </span><span id="hasiln"></span></li>
-
-    </ul>
-    <div class="mb-3">
-  <label for="exampleFormControlTextarea1" class="form-label">Problem</label>
-  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
 </div>
 
-<ul class="list-group">
-    <li class="list-group-item">RUNNING UNIT</li>
-    <li class="list-group-item">Total : <span id="running"></span><span> Unit</span></li>
-    <li class="list-group-item">RM2: <span id="rm2"></span><span> Unit</span></li>
-    <li class="list-group-item">RM0: <span id="rm1"></span><span> Unit</span></li>
-    <li class="list-group-item">a. D40: <span id="d40"></span><span> Unit</span></li>
-    <li class="list-group-item">b. D26: <span id="d26"></span><span> Unit</span></li>
-    <li class="list-group-item">c. D88: <span id="d88"></span><span> Unit</span></li>
-    <li class="list-group-item">d. TMC: <span id="tmc"></span><span> Unit</span></li>
-    <li class="list-group-item">e. D40R: <span id="d40r"></span><span> Unit</span></li>
-    <li class="list-group-item">•Remain: <span id="remain"></span><span> Unit</span></li>
-    <li class="list-group-item">•OK QRC: <span id="okqrc"></span><span> Unit</span></li>
-    <li class="list-group-item">•OK RMO: <span id="okrm0"></span><span> Unit</span></li>
-    <li class="list-group-item">Terima kasih 🙏</li>
-    <li class="list-group-item text-center">
-        *_والسلام عليكم ورحمة الله وبركاته_*
-    </li>
-    <li class="list-group-item">NB</li>
-    <li class="list-group-item">*) Remain = Belum Check QG </li>
-    <li class="list-group-item">*) OK QG = Sudah check QG tp belum di repair </li>
-    <li class="list-group-item">*) OK RM 0 = unit siap masuk jalur QV</li>
-</ul>
-
-  </div>
-  
-</div>
-
-
-
+<input class="visually-hidden " type="number" id="no3" onkeyup="sum();">
+<input class="visually-hidden " type="number" id="no4" onkeyup="sum();">
+<input class="visually-hidden " type="number" id="no5" onkeyup="sum();">
+<input class="visually-hidden " type="number" id="no6" onkeyup="sum();">
 
     <script>
-function sum() {
-      var txtFirstNumberValue = document.getElementById('floatingInput1').value;
-      var txtSecondNumberValue = document.getElementById('floatingInput2').value;
-      var txtThirdNumberValue = document.getElementById('floatingInput3').value;
-      var txtFourthNumberValue = document.getElementById('floatingInput4').value;
-      var txtFifthNumberValue = document.getElementById('floatingInput5').value;
-      var txtSixthNumberValue = document.getElementById('floatingInput6').value;
-      var txtSeventhNumberValue = document.getElementById('floatingInput7').value;
-      var txtEightthNumberValue = document.getElementById('floatingInput8').value;      
-      var txtNinethNumberValue = document.getElementById('floatingInput9').value;        
-      var txtTenthNumberValue = document.getElementById('floatingInput10').value;   
-      var txtEleventhNumberValue = document.getElementById('floatingInput11').value; 
-      var txtTwelvethNumberValue = document.getElementById('floatingInput12').value;   
-      var txt13thNumberValue = document.getElementById('floatingInput13').value;   
-      var txt14thNumberValue = document.getElementById('floatingInput14').value;   
-      var txt15thNumberValue = document.getElementById('floatingInput15').value;   
-      var txt16thNumberValue = document.getElementById('floatingInput16').value;   
-      var txt17thNumberValue = document.getElementById('floatingInput17').value;   
-      var txt18thNumberValue = document.getElementById('floatingInput18').value;   
-      var txt19thNumberValue = document.getElementById('floatingInput19').value;   
-      var txtDateNumberValue = document.getElementById('date').value;   
-      
-      var result = parseFloat(txtDateNumberValue);
-      if (!isNaN(result)) {
-         document.getElementById('date1').innerHTML= result;
-      }
-      
-      var result = parseFloat(txtFirstNumberValue) + (0);
-      if (!isNaN(result)) {
-         document.getElementById('hasila').innerHTML= result;
-      }
-      var result = parseFloat(txtSecondNumberValue) + (0);
-      if (!isNaN(result)) {
-         document.getElementById('hasilb').innerHTML= result;
-      }
+function send_handle() {
+  const fin = document.getElementById("fin").value;
+  const qrc = document.getElementById("qrc").value;
+  const num = document.getElementById("numbe").value;
+  const byp = document.getElementById("byp").value;
+  const tgl = document.getElementById("tgl").value;
+  const bln = document.getElementById("bln").value;
+  const thn = document.getElementById("thn").value;
+  const prb = document.getElementById("prb").value;
+  const prb1 = document.getElementById("prb1").value;
+  const prb2 = document.getElementById("prb2").value;
+  const dmr = document.getElementById("dmr").value;
+  const fnc = document.getElementById("fnc").value;
+  const app = document.getElementById("app").value;
+  const no1 = document.getElementById("no1").value;
+  const no2 = document.getElementById("no2").value;
+  const no3 = document.getElementById("no3").value;
+  const trn = document.getElementById("trn").value;
+  const rm2 = document.getElementById("rm2").value;
+  const rm0 = document.getElementById("rm0").value;
+  const d26 = document.getElementById("d26").value;
+  const d40 = document.getElementById("d40").value;
+  const tmc = document.getElementById("tmc").value;
+  const d4r = document.getElementById("d4r").value;
+  const d88 = document.getElementById("d88").value;
+  const okq = document.getElementById("okq").value;
+  const okr = document.getElementById("okr").value;
+  const no4 = document.getElementById("no4").value;
+  const no5 = document.getElementById("no5").value;
+  const no6 = document.getElementById("no6").value;
+  const t1 = document.getElementById("t1").value;
+  const t2 = document.getElementById("t2").value;
+  const t3 = document.getElementById("t3").value;
+  const t4 = document.getElementById("t4").value;
+  const t5 = document.getElementById("t5").value;
+  const t6 = document.getElementById("t6").value;
+  const t7 = document.getElementById("t7").value;
+  const t8 = document.getElementById("t8").value;
+  const t9 = document.getElementById("t9").value;
+  const t10 = document.getElementById("t10").value;
+  const t11 = document.getElementById("t11").value;
+  const t12 = document.getElementById("t12").value;
+  const t13 = document.getElementById("t13").value;
+  const t14 = document.getElementById("t14").value;
+  const t15 = document.getElementById("t15").value;
+  const t16 = document.getElementById("t16").value;
+  const t17 = document.getElementById("t17").value;
+  const t18 = document.getElementById("t18").value;
+  const t19 = document.getElementById("t19").value;
+  const t20 = document.getElementById("t20").value;
+  const t21 = document.getElementById("t21").value;
+  const t22 = document.getElementById("t22").value;
+  const t23 = document.getElementById("t23").value;
+  const t24 = document.getElementById("t24").value;
+  const t25 = document.getElementById("t25").value;
+  const t26 = document.getElementById("t26").value;
+  const t27 = document.getElementById("t27").value;
+  const t28 = document.getElementById("t28").value;
+  const t29 = document.getElementById("t29").value;
+  const t30 = document.getElementById("t30").value;
+  const txa = document.getElementById("txa").value;
+  
+  const win = window.open(`https://wa.me/${num}?text=${t1}%0A%0A${t2}%20*${tgl}*%20*${bln}*%20*2024*%20*Shift*%20*B*%0A%0A${t3}%20${fin}%20unit%0A${t4}%20${qrc}%20unit%0A%20%20%20%20%20%20%20%20${t5}%20${no2}%0A${t6}%20${byp}%20unit%0A%0A${t7}%20${dmr}%20unit%0A${t8}%0A${t9}%0A${t10}%20${fnc}/${dmr}%20=%20${no5}%0A${t11}%20${app}/${dmr}%20=%20${no6}%0A${t12}%20${no4}/${dmr}%20=%20${no3}%0A%0A${t13}%0A%20%20%20%20%20%20%20%20%20%20%20${prb}%0A%20%20%20%20%20%20%20%20%20%20%20${prb1}%0A%20%20%20%20%20%20%20%20%20%20%20${prb2}%0A%0A${t14}%20${trn}%20Unit%0A${t15}%20${rm2}%20unit%0A${t16}%20${rm0}%20unit%0A${t17}%20${d40}%20unit%0A${t18}%20${d88}%20unit%0A${t19}%20${d26}%20unit%0A${t20}%20${tmc}%20unit%0A${t21}%20${d4r}%20unit%0A${t22}%20${no1}%20unit%0A${t23}%20${okq}%20unit%0A${t24}%20${okr}%20unit%0A${t25}%0A${t26}%0A${t27}%0A${t28}%0A${t29}%0A${t30}`, '_blank');
+  // win.focus();
+}
 
-      var result = parseFloat(txtFirstNumberValue) + parseFloat(txtThirdNumberValue) - parseFloat(txtSecondNumberValue);
-      if (!isNaN(result)) {
-         document.getElementById('hasilc').innerHTML= result;
+function sum() {
+    var num1 = document.getElementById("fin").value;
+    var num2 = document.getElementById("qrc").value;
+    var num3 = document.getElementById("trh").value;
+    var num4 = document.getElementById("tlh").value;
+    var num5 = document.getElementById("dmr").value;
+    var num6 = document.getElementById("fnc").value;
+    var num7 = document.getElementById("app").value;
+    var num8 = document.getElementById("wip").value;
+    var num9 = document.getElementById("byp").value;
+    var num10 = document.getElementById("d26").value;
+    var num11 = document.getElementById("d40").value;
+    var num12 = document.getElementById("tmc").value;
+    var num13 = document.getElementById("d4r").value;
+    var num14 = document.getElementById("d88").value;
+    
+    
+    
+    var result = (parseFloat(num1) + parseFloat(num8)) - (parseFloat(num2) + parseFloat(num9));
+    if (!isNaN(result)) {
+        document.getElementById('no1').value= result;
       }
-      var result = (parseFloat(txtFourthNumberValue) + parseFloat(txtFifthNumberValue)) / parseFloat(txtSecondNumberValue);
-      if (!isNaN(result)) {
-         document.getElementById('hasild').innerHTML= result.toFixed(2);
+    var result = (parseFloat(num3) + parseFloat(num4)) / parseFloat(num2);
+    if (!isNaN(result)) {
+        document.getElementById('no2').value= result.toFixed(2);
+      }
+    var result = (parseFloat(num6) + parseFloat(num7)) / parseFloat(num5);
+    if (!isNaN(result)) {
+        document.getElementById('no3').value= result.toFixed(2);
+      }
+    var result = parseFloat(num13) + parseFloat(num10) + parseFloat(num11) + parseFloat(num12) + parseFloat(num14);
+    if (!isNaN(result)) {
+        document.getElementById('rm0').value= result;
+      }
+    var result = (parseFloat(num1) + parseFloat(num8)) - (parseFloat(num2) + parseFloat(num9));
+    if (!isNaN(result)) {
+        document.getElementById('rmn').value= result;
       }      
-      var result = parseFloat(txtSixthNumberValue) + (0);
-      if (!isNaN(result)) {
-         document.getElementById('hasile').innerHTML= result;
-      }
-      var result = parseFloat(txtSeventhNumberValue) + (0);
-      if (!isNaN(result)) {
-         document.getElementById('hasilf').innerHTML= result;
-      }
-      var result = parseFloat(txtSeventhNumberValue) / parseFloat(txtSixthNumberValue);
-      if (!isNaN(result)) {
-         document.getElementById('hasilh').innerHTML= result.toFixed(2);
-      }
-      var result = parseFloat(txtSixthNumberValue) + (0) *(1);
-      if (!isNaN(result)) {
-         document.getElementById('hasilg').innerHTML= result;
-      }
-      var result = parseFloat(txtEightthNumberValue) + (0);
-      if (!isNaN(result)) {
-         document.getElementById('hasili').innerHTML= result;
-      }
-      var result = parseFloat(txtSixthNumberValue) + (0) *(1) *(1) ;
-      if (!isNaN(result)) {
-         document.getElementById('hasilj').innerHTML= result;
-      }
-      var result = parseFloat(txtEightthNumberValue) / parseFloat(txtSixthNumberValue) ;
-      if (!isNaN(result)) {
-         document.getElementById('hasilk').innerHTML= result.toFixed(2);
-      }
-      var result = parseFloat(txtSixthNumberValue) + (0) *(1) *(1) *(1);
-      if (!isNaN(result)) {
-         document.getElementById('hasilm').innerHTML= result;
+    var result = parseFloat(num6) + parseFloat(num7);
+    if (!isNaN(result)) {
+        document.getElementById('no4').value= result;
       }      
-      var result = parseFloat(txtSeventhNumberValue) + parseFloat(txtEightthNumberValue);
-      if (!isNaN(result)) {
-         document.getElementById('hasill').innerHTML= result;
-      }
-      var result = (parseFloat(txtSeventhNumberValue) + parseFloat(txtEightthNumberValue)) / parseFloat(txtSixthNumberValue);
-      if (!isNaN(result)) {
-         document.getElementById('hasiln').innerHTML= result.toFixed(2);
-      }
-      var result = parseFloat(txtNinethNumberValue) + (0);
-      if (!isNaN(result)) {
-         document.getElementById('running').innerHTML= result;
-      }
-      var result = parseFloat(txtTenthNumberValue) + (0);
-      if (!isNaN(result)) {
-         document.getElementById('rm2').innerHTML= result;
-      }
-      var result = parseFloat(txtEleventhNumberValue) + (0);
-      if (!isNaN(result)) {
-         document.getElementById('rm1').innerHTML= result;
-      }
-      var result = parseFloat(txtTwelvethNumberValue) + (0);
-      if (!isNaN(result)) {
-         document.getElementById('d40').innerHTML= result;
-      }
-      var result = parseFloat(txt13thNumberValue) + (0);
-      if (!isNaN(result)) {
-         document.getElementById('d26').innerHTML= result;
-      }
-      var result = parseFloat(txt14thNumberValue) + (0);
-      if (!isNaN(result)) {
-         document.getElementById('d88').innerHTML= result;
-      }
-      var result = parseFloat(txt15thNumberValue) + (0);
-      if (!isNaN(result)) {
-         document.getElementById('tmc').innerHTML= result;
-      }
-      var result = parseFloat(txt16thNumberValue) + (0);
-      if (!isNaN(result)) {
-         document.getElementById('d40r').innerHTML= result;
-      }
-      var result = parseFloat(txt17thNumberValue) + (0);
-      if (!isNaN(result)) {
-         document.getElementById('remain').innerHTML= result;
-      }
-      var result = parseFloat(txt18thNumberValue) + (0);
-      if (!isNaN(result)) {
-         document.getElementById('okqrc').innerHTML= result;
-      }
-      var result = parseFloat(txt19thNumberValue) + (0);
-      if (!isNaN(result)) {
-         document.getElementById('okrm0').innerHTML= result;
+    var result = parseFloat(num6) / parseFloat(num5);
+    if (!isNaN(result)) {
+        document.getElementById('no5').value= result.toFixed(2);
+      }  
+    var result = parseFloat(num7) / parseFloat(num5);
+    if (!isNaN(result)) {
+        document.getElementById('no6').value= result.toFixed(2);
       }
 }
+
 
 
 function eraseText1() {
-    document.getElementById("floatingInput3").value ="";
+    document.getElementById("wip").value ="";
 }
 
-
-
-    </script>
-
+function eraseText2() {
+    document.getElementById("byp").value ="";
+}
+    </script> 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
-	      </html>
+				    </html>
