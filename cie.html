@@ -380,8 +380,8 @@ function input5() {
           document.getElementById("dfu").value = (0);
           document.getElementById("d01").innerHTML = "Zero Deffect";
           document.getElementById("dap").value = (0);
-          document.getElementById("fun").innerHTML = "-Func : " + (0);
-          document.getElementById("app").innerHTML = "-App  : " + (0);
+          document.getElementById("fun").innerHTML = "• Func : " + (0);
+          document.getElementById("app").innerHTML = "• App  : " + (0);
           document.getElementById("tdp").innerHTML = "• Total Deffect : 0";
 
     document.getElementById("T16").value ="         Func : " + (0);
@@ -395,8 +395,8 @@ function input5() {
           document.getElementById("d01").innerHTML = "";
     document.getElementById("T16").value ="         Func : " + ("");
     document.getElementById("T17").value = "         App   : " + ("");
-          document.getElementById("fun").innerHTML = "-Func : " + ("");
-          document.getElementById("app").innerHTML = "-App  : " + ("");
+          document.getElementById("fun").innerHTML = "• Func : " + ("");
+          document.getElementById("app").innerHTML = "• App  : " + ("");
     document.getElementById("T19").value= "• Total Deffect : " + ("");
           document.getElementById("tdp").innerHTML = "      • Total Deffect : ";
     document.getElementById("T20").value= (" ");
@@ -405,10 +405,10 @@ function input5() {
           document.getElementById("dfu").value = ("");
           document.getElementById("dap").value = ("");
           document.getElementById("d01").innerHTML = "";
-    document.getElementById("T16").value ="         Func : " + ("");
+    document.getElementById("T16").value = "         Func : " + ("");
     document.getElementById("T17").value = "         App   : " + ("");
-          document.getElementById("fun").innerHTML = "-Func : " + ("");
-          document.getElementById("app").innerHTML = "-App  : " + ("");
+          document.getElementById("fun").innerHTML = "• Func : " + ("");
+          document.getElementById("app").innerHTML = "• App  : " + ("");
     document.getElementById("T19").value="• Total Deffect : " + ("");
           document.getElementById("tdp").innerHTML = "      • Total Deffect : ";
     document.getElementById("T20").value= (" ");
@@ -433,11 +433,11 @@ if (result <= 0.1) {
     }else{
         text = "❌";
     }{
-        document.getElementById("ach").innerHTML= "-Achievement :" +  " "  + result.toFixed(2) + " " +  text ;
+        document.getElementById("ach").innerHTML= "• Achievement :" +  " "  + result.toFixed(2) + " " +  text ;
         document.getElementById("T12").value= "      • Achievement :" +  " "  + result.toFixed(2) + " " +  text ;
-        document.getElementById("trg").innerHTML = "-Target : 0.1";
+        document.getElementById("trg").innerHTML = "• Target : 0.1";
         document.getElementById("T13").value = "      • Target             : 0.1";
-        document.getElementById("tot").innerHTML = "-Total Temuan :" + " " + n03 + " " + "Deffect";
+        document.getElementById("tot").innerHTML = "• Total Temuan :" + " " + n03 + " " + "Deffect";
         document.getElementById("T14").value = "      • Total temuan :" + " " + n03 + " " + "Deffect";
         document.getElementById("").innerHTML = "2. QUALITY VEHICLE";
         document.getElementById("").value = "2. QUALITY VEHICLE";
@@ -446,9 +446,9 @@ if (result <= 0.1) {
 
 function jumlah(){
     let n05 = document.getElementById("dfu").value;
-    document.getElementById("fun").innerHTML ="-Func : " + n05;
+    document.getElementById("fun").innerHTML ="• Func : " + n05;
     let n06 = document.getElementById("dap").value;
-    document.getElementById("app").innerHTML = "-App : " + n06;
+    document.getElementById("app").innerHTML = "• App : " + n06;
     let element = document.getElementById("d01");
     let TEXT;
     
@@ -462,7 +462,7 @@ function jumlah(){
       }{
     document.getElementById("d01").innerHTML = " " + TEXT;
   
-        document.getElementById("tdp").innerHTML = "-Total deffect : " + hasil + " " + "Deffect";
+        document.getElementById("tdp").innerHTML = "• Total deffect : " + hasil + " " + "Deffect";
     document.getElementById("prb").innerHTML = "Problem";    
     document.getElementById("T15").value = "        Problem";    
     document.getElementById("ptj").innerHTML = "<---klik Untuk Input Problem";
