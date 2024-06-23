@@ -1,0 +1,2731 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Daily Report</title>
+    <style >
+        #b0 { display: none; }
+        #b1 { display: none; }
+        #b2 { display: none; }
+        #b3 { display: none; }
+        #b4 { display: none; }
+        #b5 { display: none; }
+        #b6 { display: none; }
+        #b7 { display: none; }
+        #n1 { display: none; }
+        #n2 { display: none; }
+        #n3 { display: none; }
+        #n4 { display: none; }
+        #n5 { display: none; }
+        #n6 { display: none; }
+        #n7 { display: none; }
+        #h2 { display: none; }
+        #h3 { display: none; }
+        #h4 { display: none; }
+        #h5 { display: none; }
+        #h6 { display: none; }
+        #h7 { display: none; }
+        #h8 { display: none; }
+        #h9 { display: none; }
+        #l2 { display: none; }
+        #r2 { display: none; }
+        #ht { display: none; }
+        #aa { display: none; }
+        #ab { display: none; }
+        #a7 { display: none; }
+        #a9 { display: none; }
+        #da { display: none; }
+        #va { display: none; }
+        #b8 { display: none; }
+        #b9 { display: none; }
+        #db { display: none; }
+        #vb { display: none; }
+        
+        
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body>
+      <div class="container mt-4">
+          
+          <div class="card">
+              <div class="card-header">
+                  <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  Launch static backdrop modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel"></h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+              <div class="card">
+                  <div class="card-body">
+                      <div id="h1">
+                          <h6 >HARI,TANGGAL</h6>
+<div class="row g-3">
+  <div class="col form-floating">
+    <input type="number" class="form-control" placeholder="Last name" aria-label="Last name" id="hr" oninput="hari();" >
+  <label for="floatingPassword">Hari</label>
+  </div>
+  <div class="col form-floating">
+    <input type="number" class="form-control" placeholder="First name" aria-label="First name" id="tg" oninput="Tanggal();" >
+      <label for="floatingPassword">Tanggal</label>
+  </div>
+  <div class="col form-floating">
+    <input type="number" class="form-control" placeholder="Last name" aria-label="Last name" id="bl" oninput="Bulan();">
+  <label for="floatingPassword">Bulan</label>
+  </div>
+  <div class="col form-floating">
+    <input type="number" class="form-control" placeholder="First name" aria-label="First name" id="th" oninput="Tahun();"  >
+      <label for="floatingPassword">Tahun</label>
+  </div>
+
+</div>
+ </div>
+ <div id="h2">
+     <h6 >AFTER MARKET CLAIM - JAPAN</h6>
+<div class="row g-3">
+      <div class="col form-floating">
+    <input type="number" class="form-control" placeholder="Last name" aria-label="Last name" id="tc40" oninput="TotalCase40();">
+  <label for="floatingPassword">Total Case D40L</label>
+  </div>
+  <div class="col form-floating">
+    <input type="number" class="form-control" placeholder="First name" aria-label="First name" id="tc26" oninput="TotalCase26();"  >
+      <label for="floatingPassword">Total Case D26</label>
+  </div>
+</div>
+ </div>
+
+ <div id="h3">
+     <h6 >DPU - HITOMAWARI</h6>
+<div class="row g-3">
+  <div class="col form-floating visually-hidden">
+    <input type="number" class="form-control" placeholder="First name" aria-label="First name" id="uch" oninput="CheckHito();"  >
+      <label for="floatingPassword">Total Unit Check</label>
+  </div>
+      <div class="col form-floating">
+    <input type="number" class="form-control" placeholder="Last name" aria-label="Last name" id="tuh" onkeyup="CheckHitomawari();">
+  <label for="floatingPassword">Total unit check</label>
+  </div>
+  <div class="col form-floating">
+    <input type="number" class="form-control" placeholder="First name" aria-label="First name" id="tdh" onkeyup="CheckHitomawari();"  >
+      <label for="floatingPassword">Total Deffect Temuan</label>
+  </div>
+
+
+</div>
+  
+</div>
+<div id="h4">
+    <h6 >DPU - AUDIT</h6>
+    <div class="row g-3">
+  <div class="col form-floating">
+    <input type="number" class="form-control" placeholder="Last name" aria-label="Last name" id="uca" onkeyup="AuditA();" >
+  <label for="floatingPassword">UNIT A</label>
+  </div>
+  <div class="col form-floating">
+    <input type="number" class="form-control" placeholder="First name" aria-label="First name" id="dfa" onkeyup="AuditA();" >
+      <label for="floatingPassword">Deffect A</label>
+  </div>
+  <div class="col form-floating">
+    <input type="number" class="form-control" placeholder="Last name" aria-label="Last name" id="ucb" onkeyup="AuditB();">
+  <label for="floatingPassword">UNIT B</label>
+  </div>
+  <div class="col form-floating">
+    <input type="number" class="form-control" placeholder="First name" aria-label="First name" id="dfb" onkeyup="AuditB();"  >
+      <label for="floatingPassword">Deffect B</label>
+  </div>
+</div>
+</div>
+<div id="h5">
+    <h6 >DPU - SQA D72</h6>
+    <div class="row g-3">
+  <div class="col form-floating">
+    <input type="number" class="form-control" placeholder="Last name" aria-label="Last name" id="usa" onkeyup="Sqad72a();" >
+  <label for="floatingPassword">UNIT A</label>
+  </div>
+  <div class="col form-floating">
+    <input type="number" class="form-control" placeholder="First name" aria-label="First name" id="dsa" onkeyup="Sqad72a();" >
+      <label for="floatingPassword">Deffect A</label>
+  </div>
+  <div class="col form-floating">
+    <input type="number" class="form-control" placeholder="Last name" aria-label="Last name" id="usb" onkeyup="Sqad72b();">
+  <label for="floatingPassword">UNIT B</label>
+  </div>
+  <div class="col form-floating">
+    <input type="number" class="form-control" placeholder="First name" aria-label="First name" id="dsb" onkeyup="Sqad72b();"  >
+      <label for="floatingPassword">Deffect B</label>
+  </div>
+</div>
+</div>
+<div id="h6">
+    <h6 >DPU - SQA DOME</h6>
+    <div class="row g-3">
+  <div class="col form-floating">
+    <input type="number" class="form-control" placeholder="Last name" aria-label="Last name" id="uda" onkeyup="Sqadomea();" >
+  <label for="floatingPassword">UNIT A</label>
+  </div>
+  <div class="col form-floating">
+    <input type="number" class="form-control" placeholder="First name" aria-label="First name" id="dda" onkeyup="Sqadomea();" >
+      <label for="floatingPassword">Deffect A</label>
+  </div>
+  <div class="col form-floating">
+    <input type="number" class="form-control" placeholder="Last name" aria-label="Last name" id="udb" onkeyup="Sqadomeb();">
+  <label for="floatingPassword">UNIT B</label>
+  </div>
+  <div class="col form-floating">
+    <input type="number" class="form-control" placeholder="First name" aria-label="First name" id="ddb" onkeyup="Sqadomeb();"  >
+      <label for="floatingPassword">Deffect B</label>
+  </div>
+</div>
+</div>
+<div id="h7">
+    <h6 >DPU - DOME RUNNING</h6>
+    <div class="row g-3">
+  <div class="col form-floating">
+    <input type="number" class="form-control" placeholder="Last name" aria-label="Last name" id="dua" onkeyup="DomeA();" >
+  <label for="floatingPassword">UNIT A</label>
+  </div>
+  <div class="col form-floating">
+    <input type="number" class="form-control" placeholder="First name" aria-label="First name" id="doa" onkeyup="DomeA();" >
+      <label for="floatingPassword">Deffect A</label>
+  </div>
+  <div class="col form-floating">
+    <input type="number" class="form-control" placeholder="Last name" aria-label="Last name" id="dub" onkeyup="DomeB();">
+  <label for="floatingPassword">UNIT B</label>
+  </div>
+  <div class="col form-floating">
+    <input type="number" class="form-control" placeholder="First name" aria-label="First name" id="dob" onkeyup="DomeB();"  >
+      <label for="floatingPassword">Deffect B</label>
+  </div>
+</div>
+</div>
+<div id="h8">
+    <h6 >DPU - VEHICLE INSPECTION</h6>
+    <div class="row g-3">
+  <div class="col form-floating">
+    <input type="number" class="form-control" placeholder="Last name" aria-label="Last name" id="uva" onkeyup="VinspA();" >
+  <label for="floatingPassword">UNIT A</label>
+  </div>
+  <div class="col form-floating">
+    <input type="number" class="form-control" placeholder="First name" aria-label="First name" id="dva" onkeyup="VinspA();" >
+      <label for="floatingPassword">Deffect A</label>
+  </div>
+  <div class="col form-floating">
+    <input type="number" class="form-control" placeholder="Last name" aria-label="Last name" id="uvb" onkeyup="VinspB();">
+  <label for="floatingPassword">UNIT B</label>
+  </div>
+  <div class="col form-floating">
+    <input type="number" class="form-control" placeholder="First name" aria-label="First name" id="dvb" onkeyup="VinspB();"  >
+      <label for="floatingPassword">Deffect B</label>
+  </div>
+</div>
+</div>
+<div id="h9">
+    <h6 >DPU - QUALITY GATE</h6>
+    <div class="row g-3">
+  <div class="col form-floating">
+    <input type="number" class="form-control" placeholder="Last name" aria-label="Last name" id="dqa" onkeyup="QgateA();" >
+  <label for="floatingPassword">DPU QG A</label>
+  </div>
+  <div class="col form-floating visually-hidden">
+    <input type="number" class="form-control" placeholder="First name" aria-label="First name" id="" onkeyup="QgateA();" >
+      <label for="floatingPassword">Deffect A</label>
+  </div>
+  <div class="col form-floating">
+    <input type="number" class="form-control" placeholder="Last name" aria-label="Last name" id="dqb" onkeyup="QgateA();">
+  <label for="floatingPassword">DPU QG B</label>
+  </div>
+  <div class="col form-floating visually-hidden">
+    <input type="number" class="form-control" placeholder="First name" aria-label="First name" id="" onkeyup="QgateB();"  >
+      <label for="floatingPassword">Deffect B</label>
+  </div>
+</div>
+</div>
+ </div>
+
+                  
+                  <div class="card-footer">
+                  <div class="clearfix">
+                      <button class="float-start btn btn-dark" id="b0" onclick="Back();">BACK</button>
+                      <button class="float-start btn btn-dark" id="b1" onclick="Back1();">BACK1</button>
+                      <button class="float-start btn btn-dark" id="b2" onclick="Back2();">BACK2</button>
+                      <button class="float-start btn btn-dark" id="b3" onclick="Back3();">BACK3</button>
+                      <button class="float-start btn btn-dark" id="b4" onclick="Back4();">BACK4</button>
+                      <button class="float-start btn btn-dark" id="b5" onclick="Back5();">BACK5</button>
+                      <button class="float-start btn btn-dark" id="b6" onclick="Back6();">BACK6</button>
+                      <button class="float-start btn btn-dark" id="b7" onclick="Back7();">BACK7</button>
+                      <button class="float-start btn " data-bs-toggle="modal" data-bs-target="#pro40" id="l2"><span id="p40"></span></button>
+                      <button class="float-start btn " data-bs-toggle="modal" data-bs-target="#proht" id="ht"><span id="pht"></span></button>
+                      <button class="float-start btn " data-bs-toggle="modal" data-bs-target="#proaa" id="aa"><span id="bpa"></span></button>
+                      <button class="float-start btn " data-bs-toggle="modal" data-bs-target="#pr72a" id="a7"><span id="72a"></span></button>
+                      <button class="float-start btn " data-bs-toggle="modal" data-bs-target="#prdoa" id="a9"><span id="doma"></span></button>
+                      <button class="float-start btn " data-bs-toggle="modal" data-bs-target="#prdma" id="da"><span id="dora"></span></button>
+                      <button class="float-start btn " data-bs-toggle="modal" data-bs-target="#provia" id="va"><span id="qia"></span></button>
+                      <button class="float-end btn btn-success" id="n0" onclick="Next();">NEXT</button>
+                      <button class="float-end btn btn-success" id="n1" onclick="Next1();">NEXT1</button>
+                      <button class="float-end btn btn-success" id="n2" onclick="Next2();">NEXT2</button>
+                      <button class="float-end btn btn-success" id="n3" onclick="Next3();">NEXT3</button>
+                      <button class="float-end btn btn-success" id="n4" onclick="Next4();">NEXT4</button>
+                      <button class="float-end btn btn-success" id="n5" onclick="Next5();">NEXT5</button>
+                      <button class="float-end btn btn-success" id="n6" onclick="Next6();">NEXT6</button>
+                      <button class="float-end btn btn-success" id="n7" onclick="Next7();">NEXT7</button>
+                      <button class="float-end btn " data-bs-toggle="modal" data-bs-target="#pro26"  id="r2"><span id="p26"></span></button>
+                      <button class="float-end btn " data-bs-toggle="modal" data-bs-target="#proab" id="ab"><span id="bpb"></span></button>
+                      <button class="float-end btn " data-bs-toggle="modal" data-bs-target="#pr72b" id="b8"><span id="72b"></span></button>
+                      <button class="float-end btn " data-bs-toggle="modal" data-bs-target="#prdob" id="b9"><span id="domb"></span></button>
+                      <button class="float-end btn " data-bs-toggle="modal" data-bs-target="#prdmb" id="db"><span id="dorb"></span></button>
+                      <button class="float-end btn " data-bs-toggle="modal" data-bs-target="#provib" id="vb"><span id="qib"></span></button>
+                  </div>
+                  </div>
+              </div>
+      </div>
+    </div>
+  </div>
+</div>
+              </div>
+              <div class="card-body">
+                <div class="d-flex p-2">
+                <ul class="list-unstyled">
+                <li><strong><span id="jdl"></span></strong></li><br>
+                <li><span id="sjd"></span></li>
+                <li><strong><span id="hri"></span><span id="tgl"></span><span id="bln"></span><span id="thn"></span></strong></li><br 
+                <li ><strong ><span id="amc"></span></strong></li>
+                <li ><strong ><span id="jc"></span></strong></li>
+                <li ><span id="u40"></span></li>
+                <li ><span id="1tc"></span></li>
+                <li ><span id="1cs"></span></li>
+                <li ><span id="pr40"></span></li>
+                <li ><span id="2pr40"></span></li>
+                <li ><span id="u26"></span></li>
+                <li ><span id="t26"></span></li>
+                <li ><span id="c26"></span></li>
+                <li ><span id="1pr26"></span></li>
+                <li ><span id="2pr26"></span></li>
+                <li ><strong><span id="dpu"></span></strong></li>
+                <li ><strong><span id="hit"></span></strong></li>
+                <li ><span id="trh"></span></li>
+                <li ><span id="thi"></span></li>
+                <li ><span id="htp"></span></li>
+                <li ><span id="pht1"></span></li>
+                <li ><span id="pht2"></span></li>
+                <li ><strong><span id="aud"></span></strong></li>
+                <li ><i><span id="tmc"></span></i></li>
+                <li ><span id="tgt"></span></li>
+                <li ><span id="act"></span></li>
+                <li ><span id="daa"></span></li>
+                <li ><span id="nga"></span></li>
+                <li ><span id="hpa"></span></li>
+                <li ><span id="paa1"></span></li>
+                <li ><span id="paa2"></span></li>
+                <li ><span id="paa3"></span></li>
+                <li ><span id="dab"></span></li>
+                <li ><span id="ngb"></span></li>
+                <li ><span id="hpb"></span></li>
+                <li ><span id="pab1"></span></li>
+                <li ><span id="pab2"></span></li>
+                <li ><span id="pab3"></span></li>
+                <li ><i><span id="sq72"></span></i></li>
+                <li ><span id="t72"></span></li>
+                <li ><span id="ac72"></span></li>
+                <li ><span id="s72a"></span></li>
+                <li ><span id="ng72a"></span></li>
+                <li ><span id="hp72a"></span></li>
+                <li ><span id="x02"></span></li>
+                <li ><span id="x03"></span></li>
+                <li ><span id="x04"></span></li>
+                <li ><span id="s72b"></span></li>
+                <li ><span id="ng72b"></span></li>
+                <li ><span id="hp72b"></span></li>
+                <li ><span id="x05"></span></li>
+                <li ><span id="x06"></span></li>
+                <li ><span id="x07"></span></li>
+                <li ><i><span id="sqdom"></span></i></li>
+                <li ><span id="tdom"></span></li>
+                <li ><span id="acdom"></span></li>
+                <li ><span id="sdoma"></span></li>
+                <li ><span id="ngdoma"></span></li>
+                <li ><span id="hpdoma"></span></li>
+                <li ><span id="x08"></span></li>
+                <li ><span id="x09"></span></li>
+                <li ><span id="x011"></span></li>
+                <li ><span id="sdomb"></span></li>
+                <li ><span id="ngdomb"></span></li>
+                <li ><span id="hpdomb"></span></li>
+                <li ><span id="x012"></span></li>
+                <li ><span id="x013"></span></li>
+                <li ><span id="x014"></span></li>
+                <li ><strong><span id="dom"></span></strong></li>
+                <li ><span id="trdom"></span></li>
+                <li ><span id="actdom"></span></li>
+                <li ><span id="1doma"></span></li>
+                <li ><span id="ndoma"></span></li>
+                <li ><span id="pdoma"></span></li>
+                <li ><span id="x015"></span></li>
+                <li ><span id="x016"></span></li>
+                <li ><span id="x017"></span></li>
+                <li ><span id="1domb"></span></li>
+                <li ><span id="ndomb"></span></li>
+                <li ><span id="pdomb"></span></li>
+                <li ><span id="x018"></span></li>
+                <li ><span id="x019"></span></li>
+                <li ><span id="x027"></span></li>
+                <li ><strong><span id="vi"></span></strong></li>
+                <li ><span id="trvi"></span></li>
+                <li ><span id="actvi"></span></li>
+                <li ><span id="via"></span></li>
+                <li ><span id="nvia"></span></li>
+                <li ><span id="pvia"></span></li>
+                <li ><span id="x021"></span></li>
+                <li ><span id="x022"></span></li>
+                <li ><span id="x023"></span></li>
+                <li ><span id="vib"></span></li>
+                <li ><span id="nvib"></span></li>
+                <li ><span id="pvib"></span></li>
+                <li ><span id="x024"></span></li>
+                <li ><span id="x025"></span></li>
+                <li ><span id="x026"></span></li>
+                <li ><strong><span id="qg"></span></strong></li>
+                <li ><span id="trqg"></span></li>
+                <li ><span id="actqg"></span></li>
+                <li ><span id="qga"></span></li>
+                <li ><span id="qgb"></span></li>
+                </ul>
+                </div>
+              </div>
+          </div>
+          
+<div class="visually-hidden" >
+    <input id="001">
+    <input id="002">
+    <input id="003">
+    <input id="004">
+    <input id="005">
+    <input id="006">
+    <input id="007">
+    <input id="008">
+    <input id="009">
+    <input id="010">
+    <input id="011">
+    <input id="012">
+    <input id="013">
+    <input id="014">
+    <input id="015">
+    <input id="016">
+    <input id="017">
+    <input id="018">
+    <input id="019">
+    <input id="020">
+    <input id="021">
+    <input id="022">
+    <input id="023">
+    <input id="024">
+    <input id="025">
+    <input id="026">
+    <input id="027">
+    <input id="028">
+    <input id="029">
+    <input id="030">
+    <input id="031">
+    <input id="t31">
+    <input id="032">
+    <input id="033">
+    <input id="034">
+    <input id="035">
+    <input id="036">
+    <input id="037">
+    <input id="038">
+    <input id="039">
+    <input id="040">
+    <input id="041">
+    <input id="042">
+    <input id="043">
+    <input id="044">
+    <input id="045">
+    <input id="046">
+    <input id="047">
+    <input id="048">
+    <input id="049">
+    <input id="050">
+    <input id="051">
+    <input id="052">
+    <input id="053">
+    <input id="054">
+    <input id="055">
+    <input id="056">
+    <input id="057">
+    <input id="058">
+    <input id="059">
+    <input id="060">
+    <input id="061">
+    <input id="062">
+    <input id="063">
+    <input id="064">
+    <input id="065">
+    <input id="066">
+    <input id="067">
+    <input id="068">
+    <input id="069">
+    <input id="070">
+    <input id="071">
+    <input id="072">
+    <input id="073">
+    <input id="074">
+    <input id="075">
+    <input id="076">
+    <input id="077">
+    <input id="078">
+    <input id="079">
+    <input id="080">
+    <input id="081">
+    <input id="082">
+    <input id="083">
+    <input id="084">
+    <input id="085">
+    <input id="086">
+    <input id="087">
+    <input id="088">
+    <input id="089">
+    <input id="090">
+    <input id="091">
+    <input id="092">
+    <input id="093">
+    <input id="094">
+    <input id="095">
+    <input id="096">
+    <input id="097">
+    <input id="098">
+    <input id="099">
+    <input id="100">
+    <input id="101">
+    <input id="102">
+    <input id="103">
+    <input id="104">
+    <input id="105">
+
+    
+</div>          
+  <!-- Tombol Send WA -->      
+        <div class="card">
+            <h5 class="card-header">Kirim Ke WA</h5>
+            <div class="card-body">
+                <div class="col">
+                    <input id="numbe" type="number" placeholder="Nomer WA" class="form-control visually-hidden"  aria-label="Scan Out Final">
+                </div>
+                <div class="col"> 
+
+                    <a href="#" onclick="send_handle()" class="btn btn-success">Kirim
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#075E54" class="bi bi-send-fill" viewBox="0 0 16 16">
+  <path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471z"/>
+</svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+          <div class="fixed-bottom z-9 position-absolute p-1 rounded-3">
+
+          </div>
+      </div>
+<!--modal Problem D40L Japan-->
+<div class="modal fade" id="pro40" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Problem D40L</h1>
+      </div>
+      <div class="modal-body">
+<div class="form-floating mb-3">
+  <input type="text" class="form-control" id="1p40" placeholder="Problem1" oninput="Problem40();">
+  <label for="floatingInput"  >Problem 1</label>
+</div>
+<div class="form-floating">
+  <input type="text" class="form-control" id="2p40" placeholder="Password" oninput="Problem40();">
+  <label for="floatingPassword">Problem 2</label>
+</div>
+      </div>
+      <div class="modal-footer">
+<button type="button" class="btn btn-success"  data-bs-toggle="modal" data-bs-target="#staticBackdrop">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--modal D26 Japan-->
+<div class="modal fade" id="pro26" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Problem D26</h1>
+      </div>
+      <div class="modal-body">
+<div class="form-floating mb-3">
+  <input type="text" class="form-control" id="1p26" placeholder="Problem1" oninput="Problem26();">
+  <label for="floatingInput"  >Problem 1</label>
+</div>
+<div class="form-floating">
+  <input type="text" class="form-control" id="2p26" placeholder="Problem2" oninput="Problem26();">
+  <label for="floatingPassword">Problem 2</label>
+</div>
+      </div>
+      <div class="modal-footer">
+<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--modal Problem HITOMAWARI-->
+<div class="modal fade" id="proht" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Problem Hitomawari</h1>
+      </div>
+      <div class="modal-body">
+<div class="form-floating mb-3">
+  <input type="text" class="form-control" id="1pht" placeholder="Problem1" oninput="ProblemHt();">
+  <label for="floatingInput"  >Problem 1</label>
+</div>
+<div class="form-floating">
+  <input type="text" class="form-control" id="2pht" placeholder="Problem2" oninput="ProblemHt();">
+  <label for="floatingPassword">Problem 2</label>
+</div>
+      </div>
+      <div class="modal-footer">
+<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--modal Problem AUDIT A-->
+<div class="modal fade" id="proaa" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Problem AUDIT SHIFT A</h1>
+          <div class="col form-floating">
+    <input type="number" class="form-control" placeholder="Last name" aria-label="Last name" id="uaa" onkeyup="AuditA();">
+  <label for="floatingPassword">UNIT NG </label>
+  </div>
+      </div>
+      <div class="modal-body">
+<div class="form-floating ">
+  <input type="text" class="form-control" id="1paa" placeholder="Problem1" oninput="audit_A();">
+  <label for="floatingInput"  >Problem 1</label>
+</div>
+<div class="form-floating">
+  <input type="text" class="form-control" id="2paa" placeholder="Problem2" oninput="audit_A();">
+  <label for="floatingPassword">Problem 2</label>
+</div>
+<div class="form-floating">
+  <input type="text" class="form-control" id="3paa" placeholder="Problem2" oninput="audit_A();">
+  <label for="floatingPassword">Problem 3</label>
+</div>
+      </div>
+      <div class="modal-footer">
+<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--modal Problem AUDIT B-->
+<div class="modal fade" id="proab" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Problem AUDIT SHIFT B</h1>
+          <div class="col form-floating">
+    <input type="number" class="form-control" placeholder="Last name" aria-label="Last name" id="uab" onkeyup="AuditB();">
+  <label for="floatingPassword">UNIT NG </label>
+  </div>
+      </div>
+      <div class="modal-body">
+<div class="form-floating ">
+  <input type="text" class="form-control" id="1pab" placeholder="Problem1" oninput="audit_B();">
+  <label for="floatingInput"  >Problem 1</label>
+</div>
+<div class="form-floating">
+  <input type="text" class="form-control" id="2pab" placeholder="Problem2" oninput="Aaudit_B();">
+  <label for="floatingPassword">Problem 2</label>
+</div>
+<div class="form-floating">
+  <input type="text" class="form-control" id="3pab" placeholder="Problem2" oninput="audit_B();">
+  <label for="floatingPassword">Problem 3</label>
+</div>
+      </div>
+      <div class="modal-footer">
+<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--modal Problem SQA D72  A-->
+<div class="modal fade" id="pr72a" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Problem SQA D72 A</h1>
+          <div class="col form-floating">
+    <input type="number" class="form-control" placeholder="Last name" aria-label="Last name" id="un72a" onkeyup="Sqad72a();">
+  <label for="floatingPassword">UNIT NG </label>
+  </div>
+      </div>
+      <div class="modal-body">
+<div class="form-floating ">
+  <input type="text" class="form-control" id="x20" placeholder="Problem1" oninput="myInput();">
+  <label for="floatingInput"  >Problem 1</label>
+</div>
+<div class="form-floating">
+  <input type="text" class="form-control" id="x30" placeholder="Problem2" oninput="myInput();">
+  <label for="floatingPassword">Problem 2</label>
+</div>
+<div class="form-floating">
+  <input type="text" class="form-control" id="x40" placeholder="Problem2" oninput="myInput();">
+  <label for="floatingPassword">Problem 3</label>
+</div>
+      </div>
+      <div class="modal-footer">
+<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--modal Problem SQA D72  B-->
+<div class="modal fade" id="pr72b" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Problem SQA D72 B</h1>
+          <div class="col form-floating">
+    <input type="number" class="form-control" placeholder="Last name" aria-label="Last name" id="un72b" onkeyup="Sqad72b();">
+  <label for="floatingPassword">UNIT NG </label>
+  </div>
+      </div>
+      <div class="modal-body">
+<div class="form-floating ">
+  <input type="text" class="form-control" id="x50" placeholder="Problem1" oninput="myInput();">
+  <label for="floatingInput"  >Problem 1</label>
+</div>
+<div class="form-floating">
+  <input type="text" class="form-control" id="x60" placeholder="Problem2" oninput="myInput();">
+  <label for="floatingPassword">Problem 2</label>
+</div>
+<div class="form-floating">
+  <input type="text" class="form-control" id="x70" placeholder="Problem2" oninput="myInput();">
+  <label for="floatingPassword">Problem 3</label>
+</div>
+      </div>
+      <div class="modal-footer">
+<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--modal Problem SQA Dome  A-->
+<div class="modal fade" id="prdoa" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Problem SQA DOM A</h1>
+          <div class="col form-floating">
+    <input type="number" class="form-control" placeholder="Last name" aria-label="Last name" id="unda" onkeyup="Sqadomea();">
+  <label for="floatingPassword">UNIT NG </label>
+  </div>
+      </div>
+      <div class="modal-body">
+<div class="form-floating ">
+  <input type="text" class="form-control" id="x80" placeholder="Problem1" oninput="myInput();">
+  <label for="floatingInput"  >Problem 1</label>
+</div>
+<div class="form-floating">
+  <input type="text" class="form-control" id="x90" placeholder="Problem2" oninput="myInput();">
+  <label for="floatingPassword">Problem 2</label>
+</div>
+<div class="form-floating">
+  <input type="text" class="form-control" id="x11" placeholder="Problem2" oninput="myInput();">
+  <label for="floatingPassword">Problem 3</label>
+</div>
+      </div>
+      <div class="modal-footer">
+<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--modal Problem SQA DOME B-->
+<div class="modal fade" id="prdob" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Problem SQA DOM B</h1>
+          <div class="col form-floating">
+    <input type="number" class="form-control" placeholder="Last name" aria-label="Last name" id="undb" onkeyup="Sqadomeb();">
+  <label for="floatingPassword">UNIT NG </label>
+  </div>
+      </div>
+      <div class="modal-body">
+<div class="form-floating ">
+  <input type="text" class="form-control" id="x12" placeholder="Problem1" oninput="myInput();">
+  <label for="floatingInput"  >Problem 1</label>
+</div>
+<div class="form-floating">
+  <input type="text" class="form-control" id="x13" placeholder="Problem2" oninput="myInput();">
+  <label for="floatingPassword">Problem 2</label>
+</div>
+<div class="form-floating">
+  <input type="text" class="form-control" id="x14" placeholder="Problem2" oninput="myInput();">
+  <label for="floatingPassword">Problem 3</label>
+</div>
+      </div>
+      <div class="modal-footer">
+<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--modal Problem Dome Running A-->
+<div class="modal fade" id="prdma" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Problem DOME RUNNING A</h1>
+          <div class="col form-floating">
+    <input type="number" class="form-control" placeholder="Last name" aria-label="Last name" id="unma" onkeyup="DomeA();">
+  <label for="floatingPassword">UNIT NG </label>
+  </div>
+      </div>
+      <div class="modal-body">
+<div class="form-floating ">
+  <input type="text" class="form-control" id="x15" placeholder="Problem1" oninput="myInput();">
+  <label for="floatingInput"  >Problem 1</label>
+</div>
+<div class="form-floating">
+  <input type="text" class="form-control" id="x16" placeholder="Problem2" oninput="myInput();">
+  <label for="floatingPassword">Problem 2</label>
+</div>
+<div class="form-floating">
+  <input type="text" class="form-control" id="x17" placeholder="Problem2" oninput="myInput();">
+  <label for="floatingPassword">Problem 3</label>
+</div>
+      </div>
+      <div class="modal-footer">
+<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--modal Problem  DOME Running B-->
+<div class="modal fade" id="prdmb" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Problem DOME RUNING B</h1>
+          <div class="col form-floating">
+    <input type="number" class="form-control" placeholder="Last name" aria-label="Last name" id="unmb" onkeyup="DomeB();">
+  <label for="floatingPassword">UNIT NG </label>
+  </div>
+      </div>
+      <div class="modal-body">
+<div class="form-floating ">
+  <input type="text" class="form-control" id="x18" placeholder="Problem1" oninput="myInput();">
+  <label for="floatingInput"  >Problem 1</label>
+</div>
+<div class="form-floating">
+  <input type="text" class="form-control" id="x19" placeholder="Problem2" oninput="myInput();">
+  <label for="floatingPassword">Problem 2</label>
+</div>
+<div class="form-floating">
+  <input type="text" class="form-control" id="x27" placeholder="Problem2" oninput="myInput();">
+  <label for="floatingPassword">Problem 3</label>
+</div>
+      </div>
+      <div class="modal-footer">
+<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--modal Problem Vi A-->
+<div class="modal fade" id="provia" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Problem V. ISPECTION A</h1>
+          <div class="col form-floating">
+    <input type="number" class="form-control" placeholder="Last name" aria-label="Last name" id="unva" onkeyup="VinspA();">
+  <label for="floatingPassword">UNIT NG </label>
+  </div>
+      </div>
+      <div class="modal-body">
+<div class="form-floating ">
+  <input type="text" class="form-control" id="x21" placeholder="Problem1" oninput="myInput();">
+  <label for="floatingInput"  >Problem 1</label>
+</div>
+<div class="form-floating">
+  <input type="text" class="form-control" id="x22" placeholder="Problem2" oninput="myInput();">
+  <label for="floatingPassword">Problem 2</label>
+</div>
+<div class="form-floating">
+  <input type="text" class="form-control" id="x23" placeholder="Problem2" oninput="myInput();">
+  <label for="floatingPassword">Problem 3</label>
+</div>
+      </div>
+      <div class="modal-footer">
+<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--modal Problem  Vi B-->
+<div class="modal fade" id="provib" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Problem V. INSPECTION B</h1>
+          <div class="col form-floating">
+    <input type="number" class="form-control" placeholder="Last name" aria-label="Last name" id="unvb" onkeyup="VinspB();">
+  <label for="floatingPassword">UNIT NG </label>
+  </div>
+      </div>
+      <div class="modal-body">
+<div class="form-floating ">
+  <input type="text" class="form-control" id="x24" placeholder="Problem1" oninput="myInput();">
+  <label for="floatingInput"  >Problem 1</label>
+</div>
+<div class="form-floating">
+  <input type="text" class="form-control" id="x25" placeholder="Problem2" oninput="myInput();">
+  <label for="floatingPassword">Problem 2</label>
+</div>
+<div class="form-floating">
+  <input type="text" class="form-control" id="x26" placeholder="Problem2" oninput="myInput();">
+  <label for="floatingPassword">Problem 3</label>
+</div>
+      </div>
+      <div class="modal-footer">
+<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+    <script >
+function send_handle() {
+const num = document.getElementById("numbe").value;
+  const a01 = document.getElementById("001").value;
+  const a02 = document.getElementById("002").value;
+  const a03 = document.getElementById("003").value;
+  const a04 = document.getElementById("004").value;
+  const a05 = document.getElementById("005").value;
+  const a06 = document.getElementById("006").value;
+  const a07 = document.getElementById("007").value;
+  const a08 = document.getElementById("008").value;
+  const a09 = document.getElementById("009").value;
+  const a10 = document.getElementById("010").value;
+  const a11 = document.getElementById("011").value;
+  const a12 = document.getElementById("012").value;
+  const a13 = document.getElementById("013").value;
+  const a14 = document.getElementById("014").value;
+  const a15 = document.getElementById("015").value;
+  const a16 = document.getElementById("016").value;
+  const a17 = document.getElementById("017").value;
+  const a18 = document.getElementById("018").value;
+  const a19 = document.getElementById("019").value;
+  const a20 = document.getElementById("020").value;
+  const a21 = document.getElementById("021").value;
+  const a22 = document.getElementById("022").value;
+  const a23 = document.getElementById("023").value;
+  const a24 = document.getElementById("024").value;
+  const a25 = document.getElementById("025").value;
+  const a26 = document.getElementById("026").value;
+  const a27 = document.getElementById("027").value;
+  const a28 = document.getElementById("028").value;
+  const a29 = document.getElementById("029").value;
+  const a30 = document.getElementById("030").value;
+  const a31 = document.getElementById("031").value;
+  const t31 = document.getElementById("t31").value;
+  const a32 = document.getElementById("032").value;
+  const a33 = document.getElementById("033").value;
+  const a34 = document.getElementById("034").value;
+  const a35 = document.getElementById("035").value;
+  const a36 = document.getElementById("036").value;
+  const a37 = document.getElementById("037").value;
+  const a38 = document.getElementById("038").value;
+  const a39 = document.getElementById("039").value;
+  const a40 = document.getElementById("040").value;
+  const a41 = document.getElementById("041").value;
+  const a42 = document.getElementById("042").value;
+  const a43 = document.getElementById("043").value;
+  const a44 = document.getElementById("044").value;
+  const a45 = document.getElementById("045").value;
+  const a46 = document.getElementById("046").value;
+  const a47 = document.getElementById("047").value;
+  const a48 = document.getElementById("048").value;
+  const a49 = document.getElementById("049").value;
+  const a50 = document.getElementById("050").value;
+  const a51 = document.getElementById("051").value;
+  const a52 = document.getElementById("052").value;
+  const a53 = document.getElementById("053").value;
+  const a54 = document.getElementById("054").value;
+  const a55 = document.getElementById("055").value;
+  const a56 = document.getElementById("056").value;
+  const a57 = document.getElementById("057").value;
+  const a58 = document.getElementById("058").value;
+  const a59 = document.getElementById("059").value;
+  const a60 = document.getElementById("060").value;
+  const a61 = document.getElementById("061").value;
+  const a62 = document.getElementById("062").value;
+  const a63 = document.getElementById("063").value;
+  const a64 = document.getElementById("064").value;
+  const a65 = document.getElementById("065").value;
+  const a66 = document.getElementById("066").value;
+  const a67 = document.getElementById("067").value;
+  const a68 = document.getElementById("068").value;
+  const a69 = document.getElementById("069").value;
+  const a70 = document.getElementById("070").value;
+  const a71 = document.getElementById("071").value;
+  const a72 = document.getElementById("072").value;
+  const a73 = document.getElementById("073").value;
+  const a74 = document.getElementById("074").value;
+  const a75 = document.getElementById("075").value;
+  const a76 = document.getElementById("076").value;
+  const a77 = document.getElementById("077").value;
+  const a78 = document.getElementById("078").value;
+  const a79 = document.getElementById("079").value;
+  const a80 = document.getElementById("080").value;
+  const a81 = document.getElementById("081").value;
+  const a82 = document.getElementById("082").value;
+  const a83 = document.getElementById("083").value;
+  const a84 = document.getElementById("084").value;
+  const a85 = document.getElementById("085").value;
+  const a86 = document.getElementById("086").value;
+  const a87 = document.getElementById("087").value;
+  const a88 = document.getElementById("088").value;
+  const a89 = document.getElementById("089").value;
+  const a90 = document.getElementById("090").value;
+  const a91 = document.getElementById("091").value;
+  const a92 = document.getElementById("092").value;
+  const a93 = document.getElementById("093").value;
+  const a94 = document.getElementById("094").value;
+  const a95 = document.getElementById("095").value;
+  const a96 = document.getElementById("096").value;
+  const a97 = document.getElementById("097").value;
+  const a98 = document.getElementById("099").value;
+  const a99 = document.getElementById("099").value;
+  const a100 = document.getElementById("100").value;
+  const a101 = document.getElementById("101").value;
+  const a102 = document.getElementById("102").value;
+  const a103 = document.getElementById("103").value;
+  const a104 = document.getElementById("104").value;
+  const a105 = document.getElementById("105").value;
+
+  
+ 
+ 
+  const win = window.open(`https://wa.me/${num}?text=${a01}%0A%0A${a02}%0A${a03}${a04}${a05}${a06}%0A%0A${a07}%0A${a08}%0A${a09}%0A${a10}%0A${a11}%0A${a12}%0A${a13}%0A${a14}%0A${a15}%0A${a16}%0A${a17}%0A${a18}%0A${a19}%0A${a20}%0A${a21}%0A${a22}%0A${a23}%0A${a24}%0A${a25}%0A${a26}%0A${a27}%0A${a28}%0A${a29}%0A${a30}%0A${a31}%0A${t31}%0A${a32}%0A${a33}%0A${a34}%0A${a35}%0A${a36}%0A${a37}%0A${a38}%0A${a39}%0A${a40}%0A${a41}%0A${a42}%0A${a43}%0A${a44}%0A${a45} %0A${a46}%0A${a47}%0A${a48}%0A${a49}%0A${a50}%0A${a51}%0A${a52}%0A${a53}%0A${a54}%0A${a55}%0A${a56}%0A${a57}%0A${a58}%0A${a59}%0A${a60}%0A${a61}%0A${a62}%0A${a63}%0A${a64}%0A${a65}%0A${a66}%0A${a67}%0A${a68}%0A${a69}%0A${a70}%0A${a71}%0A${a72}%0A${a73}%0A${a74}%0A${a75}%0A${a76}%0A${a77}%0A${a78}%0A${a79}%0A${a80}%0A${a81}%0A${a82}%0A${a83}%0A${a84}%0A${a85}%0A${a86}%0A${a87}%0A${a88}%0A${a89}%0A${a90}%0A${a91}%0A${a92}%0A${a93}%0A${a94}%0A${a95}%0A${a96}%0A${a97}%0A${a98}%0A${a99}%0A${a100}%0A${a101}%0A${a102}%0A${a103}%0A${a104}%0A${a105}`, '_blank');
+  // win.focus();
+}
+    
+function Next() {
+  var n0 = document.getElementById('n0');
+  if (n0.style.display === 'none') {
+    n0.style.display = 'block';
+  } else {
+    n0.style.display = 'none';
+  }
+  var h1 = document.getElementById('h1');
+  if (h1.style.display === 'none') {
+    h1.style.display = 'block';
+  } else {
+    h1.style.display = 'none';
+  }
+  var h2 = document.getElementById('h2');
+  if (h2.style.display === 'block') {
+    h2.style.display = 'none';
+  } else {
+    h2.style.display = 'block';
+  }
+  var n1 = document.getElementById('n1');
+  if (n1.style.display === 'block') {
+    n1.style.display = 'none';
+  } else {
+    n1.style.display = 'block';
+  }
+var b0 = document.getElementById('b0');
+  if (b0.style.display === 'block') {
+    b0.style.display = 'none';
+  } else {
+    b0.style.display = 'block';
+  }
+  var l2 = document.getElementById('l2');
+  if (l2.style.display === 'block') {
+    l2.style.display = 'none';
+  } else {
+    l2.style.display = 'block';
+  }
+  var r2 = document.getElementById('r2');
+  if (r2.style.display === 'block') {
+    r2.style.display = 'none';
+  } else {
+    r2.style.display = 'block';
+  }
+}    
+    
+function Back() {
+  var n0 = document.getElementById('n0');
+  if (n0.style.display === 'none') {
+    n0.style.display = 'block';
+  } else {
+    n0.style.display = 'none';
+  }
+  var h1 = document.getElementById('h1');
+  if (h1.style.display === 'none') {
+    h1.style.display = 'block';
+  } else {
+    h1.style.display = 'none';
+  }
+  var h2 = document.getElementById('h2');
+  if (h2.style.display === 'block') {
+    h2.style.display = 'none';
+  } else {
+    h2.style.display = 'block';
+  }
+  var n1 = document.getElementById('n1');
+  if (n1.style.display === 'block') {
+    n1.style.display = 'none';
+  } else {
+    n1.style.display = 'block';
+  }
+var b0 = document.getElementById('b0');
+  if (b0.style.display === 'block') {
+    b0.style.display = 'none';
+  } else {
+    b0.style.display = 'block';
+  }
+  var l2 = document.getElementById('l2');
+  if (l2.style.display === 'block') {
+    l2.style.display = 'none';
+  } else {
+    l2.style.display = 'block';
+  }
+  var r2 = document.getElementById('r2');
+  if (r2.style.display === 'block') {
+    r2.style.display = 'none';
+  } else {
+    r2.style.display = 'block';
+  }
+}
+
+function Next1() {
+  var h3 = document.getElementById('h3');
+  if (h3.style.display === 'block') {
+    h3.style.display = 'none';
+  } else {
+    h3.style.display = 'block';
+  }
+  var h2 = document.getElementById('h2');
+  if (h2.style.display === 'block') {
+    h2.style.display = 'none';
+  } else {
+    h2.style.display = 'block';
+  }
+  var n1 = document.getElementById('n1');
+  if (n1.style.display === 'block') {
+    n1.style.display = 'none';
+  } else {
+    n1.style.display = 'block';
+  }
+var b0 = document.getElementById('b0');
+  if (b0.style.display === 'block') {
+    b0.style.display = 'none';
+  } else {
+    b0.style.display = 'block';
+  }
+  var b1 = document.getElementById('b1');
+  if (b1.style.display === 'block') {
+    b1.style.display = 'none';
+  } else {
+    b1.style.display = 'block';
+  }
+  var n2 = document.getElementById('n2');
+  if (n2.style.display === 'block') {
+    n2.style.display = 'none';
+  } else {
+    n2.style.display = 'block';
+  }
+  var l2 = document.getElementById('l2');
+  if (l2.style.display === 'block') {
+    l2.style.display = 'none';
+  } else {
+    l2.style.display = 'block';
+  }
+  var r2 = document.getElementById('r2');
+  if (r2.style.display === 'block') {
+    r2.style.display = 'none';
+  } else {
+    r2.style.display = 'block';
+  }
+  var ht = document.getElementById('ht');
+  if (ht.style.display === 'block') {
+    ht.style.display = 'none';
+  } else {
+    ht.style.display = 'block';
+  }
+}
+
+function Back1() {
+  var h3 = document.getElementById('h3');
+  if (h3.style.display === 'block') {
+    h3.style.display = 'none';
+  } else {
+    h3.style.display = 'block';
+  }
+  var h2 = document.getElementById('h2');
+  if (h2.style.display === 'block') {
+    h2.style.display = 'none';
+  } else {
+    h2.style.display = 'block';
+  }
+  var n1 = document.getElementById('n1');
+  if (n1.style.display === 'block') {
+    n1.style.display = 'none';
+  } else {
+    n1.style.display = 'block';
+  }
+var b0 = document.getElementById('b0');
+  if (b0.style.display === 'block') {
+    b0.style.display = 'none';
+  } else {
+    b0.style.display = 'block';
+  }
+  var b1 = document.getElementById('b1');
+  if (b1.style.display === 'block') {
+    b1.style.display = 'none';
+  } else {
+    b1.style.display = 'block';
+  }
+  var n2 = document.getElementById('n2');
+  if (n2.style.display === 'block') {
+    n2.style.display = 'none';
+  } else {
+    n2.style.display = 'block';
+  }
+  var l2 = document.getElementById('l2');
+  if (l2.style.display === 'block') {
+    l2.style.display = 'none';
+  } else {
+    l2.style.display = 'block';
+  }
+  var r2 = document.getElementById('r2');
+  if (r2.style.display === 'block') {
+    r2.style.display = 'none';
+  } else {
+    r2.style.display = 'block';
+  }
+  var ht = document.getElementById('ht');
+  if (ht.style.display === 'block') {
+    ht.style.display = 'none';
+  } else {
+    ht.style.display = 'block';
+  }
+}
+
+function Next2() {
+  var h3 = document.getElementById('h3');
+  if (h3.style.display === 'block') {
+    h3.style.display = 'none';
+  } else {
+    h3.style.display = 'block';
+  }
+  var h4 = document.getElementById('h4');
+  if (h4.style.display === 'block') {
+    h4.style.display = 'none';
+  } else {
+    h4.style.display = 'block';
+  }
+  var n2 = document.getElementById('n2');
+  if (n2.style.display === 'block') {
+    n2.style.display = 'none';
+  } else {
+    n2.style.display = 'block';
+  }
+  var n3 = document.getElementById('n3');
+  if (n3.style.display === 'block') {
+    n3.style.display = 'none';
+  } else {
+    n3.style.display = 'block';
+  }
+  var b1 = document.getElementById('b1');
+  if (b1.style.display === 'block') {
+    b1.style.display = 'none';
+  } else {
+    b1.style.display = 'block';
+  }
+  var b2 = document.getElementById('b2');
+  if (b2.style.display === 'block') {
+    b2.style.display = 'none';
+  } else {
+    b2.style.display = 'block';
+  }
+  var ht = document.getElementById('ht');
+  if (ht.style.display === 'block') {
+    ht.style.display = 'none';
+  } else {
+    ht.style.display = 'block';
+  }
+  var aa = document.getElementById('aa');
+  if (aa.style.display === 'block') {
+    aa.style.display = 'none';
+  } else {
+    aa.style.display = 'block';
+  }
+  var ab = document.getElementById('ab');
+  if (ab.style.display === 'block') {
+    ab.style.display = 'none';
+  } else {
+    ab.style.display = 'block';
+  }
+}
+
+function Back2() {
+  var h3 = document.getElementById('h3');
+  if (h3.style.display === 'block') {
+    h3.style.display = 'none';
+  } else {
+    h3.style.display = 'block';
+  }
+  var h4 = document.getElementById('h4');
+  if (h4.style.display === 'block') {
+    h4.style.display = 'none';
+  } else {
+    h4.style.display = 'block';
+  }
+  var n2 = document.getElementById('n2');
+  if (n2.style.display === 'block') {
+    n2.style.display = 'none';
+  } else {
+    n2.style.display = 'block';
+  }
+  var n3 = document.getElementById('n3');
+  if (n3.style.display === 'block') {
+    n3.style.display = 'none';
+  } else {
+    n3.style.display = 'block';
+  }
+  var b1 = document.getElementById('b1');
+  if (b1.style.display === 'block') {
+    b1.style.display = 'none';
+  } else {
+    b1.style.display = 'block';
+  }
+  var b2 = document.getElementById('b2');
+  if (b2.style.display === 'block') {
+    b2.style.display = 'none';
+  } else {
+    b2.style.display = 'block';
+  }
+  var ht = document.getElementById('ht');
+  if (ht.style.display === 'block') {
+    ht.style.display = 'none';
+  } else {
+    ht.style.display = 'block';
+  }
+  var aa = document.getElementById('aa');
+  if (aa.style.display === 'block') {
+    aa.style.display = 'none';
+  } else {
+    aa.style.display = 'block';
+  }
+  var ab = document.getElementById('ab');
+  if (ab.style.display === 'block') {
+    ab.style.display = 'none';
+  } else {
+    ab.style.display = 'block';
+  }
+}
+function Next3() {
+  var h5 = document.getElementById('h5');
+  if (h5.style.display === 'block') {
+    h5.style.display = 'none';
+  } else {
+    h5.style.display = 'block';
+  }
+  var h4 = document.getElementById('h4');
+  if (h4.style.display === 'block') {
+    h4.style.display = 'none';
+  } else {
+    h4.style.display = 'block';
+  }
+  var b2 = document.getElementById('b2');
+  if (b2.style.display === 'block') {
+    b2.style.display = 'none';
+  } else {
+    b2.style.display = 'block';
+  }
+  var b3 = document.getElementById('b3');
+  if (b3.style.display === 'block') {
+    b3.style.display = 'none';
+  } else {
+    b3.style.display = 'block';
+  }
+  var n3 = document.getElementById('n3');
+  if (n3.style.display === 'block') {
+    n3.style.display = 'none';
+  } else {
+    n3.style.display = 'block';
+  }
+  var n4 = document.getElementById('n4');
+  if (n4.style.display === 'block') {
+    n4.style.display = 'none';
+  } else {
+    n4.style.display = 'block';
+  }
+  var aa = document.getElementById('aa');
+  if (aa.style.display === 'block') {
+    aa.style.display = 'none';
+  } else {
+    aa.style.display = 'block';
+  }
+  var ab = document.getElementById('ab');
+  if (ab.style.display === 'block') {
+    ab.style.display = 'none';
+  } else {
+    ab.style.display = 'block';
+  }
+  var a7 = document.getElementById('a7');
+  if (a7.style.display === 'block') {
+    a7.style.display = 'none';
+  } else {
+    a7.style.display = 'block';
+  }
+  var b8 = document.getElementById('b8');
+  if (b8.style.display === 'block') {
+    b8.style.display = 'none';
+  } else {
+    b8.style.display = 'block';
+  }
+}
+
+function Back3() {
+  var h5 = document.getElementById('h5');
+  if (h5.style.display === 'block') {
+    h5.style.display = 'none';
+  } else {
+    h5.style.display = 'block';
+  }
+  var h4 = document.getElementById('h4');
+  if (h4.style.display === 'block') {
+    h4.style.display = 'none';
+  } else {
+    h4.style.display = 'block';
+  }
+  var b2 = document.getElementById('b2');
+  if (b2.style.display === 'block') {
+    b2.style.display = 'none';
+  } else {
+    b2.style.display = 'block';
+  }
+  var b3 = document.getElementById('b3');
+  if (b3.style.display === 'block') {
+    b3.style.display = 'none';
+  } else {
+    b3.style.display = 'block';
+  }
+  var n3 = document.getElementById('n3');
+  if (n3.style.display === 'block') {
+    n3.style.display = 'none';
+  } else {
+    n3.style.display = 'block';
+  }
+  var n4 = document.getElementById('n4');
+  if (n4.style.display === 'block') {
+    n4.style.display = 'none';
+  } else {
+    n4.style.display = 'block';
+  }
+  var aa = document.getElementById('aa');
+  if (aa.style.display === 'block') {
+    aa.style.display = 'none';
+  } else {
+    aa.style.display = 'block';
+  }
+  var ab = document.getElementById('ab');
+  if (ab.style.display === 'block') {
+    ab.style.display = 'none';
+  } else {
+    ab.style.display = 'block';
+  }
+  var a7 = document.getElementById('a7');
+  if (a7.style.display === 'block') {
+    a7.style.display = 'none';
+  } else {
+    a7.style.display = 'block';
+  }
+  var b8 = document.getElementById('b8');
+  if (b8.style.display === 'block') {
+    b8.style.display = 'none';
+  } else {
+    b8.style.display = 'block';
+  }
+}
+function Next4() {
+  var h5 = document.getElementById('h5');
+  if (h5.style.display === 'block') {
+    h5.style.display = 'none';
+  } else {
+    h5.style.display = 'block';
+  }
+  var h6 = document.getElementById('h6');
+  if (h6.style.display === 'block') {
+    h6.style.display = 'none';
+  } else {
+    h6.style.display = 'block';
+  }
+  var b3 = document.getElementById('b3');
+  if (b3.style.display === 'block') {
+    b3.style.display = 'none';
+  } else {
+    b3.style.display = 'block';
+  }
+  var n4 = document.getElementById('n4');
+  if (n4.style.display === 'block') {
+    n4.style.display = 'none';
+  } else {
+    n4.style.display = 'block';
+  }
+  var b4 = document.getElementById('b4');
+  if (b4.style.display === 'block') {
+    b4.style.display = 'none';
+  } else {
+    b4.style.display = 'block';
+  }
+  var n5 = document.getElementById('n5');
+  if (n5.style.display === 'block') {
+    n5.style.display = 'none';
+  } else {
+    n5.style.display = 'block';
+  }
+  var a7 = document.getElementById('a7');
+  if (a7.style.display === 'block') {
+    a7.style.display = 'none';
+  } else {
+    a7.style.display = 'block';
+  }
+  var b8 = document.getElementById('b8');
+  if (b8.style.display === 'block') {
+    b8.style.display = 'none';
+  } else {
+    b8.style.display = 'block';
+  }
+  var a9 = document.getElementById('a9');
+  if (a9.style.display === 'block') {
+    a9.style.display = 'none';
+  } else {
+    a9.style.display = 'block';
+  }
+  var b9 = document.getElementById('b9');
+  if (b9.style.display === 'block') {
+    b9.style.display = 'none';
+  } else {
+    b9.style.display = 'block';
+  }
+}
+function Back4() {
+  var h5 = document.getElementById('h5');
+  if (h5.style.display === 'block') {
+    h5.style.display = 'none';
+  } else {
+    h5.style.display = 'block';
+  }
+  var h6 = document.getElementById('h6');
+  if (h6.style.display === 'block') {
+    h6.style.display = 'none';
+  } else {
+    h6.style.display = 'block';
+  }
+  var b3 = document.getElementById('b3');
+  if (b3.style.display === 'block') {
+    b3.style.display = 'none';
+  } else {
+    b3.style.display = 'block';
+  }
+  var n4 = document.getElementById('n4');
+  if (n4.style.display === 'block') {
+    n4.style.display = 'none';
+  } else {
+    n4.style.display = 'block';
+  }
+  var b4 = document.getElementById('b4');
+  if (b4.style.display === 'block') {
+    b4.style.display = 'none';
+  } else {
+    b4.style.display = 'block';
+  }
+  var n5 = document.getElementById('n5');
+  if (n5.style.display === 'block') {
+    n5.style.display = 'none';
+  } else {
+    n5.style.display = 'block';
+  }
+  var a7 = document.getElementById('a7');
+  if (a7.style.display === 'block') {
+    a7.style.display = 'none';
+  } else {
+    a7.style.display = 'block';
+  }
+  var b8 = document.getElementById('b8');
+  if (b8.style.display === 'block') {
+    b8.style.display = 'none';
+  } else {
+    b8.style.display = 'block';
+  }
+  var a9 = document.getElementById('a9');
+  if (a9.style.display === 'block') {
+    a9.style.display = 'none';
+  } else {
+    a9.style.display = 'block';
+  }
+  var b9 = document.getElementById('b9');
+  if (b9.style.display === 'block') {
+    b9.style.display = 'none';
+  } else {
+    b9.style.display = 'block';
+  }
+}
+
+function Next5() {
+  var h7 = document.getElementById('h7');
+  if (h7.style.display === 'block') {
+    h7.style.display = 'none';
+  } else {
+    h7.style.display = 'block';
+  }
+  var h6 = document.getElementById('h6');
+  if (h6.style.display === 'block') {
+    h6.style.display = 'none';
+  } else {
+    h6.style.display = 'block';
+  }
+  var b4 = document.getElementById('b4');
+  if (b4.style.display === 'block') {
+    b4.style.display = 'none';
+  } else {
+    b4.style.display = 'block';
+  }
+  var b5 = document.getElementById('b5');
+  if (b5.style.display === 'block') {
+    b5.style.display = 'none';
+  } else {
+    b5.style.display = 'block';
+  }
+  var n5 = document.getElementById('n5');
+  if (n5.style.display === 'block') {
+    n5.style.display = 'none';
+  } else {
+    n5.style.display = 'block';
+  }
+  var n6 = document.getElementById('n6');
+  if (n6.style.display === 'block') {
+    n6.style.display = 'none';
+  } else {
+    n6.style.display = 'block';
+  }
+  var a9 = document.getElementById('a9');
+  if (a9.style.display === 'block') {
+    a9.style.display = 'none';
+  } else {
+    a9.style.display = 'block';
+  }
+  var b9 = document.getElementById('b9');
+  if (b9.style.display === 'block') {
+    b9.style.display = 'none';
+  } else {
+    b9.style.display = 'block';
+  }
+  var da = document.getElementById('da');
+  if (da.style.display === 'block') {
+    da.style.display = 'none';
+  } else {
+    da.style.display = 'block';
+  }
+  var db = document.getElementById('db');
+  if (db.style.display === 'block') {
+    db.style.display = 'none';
+  } else {
+    db.style.display = 'block';
+  }
+}
+function Back5() {
+  var h7 = document.getElementById('h7');
+  if (h7.style.display === 'block') {
+    h7.style.display = 'none';
+  } else {
+    h7.style.display = 'block';
+  }
+  var h6 = document.getElementById('h6');
+  if (h6.style.display === 'block') {
+    h6.style.display = 'none';
+  } else {
+    h6.style.display = 'block';
+  }
+  var b4 = document.getElementById('b4');
+  if (b4.style.display === 'block') {
+    b4.style.display = 'none';
+  } else {
+    b4.style.display = 'block';
+  }
+  var b5 = document.getElementById('b5');
+  if (b5.style.display === 'block') {
+    b5.style.display = 'none';
+  } else {
+    b5.style.display = 'block';
+  }
+  var n5 = document.getElementById('n5');
+  if (n5.style.display === 'block') {
+    n5.style.display = 'none';
+  } else {
+    n5.style.display = 'block';
+  }
+  var n6 = document.getElementById('n6');
+  if (n6.style.display === 'block') {
+    n6.style.display = 'none';
+  } else {
+    n6.style.display = 'block';
+  }
+  var a9 = document.getElementById('a9');
+  if (a9.style.display === 'block') {
+    a9.style.display = 'none';
+  } else {
+    a9.style.display = 'block';
+  }
+  var b9 = document.getElementById('b9');
+  if (b9.style.display === 'block') {
+    b9.style.display = 'none';
+  } else {
+    b9.style.display = 'block';
+  }
+  var da = document.getElementById('da');
+  if (da.style.display === 'block') {
+    da.style.display = 'none';
+  } else {
+    da.style.display = 'block';
+  }
+  var db = document.getElementById('db');
+  if (db.style.display === 'block') {
+    db.style.display = 'none';
+  } else {
+    db.style.display = 'block';
+  }
+}
+function Next6() {
+  var h7 = document.getElementById('h7');
+  if (h7.style.display === 'block') {
+    h7.style.display = 'none';
+  } else {
+    h7.style.display = 'block';
+  }
+  var h8 = document.getElementById('h8');
+  if (h8.style.display === 'block') {
+    h8.style.display = 'none';
+  } else {
+    h8.style.display = 'block';
+  }
+  var n6 = document.getElementById('n6');
+  if (n6.style.display === 'block') {
+    n6.style.display = 'none';
+  } else {
+    n6.style.display = 'block';
+  }
+  var b6 = document.getElementById('b6');
+  if (b6.style.display === 'block') {
+    b6.style.display = 'none';
+  } else {
+    b6.style.display = 'block';
+  }
+  var b5 = document.getElementById('b5');
+  if (b5.style.display === 'block') {
+    b5.style.display = 'none';
+  } else {
+    b5.style.display = 'block';
+  }
+  var n7 = document.getElementById('n7');
+  if (n7.style.display === 'block') {
+    n7.style.display = 'none';
+  } else {
+    n7.style.display = 'block';
+  }
+  var da = document.getElementById('da');
+  if (da.style.display === 'block') {
+    da.style.display = 'none';
+  } else {
+    da.style.display = 'block';
+  }
+  var db = document.getElementById('db');
+  if (db.style.display === 'block') {
+    db.style.display = 'none';
+  } else {
+    db.style.display = 'block';
+  }
+  var va = document.getElementById('va');
+  if (va.style.display === 'block') {
+    va.style.display = 'none';
+  } else {
+    va.style.display = 'block';
+  }
+  var vb = document.getElementById('vb');
+  if (vb.style.display === 'block') {
+    vb.style.display = 'none';
+  } else {
+    vb.style.display = 'block';
+  }
+}
+function Back6() {
+  var h7 = document.getElementById('h7');
+  if (h7.style.display === 'block') {
+    h7.style.display = 'none';
+  } else {
+    h7.style.display = 'block';
+  }
+  var h8 = document.getElementById('h8');
+  if (h8.style.display === 'block') {
+    h8.style.display = 'none';
+  } else {
+    h8.style.display = 'block';
+  }
+  var n6 = document.getElementById('n6');
+  if (n6.style.display === 'block') {
+    n6.style.display = 'none';
+  } else {
+    n6.style.display = 'block';
+  }
+  var b6 = document.getElementById('b6');
+  if (b6.style.display === 'block') {
+    b6.style.display = 'none';
+  } else {
+    b6.style.display = 'block';
+  }
+  var b5 = document.getElementById('b5');
+  if (b5.style.display === 'block') {
+    b5.style.display = 'none';
+  } else {
+    b5.style.display = 'block';
+  }
+  var n7 = document.getElementById('n7');
+  if (n7.style.display === 'block') {
+    n7.style.display = 'none';
+  } else {
+    n7.style.display = 'block';
+  }
+  var da = document.getElementById('da');
+  if (da.style.display === 'block') {
+    da.style.display = 'none';
+  } else {
+    da.style.display = 'block';
+  }
+  var db = document.getElementById('db');
+  if (db.style.display === 'block') {
+    db.style.display = 'none';
+  } else {
+    db.style.display = 'block';
+  }
+  var va = document.getElementById('va');
+  if (va.style.display === 'block') {
+    va.style.display = 'none';
+  } else {
+    va.style.display = 'block';
+  }
+  var vb = document.getElementById('vb');
+  if (vb.style.display === 'block') {
+    vb.style.display = 'none';
+  } else {
+    vb.style.display = 'block';
+  }
+}
+
+function Next7() {
+  var h9 = document.getElementById('h9');
+  if (h9.style.display === 'block') {
+    h9.style.display = 'none';
+  } else {
+    h9.style.display = 'block';
+  }
+  var h8 = document.getElementById('h8');
+  if (h8.style.display === 'block') {
+    h8.style.display = 'none';
+  } else {
+    h8.style.display = 'block';
+  }
+  var b6 = document.getElementById('b6');
+  if (b6.style.display === 'block') {
+    b6.style.display = 'none';
+  } else {
+    b6.style.display = 'block';
+  }
+  var b7 = document.getElementById('b7');
+  if (b7.style.display === 'block') {
+    b7.style.display = 'none';
+  } else {
+    b7.style.display = 'block';
+  }
+  var n7 = document.getElementById('n7');
+  if (n7.style.display === 'block') {
+    n7.style.display = 'none';
+  } else {
+    n7.style.display = 'block';
+  }
+  var va = document.getElementById('va');
+  if (va.style.display === 'block') {
+    va.style.display = 'none';
+  } else {
+    va.style.display = 'block';
+  }
+  var vb = document.getElementById('vb');
+  if (vb.style.display === 'block') {
+    vb.style.display = 'none';
+  } else {
+    vb.style.display = 'block';
+  }
+}
+function Back7() {
+  var h9 = document.getElementById('h9');
+  if (h9.style.display === 'block') {
+    h9.style.display = 'none';
+  } else {
+    h9.style.display = 'block';
+  }
+  var h8 = document.getElementById('h8');
+  if (h8.style.display === 'block') {
+    h8.style.display = 'none';
+  } else {
+    h8.style.display = 'block';
+  }
+  var b6 = document.getElementById('b6');
+  if (b6.style.display === 'block') {
+    b6.style.display = 'none';
+  } else {
+    b6.style.display = 'block';
+  }
+  var b7 = document.getElementById('b7');
+  if (b7.style.display === 'block') {
+    b7.style.display = 'none';
+  } else {
+    b7.style.display = 'block';
+  }
+  var n7 = document.getElementById('n7');
+  if (n7.style.display === 'block') {
+    n7.style.display = 'none';
+  } else {
+    n7.style.display = 'block';
+  }
+  var va = document.getElementById('va');
+  if (va.style.display === 'block') {
+    va.style.display = 'none';
+  } else {
+    va.style.display = 'block';
+  }
+  var vb = document.getElementById('vb');
+  if (vb.style.display === 'block') {
+    vb.style.display = 'none';
+  } else {
+    vb.style.display = 'block';
+  }
+}
+
+function hari() {
+    let hr = document.getElementById("hr").value;
+    document.getElementById("jdl").innerHTML="[DAILY REPORT QUALITY PERFORMANCE]";
+    document.getElementById("001").value="*[ DAILY REPORT QUALITY PERFORMANCE ]*";
+    document.getElementById("sjd").innerHTML="Berikut kami kirimkan pencapaian Quality Assembling 2 hari ini. ";
+document.getElementById("002").value="Berikut kami kirimkan pencapaian Quality Assembling 2 hari ini. ";
+    if (hr==1){text="SENIN";}
+    else if (hr==2){text="SELASA";}
+    else if (hr==3){text="RABU";}
+    else if (hr==4){text="KAMIS";}
+    else if (hr==5){text="JUMAT";}
+    else if (hr==6){text="SABTU";}
+    else if (hr==7){text="MINGGU";}
+    else {text="Masukan Angka 1 untuk Senin sampai 7 Untuk Minggu ";}
+    
+    document.getElementById("hri").innerHTML= text + ", ";
+    document.getElementById("003").value="*" + text + ", ";
+}    
+function Tanggal() {
+    let tg = document.getElementById("tg").value;
+
+    document.getElementById("tgl").innerHTML= tg + " ";
+    document.getElementById("004").value= tg + " ";
+
+}        
+
+function Bulan() {
+    let bl = document.getElementById("bl").value;
+    if (bl==1){text="JANUARI";}
+    else if (bl==2){text="FEBRUARI";}
+    else if (bl==3){text="MARET";}
+    else if (bl==4){text="APRIL";}
+    else if (bl==5){text="MEI";}
+    else if (bl==6){text="JUNI";}
+    else if (bl==7){text="JULI";}
+    else if (bl==8){text="AGUSTUS";}
+    else if (bl==9){text="SEPTEMBER";}
+    else if (bl==10){text="OKTOBER";}
+    else if (bl==11){text="NOVEMBER";}
+    else if (bl==12){text="DESEMBER";}
+    else{text="Masukan Angka 1 sampe 12 untuk mengisi bulan";}
+    document.getElementById("bln").innerHTML=text + " ";
+    document.getElementById("005").value=text + " ";
+}
+
+function Tahun() {
+    let th = document.getElementById("th").value;
+    document.getElementById("thn").innerHTML=th;
+    document.getElementById("006").value=th + "*";
+}
+
+function TotalCase40() {
+    let tc40 = document.getElementById("tc40").value;
+    if (tc40==0){
+        text="T/A"; 
+        prb=" "; 
+        judg="✅"; 
+        x = "Zero Deffect";
+    }else {
+        text=" "; 
+        prb="Case D40L"; 
+        judg="❌"; 
+        x = "";
+    }
+    document.getElementById("1cs").innerHTML="Highlight problem : "+text;
+    document.getElementById("011").value=" Highlight problem : "+text;
+    document.getElementById("p40").innerHTML= prb;
+    
+    document.getElementById("amc").innerHTML=" " + " ▪️After Market Claim :";
+    document.getElementById("007").value= "   *▪️After Market Claim :*";
+    document.getElementById("jc").innerHTML="A. JAPAN CUSTOMER :";
+    document.getElementById("008").value="*A. JAPAN CUSTOMER :*";
+    document.getElementById("u40").innerHTML="Unit :  D40L";
+    document.getElementById("009").value="Unit :  D40L";
+    document.getElementById("1tc").innerHTML ="Total case : " + tc40 + " Case " + judg;
+    document.getElementById("010").value =" Total case : " + tc40 + " Case " + judg;
+    document.getElementById("pr40").innerHTML=("");
+    document.getElementById("2pr40").innerHTML=("");
+    document.getElementById("012").value=("     ") + x;
+    document.getElementById("013").value=("");
+}
+
+function TotalCase26() {
+    let tc26 = document.getElementById("tc26").value;
+    if (tc26==0){
+        text="T/A"; 
+        prb=" "; 
+        judg="✅";
+        x = "Zero Deffect";}
+    else {
+        text=" "; 
+        prb="Case D26"; 
+        judg="❌"; 
+        x = "";
+    }
+    document.getElementById("c26").innerHTML="Highlight problem : "+text ;
+    document.getElementById("016").value=" Highlight problem : "+text ;
+    document.getElementById("p26").innerHTML= prb;
+    document.getElementById("u26").innerHTML="Unit :  D26";
+    document.getElementById("014").value="Unit :  D26";
+    document.getElementById("t26").innerHTML ="Total case : " + tc26 + " Case " + judg ;
+    document.getElementById("015").value =" Total case : " + tc26 + " Case " + judg ;
+
+    document.getElementById("1pr26").innerHTML=("");
+    document.getElementById("2pr26").innerHTML=("");
+    document.getElementById("017").value=("     ") + x;
+    document.getElementById("018").value=("");
+}
+
+function Problem40() {
+    let p401 = document.getElementById("1p40").value;
+    let p402 = document.getElementById("2p40").value;
+    document.getElementById("pr40").innerHTML= ("     ") + p401;
+    document.getElementById("2pr40").innerHTML= ("     ") + p402;
+    document.getElementById("012").value= ("     ") + p401;
+    document.getElementById("013").value= ("     ") + p402;
+
+}
+
+function Problem26() {
+    let p261 = document.getElementById("1p26").value;
+    let p262 = document.getElementById("2p26").value;
+    document.getElementById("1pr26").innerHTML= ("     ") + p261;
+    document.getElementById("2pr26").innerHTML= ("     ") + p262;
+    document.getElementById("017").value= ("     ") + p261;
+    document.getElementById("018").value= ("     ") + p262;
+
+}
+
+
+function CheckHitomawari() {
+    let tuh = document.getElementById("tuh").value;
+    if (tuh==0){note="( no checking unit )"; }
+    else {note="";}
+    
+    let tdh = document.getElementById("tdh").value;
+    
+    var dht = parseFloat(tdh) / parseFloat(tuh);
+    if (isNaN(dht)) {
+        a = 0;
+        text="✅";  
+        prb=" " ;  
+        def="T/A";
+        x = "Zero Deffect";
+    }else if (dht == 0) {
+        a = dht;
+        text= "✅";
+        prb= " ";
+        def="T/A";
+        x = "Zero Deffect";
+    }else { 
+        a = dht;
+        text="❌";  
+        prb="Problem";  
+        def=" ";
+        x = "";
+    }{
+    document.getElementById("dpu").innerHTML="▪️DPU";
+    document.getElementById("019").value="   *▪️DPU*";
+    document.getElementById("hit").innerHTML= "A. HITTOMAWARI";
+    document.getElementById("020").value= "*A. HITTOMAWARI*";
+    document.getElementById("trh").innerHTML= "Target : 0";
+    document.getElementById("021").value= " Target : 0";
+    document.getElementById("thi").innerHTML= "Actual : " + tdh + "/" + tuh + " = " + a.toFixed(2) + " " + text + " " + note;
+    document.getElementById("022").value= " Actual : " + tdh + "/" + tuh + " = " + a.toFixed(2) + " " + text + " " + note;
+    document.getElementById("pht").innerHTML= prb;
+    document.getElementById("htp").innerHTML="Highlight problem : " + def ;
+    document.getElementById("023").value=" Highlight problem : " + def ;
+    document.getElementById("024").value= ("     ")  + x;
+    }
+}
+
+function ProblemHt() {
+    let p261 = document.getElementById("1pht").value;
+    let p262 = document.getElementById("2pht").value;
+    document.getElementById("pht1").innerHTML= ("     ") + p261;
+    document.getElementById("pht2").innerHTML= ("     ") + p262;
+    document.getElementById("024").value= ("     ") + p261;
+    document.getElementById("025").value= ("     ") + p262;
+
+}
+function AuditA() {
+    let uca = document.getElementById("uca").value;
+    let dfa = document.getElementById("dfa").value;
+    let uaa = document.getElementById("uaa").value;
+    var aua = parseFloat(dfa) / parseFloat(uca);
+    if (isNaN(aua)) {
+        a = 0;
+        text= "✅";
+        def="T/A";
+        ng="0";
+        prb="";
+        x = "Zero Deffect";
+    }else if (aua ==0) { 
+        a=aua;
+        text="✅";  
+        def="T/A" ; 
+        ng = "0";
+        prb= "";
+        x = "Zero Deffect";
+    } else if ( aua<=0.02 ) { 
+        a=aua;
+        text="✅";  
+        def=" "  ;
+        ng = "";
+        prb= "Problem";
+        x = "";
+    }else { 
+        a=aua;
+        text="❌";  
+        def=" "  ;
+        ng = "";
+        prb= "Problem";
+        x = "";
+    }
+    document.getElementById("daa").innerHTML= "SHIFT A : " + dfa + "/" + uca + " = " + a.toFixed(2) + text;
+    document.getElementById("aud").innerHTML="B. AUDIT";
+    document.getElementById("tmc").innerHTML="TMC Model";
+    document.getElementById("tgt").innerHTML = "Target : 0.02";
+    document.getElementById("act").innerHTML = "Actual :";
+    document.getElementById("nga").innerHTML = "NG Unit : " + uaa + ng + " Unit";
+    document.getElementById("hpa").innerHTML = "Highlight problem : " + def;
+    document.getElementById("bpa").innerHTML= prb;
+    
+    document.getElementById("026").value="*B. AUDIT*";
+    document.getElementById("027").value="_TMC Model_";
+    document.getElementById("028").value = " Target : 0.02";
+    document.getElementById("029").value = " Actual :";
+    document.getElementById("030").value= " SHIFT A : " + dfa + "/" + uca + " = " + a.toFixed(2) + text;
+    document.getElementById("031").value = "   NG Unit : " + uaa + ng + " Unit";
+    document.getElementById("t31").value = "   Highlight problem : " + def;
+    document.getElementById("033").value = "     " + x;
+}
+
+function audit_A(){
+  let p1aa = document.getElementById("1paa").value;
+  document.getElementById("paa1").innerHTML = p1aa;
+  document.getElementById("032").value = p1aa;
+  let p2aa = document.getElementById("2paa").value;
+  document.getElementById("paa2").innerHTML = p2aa;
+  document.getElementById("033").value = p2aa;
+  let p3aa = document.getElementById("3paa").value;
+  document.getElementById("paa3").innerHTML = p3aa;
+  document.getElementById("034").value = p3aa;
+}
+
+function AuditB() {
+    let ucb = document.getElementById("ucb").value;
+    let dfb = document.getElementById("dfb").value;
+    let uab = document.getElementById("uab").value;
+    var aub = parseFloat(dfb) / parseFloat(ucb);
+    if (isNaN(aub)) {
+        a= 0;
+        def="T/A";
+        text= "✅";
+        ng="0";
+        prb="";
+        x = "Zero Deffect";
+    } else if (aub ==0) { 
+        a=aub;
+        text="✅";  
+        def="T/A" ; 
+        ng = "0";
+        prb= "";
+        x = "Zero Deffect";
+    } else if ( aub<=0.02 ) { 
+        a=aub;
+        text="✅";  
+        def=" "  ;
+        ng = "";
+        prb= "Problem";
+        x = "";
+    }else { 
+        a=aub;
+        text="❌";  
+        def=" "  ;
+        ng = "";
+        prb= "Problem";
+        x = "";
+    }
+    document.getElementById("dab").innerHTML="SHIFT B : " + dfb + "/" + ucb + " = " + a.toFixed(2) + text;
+    document.getElementById("ngb").innerHTML="NG unit : " + ng + uab +" unit";
+    document.getElementById("hpb").innerHTML = "Highlight problem : " + def;
+    document.getElementById("035").value=" SHIFT B : " + dfb + "/" + ucb + " = " + a.toFixed(2) + text;
+    document.getElementById("036").value="   NG unit : " + ng + uab +" unit";
+    document.getElementById("037").value = "   Highlight problem : " + def;
+    document.getElementById("bpb").innerHTML= prb;
+    document.getElementById("039").value = "     " + x;
+}
+
+function audit_B(){
+  let p1ab = document.getElementById("1pab").value;
+  document.getElementById("pab1").innerHTML = p1ab;
+  document.getElementById("038").value = p1ab;
+  let p2ab = document.getElementById("2pab").value;
+  document.getElementById("pab2").innerHTML = p2ab;
+  document.getElementById("039").value = p2ab;
+  let p3ab = document.getElementById("3pab").value;
+  document.getElementById("pab3").innerHTML = p3ab;
+  document.getElementById("040").value = p3ab;
+}
+
+
+function Sqad72a() {
+   let u72a = document.getElementById("usa").value;
+   let d72a = document.getElementById("dsa").value;
+   let una = document.getElementById("un72a").value;
+
+   let dpu72a = parseFloat(d72a) / parseFloat(u72a);
+   if (isNaN(dpu72a))  {
+       a =  0 ; 
+       b = "✅";
+       c = "T/A";
+       d = "";
+       e = "0";
+        x = "Zero Deffect";
+   } else if(dpu72a==0) {
+       a = dpu72a ;
+       b = "✅";
+       c = "T/A";
+       d = "";
+       e = "0";
+        x = "Zero Deffect";
+   }else if (dpu72a<=0.02) { 
+       a = dpu72a ; 
+       b = "✅";
+       c = "";
+       d = "Problem";
+       e = una;
+       x = "";
+   }else { 
+       a = dpu72a ; 
+       b = "❌";
+       c = "";
+       d = "Problem";
+       e = una;
+       x= "";
+   }{
+    document.getElementById("sq72").innerHTML = "SQA D72";
+    document.getElementById("t72").innerHTML = "Target    : 0.02";
+    document.getElementById("ac72").innerHTML = "Actual   : ";
+    document.getElementById("s72a").innerHTML = "SHIFT A : "  + d72a + "/" + u72a + " = " + a.toFixed(2) + " " + b;
+    document.getElementById("ng72a").innerHTML = " NG unit : " + e + " unit";
+    document.getElementById("hp72a").innerHTML = "Problem : " + c;
+    document.getElementById("72a").innerHTML = d;
+    document.getElementById("041").value = "_SQA D72_";
+    document.getElementById("042").value = " Target    : 0.02";
+    document.getElementById("043").value = " Actual   : ";
+    document.getElementById("044").value = " SHIFT A : "  + d72a + "/" + u72a + " = " + a.toFixed(2) + " " + b;
+    document.getElementById("045").value = "   NG unit : " + e + " unit";
+    document.getElementById("046").value = "   Problem : " + c;
+    document.getElementById("048").value ="     "+x;
+   }
+}
+function Sqad72b() {
+   let u72b = document.getElementById("usb").value;
+   let d72b = document.getElementById("dsb").value;
+   let unb = document.getElementById("un72b").value;
+   
+   let dpu72b = parseFloat(d72b) / parseFloat(u72b);
+   if (isNaN(dpu72b))  {
+       a =  0 ; 
+       b = "✅";
+       c = "T/A";
+       d = "";
+       e = "0";
+        x = "Zero Deffect";
+   } else if(dpu72b==0) {
+       a = dpu72b ;
+       b = "✅";
+       c = "T/A";
+       d = "";
+       e = "0";
+        x = "Zero Deffect";
+   }else if (dpu72b<=0.02) { 
+       a = dpu72b ; 
+       b = "✅";
+       c = "";
+       d = "Problem";
+       e = unb;
+       x = "";
+   }else { 
+       a = dpu72b ; 
+       b = "❌";
+       c = "";
+       d = "Problem";
+       e = unb;
+       x = "";
+   }{
+
+    document.getElementById("s72b").innerHTML = "SHIFT B : "  + d72b + "/" + u72b + " = " + a.toFixed(2) + " " + b;
+    document.getElementById("ng72b").innerHTML = " NG unit : " + e + " unit";
+    document.getElementById("hp72b").innerHTML = "Problem : " + c;
+    document.getElementById("72b").innerHTML = d;
+    document.getElementById("050").value = " SHIFT B : "  + d72b + "/" + u72b + " = " + a.toFixed(2) + " " + b;
+    document.getElementById("051").value = "   NG unit : " + e + " unit";
+    document.getElementById("052").value = "   Problem : " + c;
+    document.getElementById("054").value = "     " + x;
+   }
+}
+
+function Sqadomea() {
+    let u72a = document.getElementById("uda").value;
+    let d72a = document.getElementById("dda").value;
+    let una = document.getElementById("unda").value;
+   let dpu72a = parseFloat(d72a) / parseFloat(u72a);
+   if (isNaN(dpu72a))  {
+       a =  0 ; 
+       b = "✅";
+       c = "T/A";
+       d = "";
+       e = "0";
+        x = "Zero Deffect";
+   } else if(dpu72a==0) {
+       a = dpu72a ;
+       b = "✅";
+       c = "T/A";
+       d = "";
+       e = "0";
+        x = "Zero Deffect";
+   }else if (dpu72a<=0.02) { 
+       a = dpu72a ; 
+       b = "✅";
+       c = "";
+       d = "Problem";
+       e = una;
+       x = "";
+   }else { 
+       a = dpu72a ; 
+       b = "❌";
+       c = "";
+       d = "Problem";
+       e = una;
+       x = "";
+   }{
+    document.getElementById("sqdom").innerHTML = "SQA Dom";
+    document.getElementById("tdom").innerHTML = "Target    : 0.02";
+    document.getElementById("acdom").innerHTML = "Actual   : ";
+    document.getElementById("sdoma").innerHTML = "SHIFT A : "  + d72a + "/" + u72a + " = " + a.toFixed(2) + " " + b;
+    document.getElementById("ngdoma").innerHTML = " NG unit : " + e + " unit";
+    document.getElementById("hpdoma").innerHTML = "Problem : " + c;
+    document.getElementById("doma").innerHTML = d;
+    
+    document.getElementById("056").value = "_SQA Dom_";
+    document.getElementById("057").value = " Target    : 0.02";
+    document.getElementById("058").value = " Actual   : ";
+    document.getElementById("059").value = " SHIFT A : "  + d72a + "/" + u72a + " = " + a.toFixed(2) + " " + b;
+    document.getElementById("060").value = "   NG unit : " + e + " unit";
+    document.getElementById("061").value = "   Problem : " + c;
+    document.getElementById("063").value = "     " + x;
+   }
+}
+function Sqadomeb() {
+    let u72b = document.getElementById("udb").value;
+    let d72b = document.getElementById("ddb").value;
+    let unb = document.getElementById("undb").value;
+    
+   let dpu72b = parseFloat(d72b) / parseFloat(u72b);
+   if (isNaN(dpu72b))  {
+       a =  0 ; 
+       b = "✅";
+       c = "T/A";
+       d = "";
+       e = "0";
+        x = "Zero Deffect";
+   } else if(dpu72b==0) {
+       a = dpu72b ;
+       b = "✅";
+       c = "T/A";
+       d = "";
+       e = "0";
+        x = "Zero Deffect";
+   }else if (dpu72b<=0.02) { 
+       a = dpu72b ; 
+       b = "✅";
+       c = "";
+       d = "Problem";
+       e = unb;
+       x = "";
+   }else { 
+       a = dpu72b ; 
+       b = "❌";
+       c = "";
+       d = "Problem";
+       e = unb;
+       x = "";
+   }{
+
+    document.getElementById("sdomb").innerHTML = "SHIFT B : "  + d72b + "/" + u72b + " = " + a.toFixed(2) + " " + b;
+    document.getElementById("ngdomb").innerHTML = " NG unit : " + e + " unit";
+    document.getElementById("hpdomb").innerHTML = "Problem : " + c;
+    document.getElementById("domb").innerHTML = d;
+    
+    document.getElementById("065").value = " SHIFT B : "  + d72b + "/" + u72b + " = " + a.toFixed(2) + " " + b;
+    document.getElementById("066").value = "   NG unit : " + e + " unit";
+    document.getElementById("067").value = "   Problem : " + c;
+    document.getElementById("069").value = "     " + x;
+   }
+}
+function DomeA() {
+    let u72a = document.getElementById("dua").value;
+    let d72a = document.getElementById("doa").value;
+    let uda = document.getElementById("unma").value;
+   let dpu72a = parseFloat(d72a) / parseFloat(u72a);
+   if (isNaN(dpu72a))  {
+       a =  0 ; 
+       b = "✅";
+       c = "T/A";
+       d = "";
+       e = "0";
+        x = "Zero Deffect";
+   } else if(dpu72a==0) {
+       a = dpu72a ;
+       b = "✅";
+       c = "T/A";
+       d = "";
+       e = "0";
+        x = "Zero Deffect";
+   }else if (dpu72a<=0.18) { 
+       a = dpu72a ; 
+       b = "✅";
+       c = "";
+       d = "Problem";
+       e = uda;
+       x = "";
+   }else { 
+       a = dpu72a ; 
+       b = "❌";
+       c = "";
+       d = "Problem";
+       e = uda;
+       x = "";
+   }{
+    document.getElementById("dom").innerHTML = "C. DOME RUNNING VI";
+    document.getElementById("trdom").innerHTML = "Target    : 0.18";
+    document.getElementById("actdom").innerHTML = "Actual   : ";
+    document.getElementById("1doma").innerHTML = "SHIFT A : "  + d72a + "/" + u72a + " = " + a.toFixed(2) + " " + b;
+    document.getElementById("ndoma").innerHTML = " NG unit : " + e + " unit";
+    document.getElementById("pdoma").innerHTML = "Problem : " + c;
+    document.getElementById("dora").innerHTML = d;
+    
+    document.getElementById("071").value = "*C. DOME RUNNING VI*";
+    document.getElementById("072").value = " Target    : 0.18";
+    document.getElementById("073").value = " Actual   : ";
+    document.getElementById("074").value = " SHIFT A : "  + d72a + "/" + u72a + " = " + a.toFixed(2) + " " + b;
+    document.getElementById("075").value = "   NG unit : " + e + " unit";
+    document.getElementById("076").value = "   Problem : " + c;
+    document.getElementById("078").value = "     " + x;
+   }
+}
+function DomeB() {
+    let u72b = document.getElementById("dub").value;
+    let d72b = document.getElementById("dob").value;
+    let umb = document.getElementById("unmb").value;
+   let dpu72b = parseFloat(d72b) / parseFloat(u72b);
+   if (isNaN(dpu72b))  {
+       a =  0 ; 
+       b = "✅";
+       c = "T/A";
+       d = "";
+       e = "0";
+        x = "Zero Deffect";
+   } else if(dpu72b==0) {
+       a = dpu72b ;
+       b = "✅";
+       c = "T/A";
+       d = "";
+       e = "0";
+        x = "Zero Deffect";
+   }else if (dpu72b<=0.18) { 
+       a = dpu72b ; 
+       b = "✅";
+       c = "";
+       d = "Problem";
+       e = umb;
+        x = "";
+   }else { 
+       a = dpu72b ; 
+       b = "❌";
+       c = "";
+       d = "Problem";
+       e = umb;
+        x = "";
+   }{
+
+    document.getElementById("1domb").innerHTML = "SHIFT B : "  + d72b + "/" + u72b + " = " + a.toFixed(2) + " " + b;
+    document.getElementById("ndomb").innerHTML = " NG unit : " + e + " unit";
+    document.getElementById("pdomb").innerHTML = "Problem : " + c;
+    document.getElementById("dorb").innerHTML = d;
+    
+    document.getElementById("080").value = " SHIFT B : "  + d72b + "/" + u72b + " = " + a.toFixed(2) + " " + b;
+    document.getElementById("081").value = "   NG unit : " + e + " unit";
+    document.getElementById("082").value = "   Problem : " + c;
+    document.getElementById("0884").value = "     " + x;
+   }
+}
+
+function VinspA() {
+    let u72a = document.getElementById("uva").value;
+    let d72a = document.getElementById("dva").value;
+    let uva = document.getElementById("unva").value;
+    
+   let dpu72a = parseFloat(d72a) / parseFloat(u72a);
+   if (isNaN(dpu72a))  {
+       a =  0 ; 
+       b = "✅";
+       c = "T/A";
+       d = "";
+       e = "0";
+   } else if(dpu72a==0) {
+       a = dpu72a ;
+       b = "✅";
+       c = "T/A";
+       d = "";
+       e = "0";
+   }else if (dpu72a<=0.03) { 
+       a = dpu72a ; 
+       b = "✅";
+       c = "";
+       d = "Problem";
+       e = uva;
+   }else { 
+       a = dpu72a ; 
+       b = "❌";
+       c = "";
+       d = "Problem";
+       e = uva;
+   }{
+    document.getElementById("vi").innerHTML = "D. VEHICLE INSPECTION";
+    document.getElementById("trvi").innerHTML = "Target    : 0.03  (internal gradually)";
+    document.getElementById("actvi").innerHTML = "Actual   : ";
+    document.getElementById("via").innerHTML = "SHIFT A : "  + d72a + "/" + u72a + " = " + a.toFixed(2) + " " + b;
+    document.getElementById("nvia").innerHTML = " NG unit : " + e + " unit";
+    document.getElementById("pvia").innerHTML = "Highlight Problem : " + c;
+    document.getElementById("qia").innerHTML = d;
+    
+    document.getElementById("086").value = "*D. VEHICLE INSPECTION*";
+    document.getElementById("087").value = " Target    : 0.03  (internal gradually)";
+    document.getElementById("088").value = " Actual   : ";
+    document.getElementById("089").value = " SHIFT A : "  + d72a + "/" + u72a + " = " + a.toFixed(2) + " " + b;
+    document.getElementById("090").value = "   NG unit : " + e + " unit";
+    document.getElementById("091").value = "   Highlight Problem : " + c;
+   }
+}
+function VinspB() {
+    let u72b = document.getElementById("uvb").value;
+    let d72b = document.getElementById("dvb").value;
+    let uvb = document.getElementById("unvb").value;
+    
+   let dpu72b = parseFloat(d72b) / parseFloat(u72b);
+   if (isNaN(dpu72b))  {
+       a =  0 ; 
+       b = "✅";
+       c = "T/A";
+       d = "";
+       e = "0";
+       
+   } else if(dpu72b==0) {
+       a = dpu72b ;
+       b = "✅";
+       c = "T/A";
+       d = "";
+       e = "0";
+   }else if (dpu72b<=0.03) { 
+       a = dpu72b ; 
+       b = "✅";
+       c = "";
+       d = "Problem";
+       e = uvb;
+   }else { 
+       a = dpu72b ; 
+       b = "❌";
+       c = "";
+       d = "Problem";
+       e = uvb;
+   }{
+
+    document.getElementById("vib").innerHTML = "SHIFT B : "  + d72b + "/" + u72b + " = " + a.toFixed(2) + " " + b;
+    document.getElementById("nvib").innerHTML = " NG unit : " + e + " unit";
+    document.getElementById("pvib").innerHTML = "Highlight Problem : " + c;
+    document.getElementById("qib").innerHTML = d;
+    document.getElementById("095").value = " SHIFT B : "  + d72b + "/" + u72b + " = " + a.toFixed(2) + " " + b;
+    document.getElementById("096").value = "   NG unit : " + e + " unit";
+    document.getElementById("097").value = "   Highlight Problem : " + c;
+   }
+}
+
+function QgateA() {
+    let dqa = document.getElementById("dqa").value;
+    if (dqa <= 0.25) {
+        x = "✅";
+    } else {
+        x = "⚠️";
+    }
+    
+    let dqb = document.getElementById("dqb").value;
+    if (dqb <= 0.25) {
+        y = "✅";
+    } else {
+        y = "⚠️";
+    }{
+    document.getElementById("qg").innerHTML = "E. QUALITY GATE";
+    document.getElementById("trqg").innerHTML = "Target    : 0.25  (internal gradually)";
+    document.getElementById("actqg").innerHTML = "Actual   : ";
+    document.getElementById("qga").innerHTML = " SHIFT A : " + dqa + x ;
+    document.getElementById("qgb").innerHTML = "SHIFT B : " + dqb + y ;
+    document.getElementById("101").value = "*E. QUALITY GATE*";
+    document.getElementById("102").value = " Target    : 0.25  (internal gradually)";
+    document.getElementById("103").value = " Actual   : ";
+    document.getElementById("104").value = " SHIFT A : " + dqa + x ;
+    document.getElementById("105").value = " SHIFT B : " + dqb + y ;
+   }
+}
+
+function myInput() {
+    let z2 = document.getElementById("x20").value;
+    let z3 = document.getElementById("x30").value;
+    let z4 = document.getElementById("x40").value;
+    let z5 = document.getElementById("x50").value;
+    let z6 = document.getElementById("x60").value;
+    let z7 = document.getElementById("x70").value;
+    let z8 = document.getElementById("x80").value;
+    let z9 = document.getElementById("x90").value;
+    let z11 = document.getElementById("x11").value;
+    let z12 = document.getElementById("x12").value;
+    let z13 = document.getElementById("x13").value;
+    let z14 = document.getElementById("x14").value;
+    let z15 = document.getElementById("x15").value;
+    let z16 = document.getElementById("x16").value;
+    let z17 = document.getElementById("x17").value;
+    let z18 = document.getElementById("x18").value;
+    let z19 = document.getElementById("x19").value;
+    let z27 = document.getElementById("x27").value;
+    let z21 = document.getElementById("x21").value;
+    let z22 = document.getElementById("x22").value;
+    let z23 = document.getElementById("x23").value;
+    let z24 = document.getElementById("x24").value;
+    let z25 = document.getElementById("x25").value;
+    let z26 = document.getElementById("x26").value;
+
+    document.getElementById("x02").innerHTML=("     ")+z2;
+    document.getElementById("x03").innerHTML=("     ") + z3;
+    document.getElementById("x04").innerHTML=("     ") +  z4;
+    document.getElementById("x05").innerHTML=("     ") + z5;
+    document.getElementById("x06").innerHTML=("     ") + z6;
+    document.getElementById("x07").innerHTML=("     ") + z7;
+    document.getElementById("x08").innerHTML=("     ") + z8;
+    document.getElementById("x09").innerHTML=("     ") + z9;
+    document.getElementById("x011").innerHTML=("     ") + z11;
+    document.getElementById("x012").innerHTML=("     ") + z12;
+    document.getElementById("x013").innerHTML=("     ") + z13;
+    document.getElementById("x014").innerHTML=("     ") + z14;
+    document.getElementById("x015").innerHTML=("     ") + z15;
+    document.getElementById("x016").innerHTML=("     ") + z16;
+    document.getElementById("x017").innerHTML=("     ") + z17;
+    document.getElementById("x018").innerHTML=("     ") + z18;
+    document.getElementById("x019").innerHTML=("     ") + z19;
+    document.getElementById("x027").innerHTML=("     ") + z27;
+    document.getElementById("x021").innerHTML=("     ") + z21;
+    document.getElementById("x022").innerHTML=("     ") + z22;
+    document.getElementById("x023").innerHTML=("     ") + z23;
+    document.getElementById("x024").innerHTML=("     ") + z24;
+    document.getElementById("x025").innerHTML=("     ") + z25;
+    document.getElementById("x026").innerHTML=("     ") + z26;
+    
+    document.getElementById("047").value=("     ") + z2;
+    document.getElementById("048").value=("     ") + z3;
+    document.getElementById("049").value=("     ") + z4;
+    document.getElementById("053").value=("     ") + z5;
+    document.getElementById("054").value=("     ") + z6;
+    document.getElementById("055").value=("     ") + z7;
+    document.getElementById("062").value=("     ") + z8;
+    document.getElementById("063").value=("     ") + z9;
+    document.getElementById("064").value=("     ") + z11;
+    document.getElementById("068").value=("     ") + z12;
+    document.getElementById("069").value=("     ") + z13;
+    document.getElementById("070").value=("     ") + z14;
+    document.getElementById("077").value=("     ") + z15;
+    document.getElementById("078").value=("     ") + z16;
+    document.getElementById("079").value=("     ") + z17;
+    document.getElementById("083").value=("     ") + z18;
+    document.getElementById("084").value=("     ") + z19;
+    document.getElementById("085").value=("     ") + z27;
+    document.getElementById("092").value=("     ") + z21;
+    document.getElementById("093").value=("     ") + z22;
+    document.getElementById("094").value=("     ") + z23;
+    document.getElementById("098").value=("     ") + z24;
+    document.getElementById("099").value=("     ") + z25;
+    document.getElementById("100").value=("     ") + z26;
+}
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
