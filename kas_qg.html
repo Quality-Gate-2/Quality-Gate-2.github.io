@@ -493,7 +493,7 @@ function jumlah(){
     if (dpv == 0){
         def = "✅";
         tex = " ";
-    }else if(dpv <= 0.1) {
+    }else if(dpv <= 0.03) {
         def = "✅";
         tex = " ";
     } else {
@@ -501,8 +501,8 @@ function jumlah(){
         tex = " ";
     }{
         document.getElementById("dqv").value= dpv.toFixed(2);
-        document.getElementById("tar").innerHTML= "• Target : 0.1";
-        document.getElementById("T10").value= "      • Target               : 0.1";
+        document.getElementById("tar").innerHTML= "• Target : 0.03";
+        document.getElementById("T10").value= "      • Target               : 0.03";
         document.getElementById("acv").innerHTML = "•Achievement : " + dpv.toFixed(2) + def;
         document.getElementById("T11").value= "      • Achievement   : "+ dpv.toFixed(2) + def;
         document.getElementById("d02").innerHTML=tex;
