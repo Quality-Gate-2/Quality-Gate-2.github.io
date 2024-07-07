@@ -1,0 +1,834 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Daily Report #A</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style >
+#body {
+  background-image: url('images.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+
+    </style>
+  </head>
+  <body id="body">
+        <img src="image.jpg" class="img-fluid" alt="image.jpeg">
+         <br>
+    <div class="container">
+
+<nav id="navbar-example2" class="navbar bg-body-tertiary px-3 mb-3 sticky-top">
+  <a class="navbar-brand" href="#" ></a>
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+      <a class="nav-link" href="#" onclick="send_handle()" >Kirim WA</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#"></a>
+    </li>
+  </ul>
+</nav>
+
+
+<div class="card">
+  <div class="card-body">
+<div class="form-floating mb-3 border-bottom" >
+  <input type="number" class="form-control border-0" id="hri" placeholder="" oninput="inputHari();" >
+  <label for="floatingInput">Hari <span id="har"></span> </label>
+</div>
+  </div>
+</div> <br>
+<script >
+    function inputHari() {
+        let hri = document.getElementById("hri").value;
+        if(hri==1){
+            a="SENIN";
+        }else if(hri==2){
+            a="SELASA";
+        }else if(hri==3){
+            a="RABU";
+        }else if(hri==4){
+            a="KAMIS";
+        }else if(hri==5){
+            a="JUMAT";
+        }else if(hri==6){
+            a="SABTU";
+        }else if(hri==7){
+            a="MINGGU";
+        }else{
+            a="Masukan angka 1 sampai 7";
+        }    
+        document.getElementById("judul").innerHTML = "DAILY ACTIVITY REPORT QUALITY - GATE ASSY 2";
+        document.getElementById("hari").innerHTML= a + ", ";
+        document.getElementById("har").innerHTML=" : " + a;
+        document.getElementById("01").value = "*DAILY ACTIVITY REPORT QUALITY - GATE ASSY 2*";
+        document.getElementById("02").value= "*" + a + ", ";
+    }
+</script>
+
+<div class="card">
+  <div class="card-body">
+<script>
+// set default tanggal saat ini
+document.querySelector('#tanggal').value = new Date().toISOString().substring(0, 10);
+
+// fungsi onchange cetak nilai
+function cetakTanggal() {
+var tanggal = document.querySelector('#tanggal').value;
+document.querySelector('#cetak').innerHTML = tanggal.split('-')[2]+'-'+tanggal.split('-')[1]+'-'+tanggal.split('-')[0] + " ( SHIFT A )";
+document.getElementById("03").value = tanggal.split('-')[2]+'-'+tanggal.split('-')[1]+'-'+tanggal.split('-')[0] + " ( SHIFT A )*";
+}
+</script>
+<div class="form-floating mb-3 border-bottom" >
+  <input type="date" class="form-control border-0" id="tanggal" placeholder="Tanggal" name="tanggal" onchange="cetakTanggal();">
+  <label for="floatingInput">Tanggal</label>
+</div>
+  </div>
+</div>   <br>
+<div class="card">
+  <div class="card-body">
+<div class="form-floating mb-3 border-bottom" >
+  <input type="number" class="form-control border-0" id="mptotal" placeholder="" onkeyup="Attendace();">
+  <label for="floatingInput">Jumlah man power total</label>
+</div>
+  </div>
+</div> <br>
+<div class="card">
+  <div class="card-body">
+<div class="form-floating mb-3 border-bottom" >
+  <input type="number" class="form-control border-0" id="mphadir" placeholder="" onkeyup="Attendace();">
+  <label for="floatingInput">Jumlah man power hadir</label>
+</div>
+  </div>
+</div> <br>
+<!--Rumus Attendance-->
+<script >
+    function Attendace(){
+        let mpt = document.getElementById("mptotal").value;
+        let mph = document.getElementById("mphadir").value;
+        
+        let Atten = (parseFloat(mph)/parseFloat(mpt))*(100);
+        if (isNaN(Atten)){
+            a=0;
+        }else{
+            a=Atten;
+        }
+        document.getElementById("Att").innerHTML= "ATTENDANCE : " + mph + "/" + mpt + " ( " + a.toFixed(0) + "% )";
+        document.getElementById("04").value= "*ATTENDANCE   : " + mph + "/" + mpt + " ( " + a.toFixed(0) + "% )*";
+    }
+</script>
+
+<div class="card">
+  <div class="card-body">
+<div class="form-floating mb-3 border-bottom" >
+  <input type="number" class="form-control border-0" id="efi" oninput="Efisiensi();" placeholder="name@example.com">
+  <label for="floatingInput">Effisiensi assembling 2</label>
+</div>
+  </div>
+</div> <br>
+<script >
+    function Efisiensi(){
+        let efi = document.getElementById("efi").value;
+        document.getElementById("Eff").innerHTML= "EFISIENSI : "+ efi + "%";
+        document.getElementById("05").value= "*EFISIENSI          : "+ efi + "%*";
+    }
+</script>
+
+<div class="card">
+  <div class="card-body">
+<div class="form-floating mb-3 border-bottom" >
+  <input type="number" class="form-control border-0" id="tuc" oninput="DpuQg();" placeholder="">
+  <label for="floatingInput">Total unit check</label>
+</div>
+  </div>
+</div> <br>
+<div class="card">
+  <div class="card-body">
+<div class="form-floating mb-3 border-bottom" >
+  <input type="number" class="form-control border-0" id="ttd" oninput="DpuQg();" placeholder="">
+  <label for="floatingInput">Total temuan deffect</label>
+</div>
+  </div>
+</div> <br>
+
+
+
+<script >
+    function DpuQg() {
+        let tuc = document.getElementById("tuc").value;
+        let ttd = document.getElementById("ttd").value;
+        
+        let DQG = parseFloat(ttd)/parseFloat(tuc);
+        if(isNaN(DQG)){
+            a=0;
+            b="✅";
+        }else if(DQG==0){
+            a=DQG;
+            b="✅";
+        }else if(DQG <= 0.1){
+            a=DQG;
+            b="✅";
+        }else{
+            a=DQG;
+            b="❌";
+        }
+        document.getElementById("1qg").innerHTML= "A. DPU QUALITY GATE";
+        document.getElementById("2qg").innerHTML= "• TARGET : 0.1";
+        document.getElementById("3qg").innerHTML= "• ACHIVEMENT : " + a.toFixed(2) + b;
+        document.getElementById("4qg").innerHTML= "• TOTAL TEMUAN : " + ttd + " DEFFECT";
+        document.getElementById("5qg").innerHTML= "• TOTAL UNIT : " + tuc + " UNIT";
+        document.getElementById("06").value= "*A. DPU QUALITY GATE*";
+        document.getElementById("07").value= "   • TARGET               : 0.1";
+        document.getElementById("08").value= "   • ACHIVEMENT     : " + a.toFixed(2) + b;
+        document.getElementById("09").value= "   • TOTAL TEMUAN : " + ttd + " DEFFECT";
+        document.getElementById("10").value= "   • TOTAL UNIT        : " + tuc + " UNIT";
+    }
+</script>
+
+<div class="card">
+  <div class="card-body">
+<div class="form-floating mb-3 border-bottom" >
+  <input type="number" class="form-control border-0" id="qv1" oninput="DpuQv();" placeholder="">
+  <label for="floatingInput">Total unit D26 Quality Vehicle</label>
+</div>
+  </div>
+</div> <br>
+<div class="card">
+  <div class="card-body">
+<div class="form-floating mb-3 border-bottom" >
+  <input type="number" class="form-control border-0" id="qv2" oninput="DpuQv();" placeholder="">
+  <label for="floatingInput">Deffect Function D26 Quality Vehicle</label>
+</div>
+  </div>
+</div> <br>
+<div class="card">
+  <div class="card-body">
+<div class="form-floating mb-3 border-bottom" >
+  <input type="number" class="form-control border-0" id="qv3" oninput="DpuQv();" placeholder="">
+  <label for="floatingInput">Deffect Appearance D26 Quality Vehicle</label>
+</div>
+  </div>
+</div> <br>
+<div class="card">
+  <div class="card-body">
+<div class="form-floating mb-3 border-bottom" >
+  <input type="number" class="form-control border-0" id="qv4" oninput="DpuQv();" placeholder="">
+  <label for="floatingInput">Total unit D40 Quality Vehicle</label>
+</div>
+  </div>
+</div> <br>
+<div class="card">
+  <div class="card-body">
+<div class="form-floating mb-3 border-bottom" >
+  <input type="number" class="form-control border-0" id="qv5" oninput="DpuQv();" placeholder="">
+  <label for="floatingInput">Deffect Function D40 Quality Vehicle</label>
+</div>
+  </div>
+</div> <br>
+<div class="card">
+  <div class="card-body">
+<div class="form-floating mb-3 border-bottom" >
+  <input type="number" class="form-control border-0" id="qv6" oninput="DpuQv();" placeholder="">
+  <label for="floatingInput">Deffect Appearance D40 Quality Vehicle</label>
+</div>
+  </div>
+</div> <br>
+<script >
+    function DpuQv(){
+        let qv1 = document.getElementById("qv1").value;
+        let qv2 = document.getElementById("qv2").value;
+        let qv3 = document.getElementById("qv3").value;
+        let qv4 = document.getElementById("qv4").value;
+        let qv5 = document.getElementById("qv5").value;
+        let qv6 = document.getElementById("qv6").value;
+        let qv7 = document.getElementById("qv7").value;
+        let qv8 = document.getElementById("qv8").value;
+        let qv9 = document.getElementById("qv9").value;
+ 
+        let dfunc = parseFloat(qv2)+parseFloat(qv5);
+        if (isNaN(dfunc)){
+            a=qv2;
+        }else if(isNaN(dfunc)){
+            a=qv5;
+        }else{
+            a=dfunc;
+        }
+        let dapp  = parseFloat(qv3)+parseFloat(qv6);
+        if (isNaN(dapp)){
+            b=qv3;
+        }else if(isNaN(dapp)){
+            b=qv6;
+        }else {
+            b=dapp;
+        }
+        let tdef = parseFloat(a)+parseFloat(b);
+        if (isNaN(tdef)){
+            c=a;
+        }else if(isNaN(tdef)){
+            c=b;
+        }else{
+            c=tdef;
+        }
+        let tuni = parseFloat(qv1)+parseFloat(qv4);
+        if (isNaN(tuni)){
+            d=qv1;
+        }else if(isNaN(tuni)){
+            d=qv4;
+        }else{
+            d=tuni;
+        }
+        let tdpu = parseFloat(c)/parseFloat(d);
+        if (isNaN(tdpu)){
+            g="✅";
+            f=0;
+        }else if(tdpu==0){
+            g="✅";
+            f=tdpu;
+        }else if(tdpu<=0.03){
+            g="✅";
+            f=tdpu;
+        }else{
+            g="❌";
+            f=tdpu;
+        }
+        let dpu26 =(parseFloat(qv2)+parseFloat(qv3))/parseFloat(qv1);
+        if (isNaN(dpu26)){
+            h=0;
+        }else{
+            h=dpu26;
+        }
+        let uni26 = parseFloat(qv2)+parseFloat(qv3);
+        if (isNaN(uni26)){
+            j=qv2;
+        }else if(isNaN(uni26)){
+            j=qv3;
+        }else{
+            j=uni26;
+        }
+        let dpu40 =(parseFloat(qv5)+parseFloat(qv6))/parseFloat(qv4);
+        if (isNaN(dpu40)){
+            i=0;
+        }else {
+            i=dpu40;
+        }
+        let uni40 = parseFloat(qv5)+parseFloat(qv6);
+        if (isNaN(uni40)){
+            k=qv5;
+        }else if(isNaN(uni40)){
+            k=qv6;
+        }else{
+            k=uni40;
+        }
+        let deff = parseFloat(tdef)+(0);
+        if (deff==0){
+            e="ℤ𝔼ℝ𝕆  𝔻𝔼𝔽𝔽𝔼ℂ𝕋";
+            l="👌";
+        }else{
+            e="";
+            l="";
+        }
+        
+        document.getElementById("1qv").innerHTML="B. DPU QUALITY VEHICLE";
+        document.getElementById("2qv").innerHTML="• TARGET : 0.03";
+        document.getElementById("3qv").innerHTML="• TOTAL DEFFECT : " + c + " (" + a + " FUNC/" + b + " APP)";
+        document.getElementById("4qv").innerHTML="• TOTAL UNIT : " + d + " UNIT CHECK";
+        document.getElementById("5qv").innerHTML="• TOTAL DPU QV : " + f.toFixed(2) + g;
+        document.getElementById("6qv").innerHTML="°DPU D26 : " + h.toFixed(2) + " ( " + j + "/" + qv1 + " )";
+        document.getElementById("7qv").innerHTML="°DPU D40 : " + i.toFixed(2) + " ( " + k + "/" + qv4 + " )";
+        document.getElementById("8qv").innerHTML="DAFTAR PROBLEM QUALITY VEHICLE " ;
+        document.getElementById("9qv").innerHTML= qv7;
+        document.getElementById("10qv").innerHTML=qv8 + e;
+        document.getElementById("11qv").innerHTML= qv9;
+        document.getElementById("11").value="*B. DPU QUALITY VEHICLE*";
+        document.getElementById("12").value="   • TARGET                : 0.03";
+        document.getElementById("13").value="   • TOTAL DEFFECT : " + c + " (" + a + " FUNC/" + b + " APP)";
+        document.getElementById("14").value="   • TOTAL UNIT         : " + d + " UNIT CHECK";
+        document.getElementById("15").value="   • TOTAL DPU QV    : " + f.toFixed(2) + g;
+        document.getElementById("16").value="    ° DPU D26              : " + h.toFixed(2) + " ( " + j + "/" + qv1 + " )";
+        document.getElementById("17").value="    ° DPU D40              : " + i.toFixed(2) + " ( " + k + "/" + qv4 + " )";
+        document.getElementById("18").value="   *DAFTAR PROBLEM QUALITY VEHICLE* " ;
+        document.getElementById("19").value="      " + qv7 + e;
+        document.getElementById("20").value="      " + qv8 + l;
+        document.getElementById("21").value="      " + qv9;
+
+    }
+</script>
+
+<div class="card">
+  <div class="card-body">
+<div class="form-floating mb-3 border-bottom" >
+  <input type="text" class="form-control border-0" id="qv7" oninput="DpuQv();" placeholder="">
+  <label for="floatingInput">Input Problem Quality Vehicle</label>
+</div>
+  </div>
+</div> <br>
+<div class="card">
+  <div class="card-body">
+<div class="form-floating mb-3 border-bottom" >
+  <input type="text" class="form-control border-0" id="qv8" oninput="DpuQv();" placeholder="">
+  <label for="floatingInput">Input Problem Quality Vehicle</label>
+</div>
+  </div>
+</div> <br>
+<div class="card">
+  <div class="card-body">
+<div class="form-floating mb-3 border-bottom" >
+  <input type="text" class="form-control border-0" id="qv9" oninput="DpuQv();" placeholder="">
+  <label for="floatingInput">Input Problem Quality Vehicle</label>
+</div>
+  </div>
+</div> <br>
+
+
+<div class="card">
+  <div class="card-body">
+<div class="form-floating mb-3 border-bottom" >
+  <input type="number" class="form-control border-0" id="dome1" oninput="DpuDom();" placeholder="">
+  <label for="floatingInput">Total unit check DOME Running </label>
+</div>
+  </div>
+</div> <br>
+<div class="card">
+  <div class="card-body">
+<div class="form-floating mb-3 border-bottom" >
+  <input type="number" class="form-control border-0" id="dome2" oninput="DpuDom();" placeholder="">
+  <label for="floatingInput">Deffect temuan DOME Running</label>
+</div>
+  </div>
+</div> <br>
+
+<div class="card">
+  <div class="card-body">
+<div class="form-floating mb-3 border-bottom" >
+  <input type="text" class="form-control border-0" id="dome3" oninput="DpuDom();" placeholder="">
+  <label for="floatingInput">Input Problem Dome Running</label>
+</div>
+  </div>
+</div> <br>
+<div class="card">
+  <div class="card-body">
+<div class="form-floating mb-3 border-bottom" >
+  <input type="text" class="form-control border-0" id="dome4" oninput="DpuDom();" placeholder="">
+  <label for="floatingInput">Input Problem Dome Running</label>
+</div>
+  </div>
+</div> <br>
+<div class="card">
+  <div class="card-body">
+<div class="form-floating mb-3 border-bottom" >
+  <input type="text" class="form-control border-0" id="dome5" oninput="DpuDom();" placeholder="">
+  <label for="floatingInput">Input Problem Dome Running</label>
+</div>
+  </div>
+</div> <br>
+
+<script >
+    function DpuDom(){
+        let dom1 = document.getElementById("dome1").value;
+        let dom2 = document.getElementById("dome2").value;
+        let dom3 = document.getElementById("dome3").value;
+        let dom4 = document.getElementById("dome4").value;
+        let dom5 = document.getElementById("dome5").value;
+        
+        if (dom2==0){
+            d="ℤ𝔼ℝ𝕆  𝔻𝔼𝔽𝔽𝔼ℂ𝕋";
+            f="👌";
+        }else{
+            d="";
+            f="";
+        }
+        
+        let dpudome = parseFloat(dom2)/parseFloat(dom1);
+        if(isNaN(dpudome)){
+            b="✅";
+            a=0;
+        }else if(dpudome<=0.28){
+            b="✅";
+            a=dpudome;
+        }else{
+            b="❌";
+            a=dpudome;
+        }{
+            document.getElementById("domer1").innerHTML="C. DPU DOME RUNNING";
+            document.getElementById("domer2").innerHTML="• TARGET : 0.28";
+            document.getElementById("domer3").innerHTML="•TOTAL DPU : " + a.toFixed(2) + " " + b;
+            document.getElementById("domer4").innerHTML="• TOTAL DEFFECT : " + dom2 + " DEFFECT";
+            document.getElementById("domer5").innerHTML="• TOTAL UNIT : " + dom1 + " UNIT";
+            document.getElementById("domer6").innerHTML="DAFTAR PROBLEM DOME RUNNING ";
+            document.getElementById("domer7").innerHTML= dom3;
+            document.getElementById("domer8").innerHTML= dom4 + d;
+            document.getElementById("domer9").innerHTML= dom5;
+        
+        
+            document.getElementById("22").value="*C. DPU DOME RUNNING*";
+            document.getElementById("23").value="   • TARGET : 0.28";
+            document.getElementById("24").value="   • TOTAL DPU : " + a.toFixed(2) + " " + b;
+            document.getElementById("25").value="   • TOTAL DEFFECT : " + dom2 + " DEFFECT";
+            document.getElementById("26").value="   • TOTAL UNIT : " + dom1 + " UNIT";
+            document.getElementById("27").value="   *DAFTAR PROBLEM DOME RUNNING* ";
+            document.getElementById("28").value="      " + dom3+ d;
+            document.getElementById("29").value="      " + dom4 + f;
+            document.getElementById("30").value="      " + dom5;
+        }
+    }
+</script>
+
+<div class="card">
+  <div class="card-body">
+<div class="form-floating mb-3 border-bottom" >
+  <input type="number" class="form-control border-0" id="audi1" oninput="DpuAu();" placeholder="">
+  <label for="floatingInput">Total unit check AUDIT </label>
+</div>
+  </div>
+</div> <br>
+<div class="card">
+  <div class="card-body">
+<div class="form-floating mb-3 border-bottom" >
+  <input type="number" class="form-control border-0" id="audi2" oninput="DpuAu();" placeholder="">
+  <label for="floatingInput">Total Deffect temuan AUDIT</label>
+</div>
+  </div>
+</div> <br>
+<div class="card">
+  <div class="card-body">
+<div class="form-floating mb-3 border-bottom" >
+  <input type="text" class="form-control border-0" id="audi3" oninput="DpuAu();" placeholder="">
+  <label for="floatingInput">Problem AUDIT</label>
+</div>
+  </div>
+</div> <br>
+<div class="card">
+  <div class="card-body">
+<div class="form-floating mb-3 border-bottom" >
+  <input type="text" class="form-control border-0" id="audi4" oninput="DpuAu();" placeholder="">
+  <label for="floatingInput">Problem AUDIT</label>
+</div>
+  </div>
+</div> <br>
+<div class="card">
+  <div class="card-body">
+<div class="form-floating mb-3 border-bottom" >
+  <input type="text" class="form-control border-0" id="audi5" oninput="DpuAu();" placeholder="">
+  <label for="floatingInput">Problem AUDIT</label>
+</div>
+  </div>
+</div> <br>
+<script >
+function DpuAu(){
+        let dom1 = document.getElementById("audi1").value;
+        let dom2 = document.getElementById("audi2").value;
+        let dom3 = document.getElementById("audi3").value;
+        let dom4 = document.getElementById("audi4").value;
+        let dom5 = document.getElementById("audi5").value;
+        
+        if (dom2==0){
+            d="ℤ𝔼ℝ𝕆  𝔻𝔼𝔽𝔽𝔼ℂ𝕋";
+            x="👌";
+        }else{
+            d="";
+            x="";
+        }
+        let dpudome = parseFloat(dom2)/parseFloat(dom1);
+        if(isNaN(dpudome)){
+            b="✅";
+            a=0;
+        }else if(dpudome<=0.04){
+            b="✅";
+            a=dpudome;
+        }else{
+            b="❌";
+            a=dpudome;
+        }{
+    document.getElementById("audit1").innerHTML="D. DPU AUDIT";
+    document.getElementById("audit2").innerHTML="• TARGET : 0.04";
+    document.getElementById("audit3").innerHTML="• TOTAL DEFFECT : " + dom2 + " DEFFECT";
+    document.getElementById("audit4").innerHTML="• TOTAL UNIT : " + dom1 + " UNIT";
+    document.getElementById("audit5").innerHTML="• TOTAL DPU : " + a.toFixed(2) + " " + b;
+    document.getElementById("audit6").innerHTML= "DAFTAR DEFFECT AUDIT";
+    document.getElementById("audit7").innerHTML=dom3;
+    document.getElementById("audit8").innerHTML=dom4 + d;
+    document.getElementById("audit9").innerHTML=dom5;
+
+    document.getElementById("31").value="*D. DPU AUDIT*";
+    document.getElementById("32").value="   • TARGET                : 0.04";
+    document.getElementById("33").value="   • TOTAL DEFFECT : " + dom2 + " DEFFECT";
+    document.getElementById("34").value="   • TOTAL UNIT         : " + dom1 + " UNIT";
+    document.getElementById("35").value="   • TOTAL DPU          : " + a.toFixed(2) + " " + b;
+    document.getElementById("36").value= "   *DAFTAR DEFFECT AUDIT*";
+    document.getElementById("37").value="      " +  dom3 + d;
+    document.getElementById("38").value="      " +  dom4 + x;
+    document.getElementById("39").value="      " +  dom5;
+    
+        }
+}
+</script>
+
+<div class="card">
+  <div class="card-body">
+<div class="form-floating mb-3 border-bottom" >
+  <input type="number" class="form-control border-0" id="sqa1" oninput="DpuSqa();" placeholder="">
+  <label for="floatingInput">Total unit AUDIT SQA</label>
+</div>
+  </div>
+</div> <br>
+<div class="card">
+  <div class="card-body">
+<div class="form-floating mb-3 border-bottom" >
+  <input type="number" class="form-control border-0" id="sqa2" oninput="DpuSqa();" placeholder="">
+  <label for="floatingInput">Deffect temuan AUDIT SQA</label>
+</div>
+  </div>
+</div> <br>
+<div class="card">
+  <div class="card-body">
+<div class="form-floating mb-3 border-bottom" >
+  <input type="text" class="form-control border-0" id="sqa3" oninput="DpuSqa();" placeholder="">
+  <label for="floatingInput">Problem AUDIT SQA</label>
+</div>
+  </div>
+</div> <br>
+<div class="card">
+  <div class="card-body">
+<div class="form-floating mb-3 border-bottom" >
+  <input type="text" class="form-control border-0" id="sqa4" oninput="DpuSqa();" placeholder="">
+  <label for="floatingInput">Problem AUDIT SQA</label>
+</div>
+  </div>
+</div> <br>
+<div class="card">
+  <div class="card-body">
+<div class="form-floating mb-3 border-bottom" >
+  <input type="text" class="form-control border-0" id="sqa5" oninput="DpuSqa();" placeholder="">
+  <label for="floatingInput">Problem AUDIT SQA</label>
+</div>
+  </div>
+</div> <br>
+<script >
+    function DpuSqa(){
+        let sqa1 = document.getElementById("sqa1").value;
+        let sqa2 = document.getElementById("sqa2").value;
+        let sqa3 = document.getElementById("sqa3").value;
+        let sqa4 = document.getElementById("sqa4").value;
+        let sqa5 = document.getElementById("sqa5").value;
+
+        let dsqa = parseFloat(sqa2)/parseFloat(sqa1);
+        if(isNaN(dsqa)){
+            b="✅";
+            a=0;
+            c="ℤ𝔼ℝ𝕆  𝔻𝔼𝔽𝔽𝔼ℂ𝕋";
+            e="👌";
+        }else if(dsqa==0){
+            b="✅";
+            a=dsqa;
+            c="ℤ𝔼ℝ𝕆  𝔻𝔼𝔽𝔽𝔼ℂ𝕋";
+            e="👌";
+        }else{
+            b="❌";
+            a=dsqa;
+            c="";
+            e="👌";
+        }
+    document.getElementById("sqa11").innerHTML="E. DPU AUDIT SQA";
+    document.getElementById("sqa12").innerHTML="TERIMA KASIH";
+    document.getElementById("sqa13").innerHTML="• TOTAL DEFFECT : " + sqa2 + " DEFFECT";
+    document.getElementById("sqa14").innerHTML="• TOTAL UNIT : " + sqa1 + " UNIT";
+    document.getElementById("sqa15").innerHTML="• TOTAL DPU : " + a.toFixed(2) + " " + b;
+    document.getElementById("sqa16").innerHTML= "DAFTAR DEFFECT AUDIT SQA";
+    document.getElementById("sqa18").innerHTML=sqa3 + c;
+    document.getElementById("sqa19").innerHTML=sqa4;
+    document.getElementById("sqa20").innerHTML=sqa5;
+    
+    document.getElementById("40").value="*E. DPU AUDIT SQA*";
+    document.getElementById("49").value="TERIMA KASIH";
+    document.getElementById("41").value="   • TOTAL DEFFECT : " + sqa2 + " DEFFECT";
+    document.getElementById("42").value="   • TOTAL UNIT         : " + sqa1 + " UNIT";
+    document.getElementById("43").value="   • TOTAL DPU          : " + a.toFixed(2) + " " + b;
+    document.getElementById("44").value= "   *DAFTAR DEFFECT AUDIT SQA*";
+    document.getElementById("46").value="      " + sqa3 + c;
+    document.getElementById("47").value="      " +  sqa4 + e;
+    document.getElementById("48").value="      " +  sqa5;
+    }
+</script>
+<div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
+<!-- hasil akan tercetak di dalam div ini -->
+<ul class="list-unstyled">
+    <li ><b><span id="judul"></span></b></li>
+    <li ><b><span id="hari"></span> <span id='cetak'></span></b></li>
+    <li ><b><span id="Att"></span></b></li>
+    <li ><b><span id="Eff"></span></b></li><br>
+    <li ><b><span id="1qg"></span></b></li>
+    <li ><span id="2qg"></span></li>
+    <li ><span id="3qg"></span></li>
+    <li ><span id="4qg"></span></li>
+    <li ><span id="5qg"></span></li>
+    <li ><b><span id="1qv"></span></b></li>
+    <li ><span id="2qv"></span></li>
+    <li ><span id="3qv"></span></li>
+    <li ><span id="4qv"></span></li>
+    <li ><span id="5qv"></span></li>
+    <li ><span id="6qv"></span></li>
+    <li ><span id="7qv"></span></li>
+    <li ><b><span id="8qv"></span></b></li>
+    <li ><span id="9qv"></span></li>
+    <li ><span id="10qv"></span></li>
+    <li ><span id="11qv"></span></li>
+    <li ><b><span id="domer1"></span></b></li>
+    <li ><span id="domer2"></span></li>
+    <li ><span id="domer3"></span></li>
+    <li ><span id="domer4"></span></li>
+    <li ><span id="domer5"></span></li>
+    <li ><b><span id="domer6"></span></b></li>
+    <li ><span id="domer7"></span></li>
+    <li ><span id="domer8"></span></li>
+    <li ><span id="domer9"></span></li>
+    <li ><b><span id="audit1"></span></b></li>
+    <li ><span id="audit2"></span></li>
+    <li ><span id="audit3"></span></li>
+    <li ><span id="audit4"></span></li>
+    <li ><span id="audit5"></span></li>
+    <li ><b><span id="audit6"></span></b></li>
+    <li ><span id="audit7"></span></li>
+    <li ><span id="audit8"></span></li>
+    <li ><span id="audit9"></span></li>
+    <li ><b><span id="sqa11"></span></b></li>
+    <li ><span id="sqa13"></span></li>
+    <li ><span id="sqa14"></span></li>
+    <li ><span id="sqa15"></span></li>
+    <li ><b><span id="sqa16"></span></b></li>
+    <li ><span id="sqa18"></span></li>
+    <li ><span id="sqa19"></span></li>
+    <li ><span id="sqa20"></span></li>
+</ul>
+    <span id="sqa12"></span>
+</div><br>
+<div class="visually-hidden" >
+<input class="border-0" id="01">
+<input class="border-0" id="02">
+<input class="border-0" id="03">
+<input class="border-0" id="04">
+<input class="border-0" id="05">
+<input class="border-0" id="06">
+<input class="border-0" id="07">
+<input class="border-0" id="08">
+<input class="border-0" id="09">
+<input class="border-0" id="10">
+<input class="border-0" id="11">
+<input class="border-0" id="12">
+<input class="border-0" id="13">
+<input class="border-0" id="14">
+<input class="border-0" id="15">
+<input class="border-0" id="16">
+<input class="border-0" id="17">
+<input class="border-0" id="18">
+<input class="border-0" id="19">
+<input class="border-0" id="20">
+<input class="border-0" id="21">
+<input class="border-0" id="22">
+<input class="border-0" id="23">
+<input class="border-0" id="24">
+<input class="border-0" id="25">
+<input class="border-0" id="26">
+<input class="border-0" id="27">
+<input class="border-0" id="28">
+<input class="border-0" id="29">
+<input class="border-0" id="30">
+<input class="border-0" id="31">
+<input class="border-0" id="32">
+<input class="border-0" id="33">
+<input class="border-0" id="34">
+<input class="border-0" id="35">
+<input class="border-0" id="36">
+<input class="border-0" id="37">
+<input class="border-0" id="38">
+<input class="border-0" id="39">  
+<input class="border-0" id="40">
+<input class="border-0" id="41">
+<input class="border-0" id="42">
+<input class="border-0" id="43">
+<input class="border-0" id="44">
+<input class="border-0" id="46">
+<input class="border-0" id="47">
+<input class="border-0" id="48">
+<input class="border-0" id="49">
+ </div> 
+  <!-- Tombol Send WA -->      
+        <div class="card">
+            <h5 class="card-header">Kirim Ke WA</h5>
+            <div class="card-body">
+                <div class="col">
+                    <input id="numbe" type="number" placeholder="Nomer WA" class="form-control visually-hidden"  aria-label="Scan Out Final">
+                </div>
+                <div class="col"> 
+                
+                    <a href="#" onclick="send_handle()" class="btn btn-success">Kirim</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script >
+function send_handle() {
+  const num = document.getElementById("numbe").value;
+  const a01 = document.getElementById("01").value;
+  const a02 = document.getElementById("02").value;
+  const a03 = document.getElementById("03").value;
+  const a04 = document.getElementById("04").value;
+  const a05 = document.getElementById("05").value;
+  const a06 = document.getElementById("06").value;
+  const a07 = document.getElementById("07").value;
+  const a08 = document.getElementById("08").value;
+  const a09 = document.getElementById("09").value;
+  const a10 = document.getElementById("10").value;
+  const a11 = document.getElementById("11").value;
+  const a12 = document.getElementById("12").value;
+  const a13 = document.getElementById("13").value;
+  const a14 = document.getElementById("14").value;
+  const a15 = document.getElementById("15").value;
+  const a16 = document.getElementById("16").value;
+  const a17 = document.getElementById("17").value;
+  const a18 = document.getElementById("18").value;
+  const a19 = document.getElementById("19").value;
+  const a20 = document.getElementById("20").value;
+  const a21 = document.getElementById("21").value;
+  const a22 = document.getElementById("22").value;
+  const a23 = document.getElementById("23").value;
+  const a24 = document.getElementById("24").value;
+  const a25 = document.getElementById("25").value;
+  const a26 = document.getElementById("26").value;
+  const a27 = document.getElementById("27").value;
+  const a28 = document.getElementById("28").value;
+  const a29 = document.getElementById("29").value;
+  const a30 = document.getElementById("30").value;
+  const a31 = document.getElementById("31").value;
+  const a32 = document.getElementById("32").value;
+  const a33 = document.getElementById("33").value;
+  const a34 = document.getElementById("34").value;
+  const a35 = document.getElementById("35").value;
+  const a36 = document.getElementById("36").value;
+  const a37 = document.getElementById("37").value;
+  const a38 = document.getElementById("38").value;
+  const a39 = document.getElementById("39").value;
+  const a40 = document.getElementById("40").value;
+  const a41 = document.getElementById("41").value;
+  const a42 = document.getElementById("42").value;
+  const a43 = document.getElementById("43").value;
+  const a44 = document.getElementById("44").value;
+  const a46 = document.getElementById("46").value;
+  const a47 = document.getElementById("47").value;
+  const a48 = document.getElementById("48").value;
+  const a49 = document.getElementById("49").value;
+ 
+  const win = window.open(`https://wa.me/${num}?text=
+${a01}%0A${a02}${a03}%0A${a04}%0A${a05}%0A%0A${a06}%0A${a07}%0A${a08}%0A${a09}%0A${a10}%0A${a11}%0A${a12}%0A${a13}%0A${a14}%0A${a15}%0A${a16}%0A${a17}%0A${a18}%0A${a19}%0A${a20}%0A${a21}%0A${a22}%0A${a23}%0A${a24}%0A${a25}%0A${a26}%0A${a27}%0A${a28}%0A${a29}%0A${a30}%0A${a31}%0A${a32}%0A${a33}%0A${a34}%0A${a35}%0A${a36}%0A${a37}%0A${a38}%0A${a39}%0A${a40}%0A${a41}%0A${a42}%0A${a43}%0A${a44}%0A${a46}%0A${a47}%0A${a48}%0A${a49}%0A `, '_blank');
+  // win.focus();
+}
+    </script>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
