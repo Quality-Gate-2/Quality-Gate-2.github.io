@@ -1,0 +1,984 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+  </head>
+  <body>
+      <div id="div" class="container">
+          <br>
+    <h1 class="text-center">ITEM SPEC D14 T0-LH</h1>
+    <div class="row g-3 align-items-center">
+  <div class="col-auto">
+    <label for="suffix" class="col-form-label">SUFFIX</label>
+  </div>
+  <div class="col-auto">
+    <input type="text" id="suf" class="form-control" oninput="CekSpec();" style="text-transform:uppercase"/>
+  </div>
+  <div class="col-auto">
+    <span id="passwordHelpInline" class="form-text">
+      
+    </span>
+  </div>
+</div>
+<br>
+<table class="table table-bordered border-primary">
+  <thead>
+    <tr>
+      <th scope="col" class="text-center" id="th1" ></th>
+      <th scope="col" class="text-center" id="th2" ></th>
+      <th scope="col" class="text-center" id="th3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="text-center"><h1 id="td1"></h1></td>
+      <td class="text-center"><h1 id="td2"></h1></td>
+      <td class="text-center"><h1 id="td3"></h1></td>
+    </tr>
+  </tbody>
+  <thead>
+    <tr>
+      <th scope="col" class="text-center" id="th4"></th>
+      <th scope="col" class="text-center" id="th5"></th>
+      <th scope="col" class="text-center" id="th6"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="text-center"><h1 id="td4"></h1></td>
+      <td class="text-center"><h1 id="td5"></h1></td>
+      <td class="text-center"><h1 id="td6"></h1></td>
+    </tr>
+  </tbody>
+  <thead>
+    <tr>
+      <th scope="col" class="text-center" id="th7" ></th>
+      <th scope="col" class="text-center" id="th8"></th>
+      <th scope="col" class="text-center" id="th9"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="text-center"><h2 id="td7"></h2></td>
+      <td class="text-center"><h1 id="td8"></h1></td>
+      <td class="text-center"><h1 id="td9"></h1></td>
+    </tr>
+  </tbody>
+</table>
+      </div>
+
+
+
+    
+
+
+<script>
+
+function CekSpec() {
+    let suf = document.getElementById("suf").value.toUpperCase();
+
+    if (suf==="CB"){
+        t01 = "Emblem VVTI";
+        t02 = "Actuator Brake";
+        t03 = "Cylinder Brake";
+        t04 = "Wire B/D No 2";
+        t05 = "Wire E/G Room";
+        t06 = "Comp Air Bag";
+        t07 = "Switch B/D";
+        t08 = "Comp Efi";
+        t09 = "";
+        sp1 = "POLOS";
+        sp2 = "4X";
+        sp3 = "2C";
+        sp4 = "BZ320";    
+        sp5 = "BYF10";
+        sp6 = "SB";
+        sp7 = "TOMBOL 1";
+        sp8 = "J6";
+        sp9 = "";
+    }else if (suf==="CD"){
+        t01 = "Emblem VVTI";
+        t02 = "Actuator Brake";
+        t03 = "Cylinder Brake";
+        t04 = "Wire B/D No 2";
+        t05 = "Wire E/G Room";
+        t06 = "Comp Air Bag";
+        t07 = "Switch B/D";
+        t08 = "Comp Efi";
+        t09 = "";
+        sp1 = "POLOS";
+        sp2 = "4Z";
+        sp3 = "CH";
+        sp4 = "BZ320";    
+        sp5 = "BYF10";
+        sp6 = "SB";
+        sp7 = "TOMBOL 1";
+        sp8 = "J7";
+        sp9 = "";
+    }else if (suf==="BH"){
+        t01 = "Emblem VVTI";
+        t02 = "Actuator Brake";
+        t03 = "Cylinder Brake";
+        t04 = "Wire B/D No 2";
+        t05 = "Wire E/G Room";
+        t06 = "Comp Air Bag";
+        t07 = "Switch B/D";
+        t08 = "Comp Efi";
+        t09 = "";
+        sp1 = "POLOS";
+        sp2 = "4X";
+        sp3 = "2C";
+        sp4 = "BZ320";    
+        sp5 = "BYF10";
+        sp6 = "SB";
+        sp7 = "TOMBOL 2";
+        sp8 = "J6";
+        sp9 = "";
+    }else if (suf==="U5"){
+        t01 = "Emblem VVTI";
+        t02 = "Actuator Brake";
+        t03 = "Cylinder Brake";
+        t04 = "Wire B/D No 2";
+        t05 = "Wire E/G Room";
+        t06 = "Comp Air Bag";
+        t07 = "Switch B/D";
+        t08 = "Comp Efi";
+        t09 = "";
+        sp1 = "POLOS";
+        sp2 = "4X";
+        sp3 = "2C";
+        sp4 = "BZ320";    
+        sp5 = "BYF10";
+        sp6 = "SB";
+        sp7 = "TOMBOL 2";
+        sp8 = "J6";
+        sp9 = "";
+    }else if (suf==="CC"){
+        t01 = "Emblem VVTI";
+        t02 = "Actuator Brake";
+        t03 = "Cylinder Brake";
+        t04 = "Wire B/D No 2";
+        t05 = "Wire E/G Room";
+        t06 = "Comp Air Bag";
+        t07 = "Switch B/D";
+        t08 = "Comp Efi";
+        t09 = "";
+        sp1 = "POLOS";
+        sp2 = "4Z";
+        sp3 = "CH";
+        sp4 = "BZ320";    
+        sp5 = "BYF10";
+        sp6 = "SB";
+        sp7 = "TOMBOL 2";
+        sp8 = "J7";
+        sp9 = "";
+    }else if (suf==="U6"){
+        t01 = "Emblem VVTI";
+        t02 = "Actuator Brake";
+        t03 = "Cylinder Brake";
+        t04 = "Wire B/D No 2";
+        t05 = "Wire E/G Room";
+        t06 = "Comp Air Bag";
+        t07 = "Switch B/D";
+        t08 = "Comp Efi";
+        t09 = "";
+        sp1 = "POLOS";
+        sp2 = "4Z";
+        sp3 = "CH";
+        sp4 = "BZ320";    
+        sp5 = "BYF10";
+        sp6 = "SB";
+        sp7 = "TOMBOL 2";
+        sp8 = "J7";
+        sp9 = "";
+    }else if (suf==="KK"){
+        t01 = "Emblem VVTI";
+        t02 = "Actuator Brake";
+        t03 = "Cylinder Brake";
+        t04 = "Wire B/D No 2";
+        t05 = "Wire E/G Room";
+        t06 = "Comp Air Bag";
+        t07 = "Switch B/D";
+        t08 = "Comp Efi";
+        t09 = "";
+        sp1 = "VVTI";
+        sp2 = "4B";
+        sp3 = "CE";
+        sp4 = "BZ320";    
+        sp5 = "BY273";
+        sp6 = "SB";
+        sp7 = "TOMBOL 2";
+        sp8 = "FH";
+        sp9 = "";
+    }else if (suf==="HS"){
+        t01 = "Emblem VVTI";
+        t02 = "Actuator Brake";
+        t03 = "Cylinder Brake";
+        t04 = "Wire B/D No 2";
+        t05 = "Wire E/G Room";
+        t06 = "Comp Air Bag";
+        t07 = "Switch B/D";
+        t08 = "Comp Efi";
+        t09 = "";
+        sp1 = "VVTI";
+        sp2 = "4A";
+        sp3 = "CD";
+        sp4 = "BZ320";    
+        sp5 = "BY262";
+        sp6 = "SB";
+        sp7 = "TOMBOL 2";
+        sp8 = "2H";
+        sp9 = "";
+    }else if (suf==="KM"){
+        t01 = "Emblem VVTI";
+        t02 = "Actuator Brake";
+        t03 = "Cylinder Brake";
+        t04 = "Wire B/D No 2";
+        t05 = "Wire E/G Room";
+        t06 = "Comp Air Bag";
+        t07 = "Switch B/D";
+        t08 = "Comp Efi";
+        t09 = "";
+        sp1 = "VVTI";
+        sp2 = "4B";
+        sp3 = "CE";
+        sp4 = "BZ320";    
+        sp5 = "BY273";
+        sp6 = "SB";
+        sp7 = "TOMBOL 2";
+        sp8 = "FK";
+        sp9 = "";
+    }else if (suf==="PQ"){
+        t01 = "Emblem VVTI";
+        t02 = "Actuator Brake";
+        t03 = "Cylinder Brake";
+        t04 = "Wire B/D No 2";
+        t05 = "Wire E/G Room";
+        t06 = "Comp Air Bag";
+        t07 = "Switch B/D";
+        t08 = "Comp Efi";
+        t09 = "";
+        sp1 = "VVTI";
+        sp2 = "4A";
+        sp3 = "CB";
+        sp4 = "BZ300";    
+        sp5 = "BY252";
+        sp6 = "SB";
+        sp7 = "TOMBOL 1";
+        sp8 = "FA";
+        sp9 = "";
+    }else if (suf==="ZX"){
+        t01 = "Emblem VVTI";
+        t02 = "Actuator Brake";
+        t03 = "Cylinder Brake";
+        t04 = "Wire B/D No 2";
+        t05 = "Wire E/G Room";
+        t06 = "Comp Air Bag";
+        t07 = "Switch B/D";
+        t08 = "Comp Efi";
+        t09 = "";
+        sp1 = "VVTI";
+        sp2 = "4B";
+        sp3 = "CC";
+        sp4 = "BZ300";    
+        sp5 = "BY313";
+        sp6 = "SB";
+        sp7 = "TOMBOL 1";
+        sp8 = "FX";
+        sp9 = "";
+    }else if (suf==="NA"){
+        t01 = "Emblem VVTI";
+        t02 = "Actuator Brake";
+        t03 = "Cylinder Brake";
+        t04 = "Wire B/D No 2";
+        t05 = "Wire E/G Room";
+        t06 = "Comp Air Bag";
+        t07 = "Switch B/D";
+        t08 = "Comp Efi";
+        t09 = "";
+        sp1 = "VVTI";
+        sp2 = "4A";
+        sp3 = "CB";
+        sp4 = "BZ320";    
+        sp5 = "BY252";
+        sp6 = "SB";
+        sp7 = "TOMBOL 2";
+        sp8 = "FA";
+        sp9 = "";
+    }else if (suf==="SE"){
+        t01 = "Emblem VVTI";
+        t02 = "Actuator Brake";
+        t03 = "Cylinder Brake";
+        t04 = "Wire B/D No 2";
+        t05 = "Wire E/G Room";
+        t06 = "Comp Air Bag";
+        t07 = "Switch B/D";
+        t08 = "Comp Efi";
+        t09 = "";
+        sp1 = "VVTI";
+        sp2 = "4B";
+        sp3 = "CC";
+        sp4 = "BZ320";    
+        sp5 = "BY313";
+        sp6 = "SB";
+        sp7 = "TOMBOL 2";
+        sp8 = "FX";
+        sp9 = "";
+    }else if (suf==="KN"){
+        t01 = "Emblem VVTI";
+        t02 = "Actuator Brake";
+        t03 = "Cylinder Brake";
+        t04 = "Wire B/D No 2";
+        t05 = "Wire E/G Room";
+        t06 = "Comp Air Bag";
+        t07 = "Switch B/D";
+        t08 = "Comp Efi";
+        t09 = "";
+        sp1 = "VVTI";
+        sp2 = "4B";
+        sp3 = "CE";
+        sp4 = "BZ320";    
+        sp5 = "BY273";
+        sp6 = "SB";
+        sp7 = "TOMBOL 2";
+        sp8 = "FX";
+        sp9 = "";
+    }else if (suf==="HZ"){
+        t01 = "Emblem VVTI";
+        t02 = "Actuator Brake";
+        t03 = "Cylinder Brake";
+        t04 = "Wire B/D No 2";
+        t05 = "Wire E/G Room";
+        t06 = "Comp Air Bag";
+        t07 = "Switch B/D";
+        t08 = "Comp Efi";
+        t09 = "";
+        sp1 = "VVTI";
+        sp2 = "4A";
+        sp3 = "CD";
+        sp4 = "BZ300";    
+        sp5 = "BY273";
+        sp6 = "SB";
+        sp7 = "TOMBOL 1";
+        sp8 = "FB";
+        sp9 = "";
+    }else if (suf==="KR"){
+        t01 = "Emblem VVTI";
+        t02 = "Actuator Brake";
+        t03 = "Cylinder Brake";
+        t04 = "Wire B/D No 2";
+        t05 = "Wire E/G Room";
+        t06 = "Comp Air Bag";
+        t07 = "Switch B/D";
+        t08 = "Comp Efi";
+        t09 = "";
+        sp1 = "VVTI";
+        sp2 = "4B";
+        sp3 = "CE";
+        sp4 = "BZ300";    
+        sp5 = "BY273";
+        sp6 = "SB";
+        sp7 = "TOMBOL 1";
+        sp8 = "FX";
+        sp9 = "";
+    }else if (suf==="HM"){
+        t01 = "Emblem VVTI";
+        t02 = "Actuator Brake";
+        t03 = "Cylinder Brake";
+        t04 = "Wire B/D No 2";
+        t05 = "Wire E/G Room";
+        t06 = "Comp Air Bag";
+        t07 = "Switch B/D";
+        t08 = "Comp Efi";
+        t09 = "";
+        sp1 = "VVTI";
+        sp2 = "4A";
+        sp3 = "CD";
+        sp4 = "BZ320";    
+        sp5 = "BY273";
+        sp6 = "SB";
+        sp7 = "TOMBOL 2";
+        sp8 = "FB";
+        sp9 = "";
+    }else if (suf==="JT"){
+        t01 = "Emblem VVTI";
+        t02 = "Actuator Brake";
+        t03 = "Cylinder Brake";
+        t04 = "Wire B/D No 2";
+        t05 = "Wire E/G Room";
+        t06 = "Comp Air Bag";
+        t07 = "Switch B/D";
+        t08 = "Comp Efi";
+        t09 = "";
+        sp1 = "VVTI";
+        sp2 = "4B";
+        sp3 = "CE";
+        sp4 = "BZ320";    
+        sp5 = "BY273";
+        sp6 = "SB";
+        sp7 = "TOMBOL 2";
+        sp8 = "FX";
+        sp9 = "";
+    }else if (suf==="JW"){
+        t01 = "Emblem VVTI";
+        t02 = "Actuator Brake";
+        t03 = "Cylinder Brake";
+        t04 = "Wire B/D No 2";
+        t05 = "Wire E/G Room";
+        t06 = "Comp Air Bag";
+        t07 = "Switch B/D";
+        t08 = "Comp Efi";
+        t09 = "";
+        sp1 = "VVTI";
+        sp2 = "4A";
+        sp3 = "CD";
+        sp4 = "BZ300";    
+        sp5 = "BY273";
+        sp6 = "SB";
+        sp7 = "TOMBOL 1";
+        sp8 = "FB";
+        sp9 = "";
+    }else if (suf==="JY"){
+        t01 = "Emblem VVTI";
+        t02 = "Actuator Brake";
+        t03 = "Cylinder Brake";
+        t04 = "Wire B/D No 2";
+        t05 = "Wire E/G Room";
+        t06 = "Comp Air Bag";
+        t07 = "Switch B/D";
+        t08 = "Comp Efi";
+        t09 = "";
+        sp1 = "VVTI";
+        sp2 = "4B";
+        sp3 = "CE";
+        sp4 = "BZ320";    
+        sp5 = "BY273";
+        sp6 = "SB";
+        sp7 = "TOMBOL 2";
+        sp8 = "FX";
+        sp9 = "";
+    }else if (suf==="QU"){
+        t01 = "Emblem VVTI";
+        t02 = "Actuator Brake";
+        t03 = "Cylinder Brake";
+        t04 = "Wire B/D No 2";
+        t05 = "Wire E/G Room";
+        t06 = "Comp Air Bag";
+        t07 = "Switch B/D";
+        t08 = "Comp Efi";
+        t09 = "";
+        sp1 = "VVTI";
+        sp2 = "4A";
+        sp3 = "CD";
+        sp4 = "BZ300";    
+        sp5 = "BY273";
+        sp6 = "SB";
+        sp7 = "TOMBOL 1";
+        sp8 = "FJ";
+        sp9 = "";
+    }else if (suf==="QW"){
+        t01 = "Emblem VVTI";
+        t02 = "Actuator Brake";
+        t03 = "Cylinder Brake";
+        t04 = "Wire B/D No 2";
+        t05 = "Wire E/G Room";
+        t06 = "Comp Air Bag";
+        t07 = "Switch B/D";
+        t08 = "Comp Efi";
+        t09 = "";
+        sp1 = "VVTI";
+        sp2 = "4B";
+        sp3 = "CE";
+        sp4 = "BZ300";    
+        sp5 = "BY273";
+        sp6 = "SB";
+        sp7 = "TOMBOL 1";
+        sp8 = "FK";
+        sp9 = "";
+    }else if (suf==="NM"){
+        t01 = "Emblem VVTI";
+        t02 = "Actuator Brake";
+        t03 = "Cylinder Brake";
+        t04 = "Wire B/D No 2";
+        t05 = "Wire E/G Room";
+        t06 = "Comp Air Bag";
+        t07 = "Switch B/D";
+        t08 = "Comp Efi";
+        t09 = "";
+        sp1 = "VVTI";
+        sp2 = "4A";
+        sp3 = "CB";
+        sp4 = "BZ300";    
+        sp5 = "BY252";
+        sp6 = "SB";
+        sp7 = "TOMBOL 1";
+        sp8 = "FA";
+        sp9 = "";
+    }else if (suf==="XF"){
+        t01 = "Emblem VVTI";
+        t02 = "Actuator Brake";
+        t03 = "Cylinder Brake";
+        t04 = "Wire B/D No 2";
+        t05 = "Wire E/G Room";
+        t06 = "Comp Air Bag";
+        t07 = "Switch B/D";
+        t08 = "Comp Efi";
+        t09 = "";
+        sp1 = "VVTI";
+        sp2 = "4";
+        sp3 = "CC";
+        sp4 = "BZ300";    
+        sp5 = "BY313";
+        sp6 = "SB";
+        sp7 = "TOMBOL 1";
+        sp8 = "FX";
+        sp9 = "";
+    }else if (suf==="MB"){
+        t01 = "Emblem VVTI";
+        t02 = "Actuator Brake";
+        t03 = "Cylinder Brake";
+        t04 = "Wire B/D No 2";
+        t05 = "Wire E/G Room";
+        t06 = "Comp Air Bag";
+        t07 = "Switch B/D";
+        t08 = "Comp Efi";
+        t09 = "";
+        sp1 = "VVTI";
+        sp2 = "4A";
+        sp3 = "CB";
+        sp4 = "BZ320";    
+        sp5 = "BY252";
+        sp6 = "SB";
+        sp7 = "TOMBOL 2";
+        sp8 = "FA";
+        sp9 = "";
+    }else if (suf==="RG"){
+        t01 = "Emblem VVTI";
+        t02 = "Actuator Brake";
+        t03 = "Cylinder Brake";
+        t04 = "Wire B/D No 2";
+        t05 = "Wire E/G Room";
+        t06 = "Comp Air Bag";
+        t07 = "Switch B/D";
+        t08 = "Comp Efi";
+        t09 = "";
+        sp1 = "VVTI";
+        sp2 = "4B";
+        sp3 = "CC";
+        sp4 = "BZ320";    
+        sp5 = "BY313";
+        sp6 = "SB";
+        sp7 = "TOMBOL 2";
+        sp8 = "FX";
+        sp9 = "";
+    }else if (suf==="PV"){
+        t01 = "Emblem VVTI";
+        t02 = "Actuator Brake";
+        t03 = "Cylinder Brake";
+        t04 = "Wire B/D No 2";
+        t05 = "Wire E/G Room";
+        t06 = "Comp Air Bag";
+        t07 = "Switch B/D";
+        t08 = "Comp Efi";
+        t09 = "";
+        sp1 = "VVTI";
+        sp2 = "4A";
+        sp3 = "CB";
+        sp4 = "BZ300";    
+        sp5 = "BY252";
+        sp6 = "SB";
+        sp7 = "TOMBOL 1";
+        sp8 = "FS";
+        sp9 = "";
+    }else if (suf==="ZY"){
+        t01 = "Emblem VVTI";
+        t02 = "Actuator Brake";
+        t03 = "Cylinder Brake";
+        t04 = "Wire B/D No 2";
+        t05 = "Wire E/G Room";
+        t06 = "Comp Air Bag";
+        t07 = "Switch B/D";
+        t08 = "Comp Efi";
+        t09 = "";
+        sp1 = "VVTI";
+        sp2 = "4B";
+        sp3 = "CC";
+        sp4 = "BZ300";    
+        sp5 = "BY313";
+        sp6 = "SB";
+        sp7 = "TOMBOL 1";
+        sp8 = "FK";
+        sp9 = "";
+    }else if (suf==="NJ"){
+        t01 = "Emblem VVTI";
+        t02 = "Actuator Brake";
+        t03 = "Cylinder Brake";
+        t04 = "Wire B/D No 2";
+        t05 = "Wire E/G Room";
+        t06 = "Comp Air Bag";
+        t07 = "Switch B/D";
+        t08 = "Comp Efi";
+        t09 = "";
+        sp1 = "VVTI";
+        sp2 = "4A";
+        sp3 = "CB320";
+        sp4 = "BZ252";    
+        sp5 = "BY";
+        sp6 = "SB";
+        sp7 = "TOMBOL 2";
+        sp8 = "FS";
+        sp9 = "";
+    }else if (suf==="XE"){
+        t01 = "Emblem VVTI";
+        t02 = "Actuator Brake";
+        t03 = "Cylinder Brake";
+        t04 = "Wire B/D No 2";
+        t05 = "Wire E/G Room";
+        t06 = "Comp Air Bag";
+        t07 = "Switch B/D";
+        t08 = "Comp Efi";
+        t09 = "";
+        sp1 = "VVTI";
+        sp2 = "4B";
+        sp3 = "CC";
+        sp4 = "BZ320";    
+        sp5 = "BY313";
+        sp6 = "SB";
+        sp7 = "TOMBOL 2";
+        sp8 = "FK";
+        sp9 = "";
+    }else if (suf==="JF"){
+        t01 = "Emblem VVTI";
+        t02 = "Actuator Brake";
+        t03 = "Cylinder Brake";
+        t04 = "Wire B/D No 2";
+        t05 = "Wire E/G Room";
+        t06 = "Comp Air Bag";
+        t07 = "Switch B/D";
+        t08 = "Comp Efi";
+        t09 = "";
+        sp1 = "VVTI";
+        sp2 = "4A";
+        sp3 = "CD";
+        sp4 = "BZ300";    
+        sp5 = "BY273";
+        sp6 = "SB";
+        sp7 = "TOMBOL 1";
+        sp8 = "FJ";
+        sp9 = "";
+    }else if (suf==="LN"){
+        t01 = "Emblem VVTI";
+        t02 = "Actuator Brake";
+        t03 = "Cylinder Brake";
+        t04 = "Wire B/D No 2";
+        t05 = "Wire E/G Room";
+        t06 = "Comp Air Bag";
+        t07 = "Switch B/D";
+        t08 = "Comp Efi";
+        t09 = "";
+        sp1 = "VVTI";
+        sp2 = "4B";
+        sp3 = "CE";
+        sp4 = "BZ300";    
+        sp5 = "BY273";
+        sp6 = "SB";
+        sp7 = "TOMBOL 1";
+        sp8 = "FK";
+        sp9 = "";
+    }else if (suf==="HN"){
+        t01 = "Emblem VVTI";
+        t02 = "Actuator Brake";
+        t03 = "Cylinder Brake";
+        t04 = "Wire B/D No 2";
+        t05 = "Wire E/G Room";
+        t06 = "Comp Air Bag";
+        t07 = "Switch B/D";
+        t08 = "Comp Efi";
+        t09 = "";
+        sp1 = "VV5I";
+        sp2 = "4A";
+        sp3 = "CD";
+        sp4 = "BZ320";    
+        sp5 = "BY273";
+        sp6 = "SB";
+        sp7 = "TOMBOL 2";
+        sp8 = "FJ";
+        sp9 = "";
+    }else if (suf==="JU"){
+        t01 = "Emblem VVTI";
+        t02 = "Actuator Brake";
+        t03 = "Cylinder Brake";
+        t04 = "Wire B/D No 2";
+        t05 = "Wire E/G Room";
+        t06 = "Comp Air Bag";
+        t07 = "Switch B/D";
+        t08 = "Comp Efi";
+        t09 = "";
+        sp1 = "VVTI";
+        sp2 = "4B";
+        sp3 = "CE";
+        sp4 = "BZ320";    
+        sp5 = "BY273";
+        sp6 = "SB";
+        sp7 = "TOMBOL 2";
+        sp8 = "FK";
+        sp9 = "";
+    }else if (suf==="AD"){
+        t01 = "Emblem VVTI";
+        t02 = "Actuator Brake";
+        t03 = "Cylinder Brake";
+        t04 = "Wire B/D No 2";
+        t05 = "Wire E/G Room";
+        t06 = "Comp Air Bag";
+        t07 = "Switch B/D";
+        t08 = "Comp Efi";
+        t09 = "";
+        sp1 = "VVTI";
+        sp2 = "4A";
+        sp3 = "CD";
+        sp4 = "BZ300";    
+        sp5 = "BY273";
+        sp6 = "SB";
+        sp7 = "TOMBOL 1";
+        sp8 = "J2";
+        sp9 = "";
+    }else if (suf==="AH"){
+        t01 = "Emblem VVTI";
+        t02 = "Actuator Brake";
+        t03 = "Cylinder Brake";
+        t04 = "Wire B/D No 2";
+        t05 = "Wire E/G Room";
+        t06 = "Comp Air Bag";
+        t07 = "Switch B/D";
+        t08 = "Comp Efi";
+        t09 = "";
+        sp1 = "VVTI";
+        sp2 = "4B";
+        sp3 = "CE";
+        sp4 = "BZ300";    
+        sp5 = "BY273";
+        sp6 = "SB";
+        sp7 = "TOMBOL 1";
+        sp8 = "J3";
+        sp9 = "";
+    }else if (suf==="AC"){
+        t01 = "Emblem VVTI";
+        t02 = "Actuator Brake";
+        t03 = "Cylinder Brake";
+        t04 = "Wire B/D No 2";
+        t05 = "Wire E/G Room";
+        t06 = "Comp Air Bag";
+        t07 = "Switch B/D";
+        t08 = "Comp Efi";
+        t09 = "";
+        sp1 = "VVTI";
+        sp2 = "4A";
+        sp3 = "CD";
+        sp4 = "BZ320";    
+        sp5 = "BY273";
+        sp6 = "SB";
+        sp7 = "TOMBOL 2";
+        sp8 = "J2";
+        sp9 = "";
+    }else if (suf==="AF"){
+        t01 = "Emblem VVTI";
+        t02 = "Actuator Brake";
+        t03 = "Cylinder Brake";
+        t04 = "Wire B/D No 2";
+        t05 = "Wire E/G Room";
+        t06 = "Comp Air Bag";
+        t07 = "Switch B/D";
+        t08 = "Comp Efi";
+        t09 = "";
+        sp1 = "VVTI";
+        sp2 = "4B";
+        sp3 = "CE";
+        sp4 = "BZ320";    
+        sp5 = "BY273";
+        sp6 = "SB";
+        sp7 = "TOMBOL 2";
+        sp8 = "J3";
+        sp9 = "";
+    }else if (suf==="TB"){
+        t01 = "Emblem VVTI";
+        t02 = "Actuator Brake";
+        t03 = "Cylinder Brake";
+        t04 = "Wire B/D No 2";
+        t05 = "Wire E/G Room";
+        t06 = "Comp Air Bag";
+        t07 = "Switch B/D";
+        t08 = "Comp Efi";
+        t09 = "";
+        sp1 = "VVTI";
+        sp2 = "4B";
+        sp3 = "CC";
+        sp4 = "BZ320";    
+        sp5 = "BY313";
+        sp6 = "SB";
+        sp7 = "TOMBOL 2";
+        sp8 = "J3";
+        sp9 = "";
+    }else if (suf==="9K"){
+        t01 = "Emblem VVTI";
+        t02 = "Actuator Brake";
+        t03 = "Cylinder Brake";
+        t04 = "Wire B/D No 2";
+        t05 = "Wire E/G Room";
+        t06 = "Comp Air Bag";
+        t07 = "Switch B/D";
+        t08 = "Comp Efi";
+        t09 = "";
+        sp1 = "POLOS";
+        sp2 = "4X";
+        sp3 = "2C";
+        sp4 = "BZ330";    
+        sp5 = "BYF20";
+        sp6 = "SA";
+        sp7 = "TOMBOL 1";
+        sp8 = "J4";
+        sp9 = "";
+    }else if (suf==="9L"){
+        t01 = "Emblem VVTI";
+        t02 = "Actuator Brake";
+        t03 = "Cylinder Brake";
+        t04 = "Wire B/D No 2";
+        t05 = "Wire E/G Room";
+        t06 = "Comp Air Bag";
+        t07 = "Switch B/D";
+        t08 = "Comp Efi";
+        t09 = "";
+        sp1 = "POLOS";
+        sp2 = "4X";
+        sp3 = "2C";
+        sp4 = "BZ330";    
+        sp5 = "BYN40";
+        sp6 = "SA";
+        sp7 = "TOMBOL 2";
+        sp8 = "J6";
+        sp9 = "";
+    }else if (suf==="9M"){
+        t01 = "Emblem VVTI";
+        t02 = "Actuator Brake";
+        t03 = "Cylinder Brake";
+        t04 = "Wire B/D No 2";
+        t05 = "Wire E/G Room";
+        t06 = "Comp Air Bag";
+        t07 = "Switch B/D";
+        t08 = "Comp Efi";
+        t09 = "";
+        sp1 = "POLOS";
+        sp2 = "4X";
+        sp3 = "2C";
+        sp4 = "BZ330";    
+        sp5 = "BYN40";
+        sp6 = "SB";
+        sp7 = "TOMBOL 2";
+        sp8 = "J6";
+        sp9 = "";
+    }else if (suf==="9N"){
+        t01 = "Emblem VVTI";
+        t02 = "Actuator Brake";
+        t03 = "Cylinder Brake";
+        t04 = "Wire B/D No 2";
+        t05 = "Wire E/G Room";
+        t06 = "Comp Air Bag";
+        t07 = "Switch B/D";
+        t08 = "Comp Efi";
+        t09 = "";
+        sp1 = "POLOS";
+        sp2 = "4Z";
+        sp3 = "CH";
+        sp4 = "BZ330";    
+        sp5 = "BYF20";
+        sp6 = "SA";
+        sp7 = "TOMBOL 1";
+        sp8 = "J5";
+        sp9 = "";
+    }else if (suf==="9P"){
+        t01 = "Emblem VVTI";
+        t02 = "Actuator Brake";
+        t03 = "Cylinder Brake";
+        t04 = "Wire B/D No 2";
+        t05 = "Wire E/G Room";
+        t06 = "Comp Air Bag";
+        t07 = "Switch B/D";
+        t08 = "Comp Efi";
+        t09 = "";
+        sp1 = "POLOS";
+        sp2 = "4Z";
+        sp3 = "CH";
+        sp4 = "BZ330";    
+        sp5 = "BYN40";
+        sp6 = "SA";
+        sp7 = "TOMBOL 2";
+        sp8 = "J7";
+        sp9 = "";
+    }else if (suf==="9Q"){
+        t01 = "Emblem VVTI";
+        t02 = "Actuator Brake";
+        t03 = "Cylinder Brake";
+        t04 = "Wire B/D No 2";
+        t05 = "Wire E/G Room";
+        t06 = "Comp Air Bag";
+        t07 = "Switch B/D";
+        t08 = "Comp Efi";
+        t09 = "";
+        sp1 = "POLOS";
+        sp2 = "4Z";
+        sp3 = "CH";
+        sp4 = "BZ330";    
+        sp5 = "BYN40";
+        sp6 = "SB";
+        sp7 = "TOMBOL 2";
+        sp8 = "J7";
+        sp9 = "";
+    } else{
+        t01 = "";
+        t02 = "";
+        t03 = "";
+        t04 = "";
+        t05 = "";
+        t06 = "";
+        t07 = "";
+        t08 = "";
+        t09 = "";
+        sp1 = "";
+        sp2 = "";
+        sp3 = "";
+        sp4 = "";    
+        sp5 = "";
+        sp6 = "";
+        sp7 = "";
+        sp8 = "";
+        sp9 = "";
+    }
+    document.getElementById("th1").innerHTML= t01;
+    document.getElementById("th2").innerHTML= t02;
+    document.getElementById("th3").innerHTML= t03;
+    document.getElementById("th4").innerHTML= t04;
+    document.getElementById("th5").innerHTML= t05;
+    document.getElementById("th6").innerHTML= t06;
+    document.getElementById("th7").innerHTML= t07;
+    document.getElementById("th8").innerHTML= t08;
+    document.getElementById("th9").innerHTML= t09;
+    document.getElementById("td1").innerHTML= sp1;
+    document.getElementById("td2").innerHTML= sp2;
+    document.getElementById("td3").innerHTML= sp3;
+    document.getElementById("td4").innerHTML= sp4;
+    document.getElementById("td5").innerHTML= sp5;
+    document.getElementById("td6").innerHTML= sp6;
+    document.getElementById("td7").innerHTML= sp7;
+    document.getElementById("td8").innerHTML= sp8;
+    document.getElementById("td9").innerHTML= sp9;
+ }
+
+    
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+  </body>
+  
+
+</html>
