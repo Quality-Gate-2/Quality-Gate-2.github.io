@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan Kerja Harian</title>
+    <link rel="stylesheet" href="gaya.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Laporan Kerja Harian</h1>
+
+        <div class="card">
+            <h2>Langkah 1: Atur Header Laporan</h2>
+            <div class="header-form">
+                <div class="form-group">
+                    <label for="report-day">Hari</label>
+                    <select id="report-day">
+                        <option>Senin</option>
+                        <option>Selasa</option>
+                        <option>Rabu</option>
+                        <option>Kamis</option>
+                        <option>Jumat</option>
+                        <option>Sabtu</option>
+                        <option selected>Minggu</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="report-date">Tanggal</label>
+                    <input type="date" id="report-date">
+                </div>
+                <div class="form-group">
+                    <label for="report-shift">Shift</label>
+                    <input type="text" id="report-shift" value="A" placeholder="Contoh: A, B">
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Langkah 2: Tambah Data Unit</h2>
+            <div class="data-form">
+                 <div class="form-group">
+                    <label for="unit-id">Unit (Contoh: T2 2345)</label>
+                    <input type="text" id="unit-id" placeholder="T2 2345">
+                </div>
+                 <div class="form-group">
+                    <label for="unit-status">Status</label>
+                    <select id="unit-status">
+                        <option value="OK">OK</option>
+                        <option value="Problem"> NG</option>
+                    </select>
+                </div>
+                 <div class="form-group full-width">
+                     <label for="unit-desc">Keterangan (jika Problem)</label>
+                    <input type="text" id="unit-desc" placeholder="Rem blong">
+                </div>
+                <button id="add-button">Tambah ke Laporan</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Langkah 3: Kelola Laporan</h2>
+            <div id="report-list">
+                <p class="empty-state">Belum ada data laporan. Silakan tambahkan di atas.</p>
+            </div>
+        </div>
+
+        <div class="card action-card">
+            <h2>Langkah 4: Kirim Laporan</h2>
+            <p>Klik tombol di bawah untuk membuat teks laporan dan mengirimnya via WhatsApp.</p>
+            <button id="send-button">Buat & Kirim ke WhatsApp</button>
+        </div>
+        
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
